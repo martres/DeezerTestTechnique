@@ -6,8 +6,17 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class DZRootWireframe;
+@class DZArtistDetailWireframe;
+@class DZArtistSearchPresenter;
 
 @interface DZArtistSearchWireframe : NSObject
+
+@property (nonatomic, strong) DZRootWireframe *rootWireframe;
+@property (nonatomic, strong) DZArtistDetailWireframe *artistDetailWireframe;
+@property (nonatomic, strong) DZArtistSearchPresenter *searchPresenter;
+
+- (void)presentArtistSearchFromWindow:(UIWindow *)window;
+- (void)presentArtistDetail;
 
 @end

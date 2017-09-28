@@ -8,6 +8,20 @@
 
 #import "DZArtistSearchWireframe.h"
 
+static NSString *ArtistSearchViewControllerIdentifier = @"DZRArtistSearchViewController";
+
 @implementation DZArtistSearchWireframe
+
+- (void)presentArtistSearchFromWindow:(UIWindow *)window {
+    
+}
+
+- (void)presentArtistDetail {
+//    [self.artistDetailWireframe ]
+}
+
+- (UIStoryboard *)mainStoryboard {
+    return [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+}
 
 @end
