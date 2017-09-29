@@ -10,5 +10,9 @@
 
 @interface DZRArtistSearchViewController : UIViewController<DZRArtistSearchInterface>
 
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, weak) IBOutlet UIView *noResultsView;
+
 @end
 

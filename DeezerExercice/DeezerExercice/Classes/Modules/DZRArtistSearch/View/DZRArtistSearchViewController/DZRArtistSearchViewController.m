@@ -9,8 +9,6 @@
 
 @interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 
-@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) NSArray *artists;
 
 @end
@@ -25,13 +23,25 @@
 
 - (void)configureView {
     self.navigationItem.title = @"Search Artist";
+    [self.noResultsView setHidden:false];
 }
 
 - (void)showEmptyResultMessage {
-    [self.collectionView setHidden:true];
+    self.collectionView.hidden = true;
+    self.noResultsView.hidden = false;
 }
 
+- (void) reloadView {
+    [self.collectionView reloadData];
+}
 
+- (void)showResultsOfSearchArtist {
+    self.noResultsView.hidden = true;
+    self.collectionView.hidden = false;
+
+    
+    [self reloadView];
+}
 
 #pragma - DZRArtistSearchInterface
 
@@ -85,10 +95,10 @@
 {
     NSString *CellIdentifier = [DZRArtistCollectionViewCell identifierCell];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSDictionary *artistDictionary = [self.artists objectAtIndex:indexPath.row];
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[artistDictionary objectForKey:@"picture"]]];
-    cell.artistImage.image = [UIImage imageWithData:imageData];
-    cell.artistName.text = [artistDictionary objectForKey:@"name"];
+//    NSDictionary *artistDictionary = [self.artists objectAtIndex:indexPath.row];
+//    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[artistDictionary objectForKey:@"picture"]]];
+//    cell.artistImage.image = [UIImage imageWithData:imageData];
+//    cell.artistName.text = [artistDictionary objectForKey:@"name"];
     return cell;
 }
 
