@@ -13,6 +13,6 @@
 
 @protocol BaseService <NSObject>
 
-+(id)objectFromData:(NSData *)data;
+- (id)objectFromData:(NSData *)data;
 
 @end
