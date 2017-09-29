@@ -6,13 +6,13 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "DZArtistDetailViewController.h"
+#import "DZRArtistDetailViewController.h"
 
-@interface DZArtistDetailViewController ()
+@interface DZRArtistDetailViewController ()
 
 @end
 
-@implementation DZArtistDetailViewController
+@implementation DZRArtistDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

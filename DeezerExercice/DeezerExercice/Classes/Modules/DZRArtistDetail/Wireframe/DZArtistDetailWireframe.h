@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DZArtistDetailWireframe : NSObject
+@interface DZRArtistDetailWireframe : NSObject
 
 @end

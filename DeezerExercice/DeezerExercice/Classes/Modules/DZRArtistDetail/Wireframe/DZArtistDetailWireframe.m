@@ -8,6 +8,6 @@
 
 #import "DZArtistDetailWireframe.h"
 
-@implementation DZArtistDetailWireframe
+@implementation DZRArtistDetailWireframe
 
 @end

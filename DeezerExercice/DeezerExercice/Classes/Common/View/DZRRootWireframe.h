@@ -6,7 +6,7 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-@interface DZRootWireframe : NSObject
+@interface DZRRootWireframe : NSObject
 
 - (void) showRootViewController:(UIViewController *)viewController  inWindow:(UIWindow *)window;
 

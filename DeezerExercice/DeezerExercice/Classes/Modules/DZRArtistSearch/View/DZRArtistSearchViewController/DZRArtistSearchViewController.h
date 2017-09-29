@@ -1,11 +1,14 @@
 //
 //  DZRArtistSearchViewController.h
 //  DeezerExercice
-//  Copyright (c) 2015 Deezer. All rights reserved.
+//
+//  Created by Martreux Steven on 29/09/2017.
+//  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DZRArtistSearchInterface.h"
 
-@interface DZRArtistSearchViewController : UIViewController
+@interface DZRArtistSearchViewController : UIViewController<DZRArtistSearchInterface>
 
 @end
+

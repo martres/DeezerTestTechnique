@@ -1,13 +1,13 @@
 //
-//  DZArtistDetailViewController.h
+//  DZArtistSearchPresenter.h
 //  DeezerExercice
 //
 //  Created by Martreux Steven on 28/09/2017.
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface DZArtistDetailViewController : UIViewController
+@interface DZRArtistSearchPresenter : NSObject
 
 @end

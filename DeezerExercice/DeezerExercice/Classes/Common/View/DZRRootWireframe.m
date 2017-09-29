@@ -6,9 +6,9 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "DZRootWireframe.h"
+#import "DZRRootWireframe.h"
 
-@implementation DZRootWireframe
+@implementation DZRRootWireframe
 
 - (void)showRootViewController:(UIViewController *)viewController
                       inWindow:(UIWindow *)window

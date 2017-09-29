@@ -20,47 +20,53 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self configureView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)configureView {
+    self.navigationItem.title = @"Search Artist";
 }
-*/
 
-#pragma - Search
-
-- (void)searchArtistsWithName:(NSString *)name {
-    NSString *urlRequest = [NSString stringWithFormat:@"http://api.deezer.com/search/artist?q=%@", name];
-    NSURLRequest *APIRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlRequest]];
-
-    [NSURLConnection sendAsynchronousRequest:APIRequest
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               if (connectionError) {
-                                   // TODO
-                               }
-                               else {
-                                   NSDictionary *retData = [NSJSONSerialization JSONObjectWithData:data
-                                                                                           options:kNilOptions
-                                                                                             error:&connectionError];
-                                   NSLog(@"%@", [retData objectForKey:@"data"]);
-                                   self.artists = [retData objectForKey:@"data"];
-                                   [self.collectionView reloadData];
-                               }
-                           }];
+- (void)showEmptyResultMessage {
+    [self.collectionView setHidden:true];
 }
+
+
+
+#pragma - DZRArtistSearchInterface
+
+- (void)searchArtistWithName:(NSString *)textSearch {
+    
+}
+
+//#pragma - Search
+//
+//- (void)searchArtistsWithName:(NSString *)name {
+//    NSString *urlRequest = [NSString stringWithFormat:@"http://api.deezer.com/search/artist?q=%@", name];
+//    NSURLRequest *APIRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlRequest]];
+//
+//    [NSURLConnection sendAsynchronousRequest:APIRequest
+//                                       queue:[NSOperationQueue mainQueue]
+//                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//                               if (connectionError) {
+//                                   // TODO
+//                               }
+//                               else {
+//                                   NSDictionary *retData = [NSJSONSerialization JSONObjectWithData:data
+//                                                                                           options:kNilOptions
+//                                                                                             error:&connectionError];
+//                                   NSLog(@"%@", [retData objectForKey:@"data"]);
+//                                   self.artists = [retData objectForKey:@"data"];
+//                                   [self.collectionView reloadData];
+//                               }
+//                           }];
+//}
 
 #pragma - UISearchBarDelegate
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    [self searchArtistsWithName:searchText];
+    [self searchArtistWithName:searchText];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -77,8 +83,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ArtistCollectionViewCellIdentifier";
-
+    NSString *CellIdentifier = [DZRArtistCollectionViewCell identifierCell];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *artistDictionary = [self.artists objectAtIndex:indexPath.row];
     NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[artistDictionary objectForKey:@"picture"]]];
