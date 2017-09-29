@@ -6,8 +6,9 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
 @interface URLManager : NSObject
+
++ (NSString *)urlForSearchArtistsWithName:(NSString *)name;
 
 @end

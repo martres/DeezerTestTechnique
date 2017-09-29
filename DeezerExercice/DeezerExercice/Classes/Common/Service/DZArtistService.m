@@ -7,13 +7,15 @@
 //
 
 #import "DZArtistService.h"
-#import "ApiManager.h"
 
 @implementation DZArtistService
 
-- (void)getArtists:(NSArray *)artists {
-    [[APIManager sharedInstance] get:"" completion:<#^(NSData *data, NSError *error)completion#>]
-    
+
+- (void)getArtists:(NSString *)name {
+    NSString *url = [URLManager urlForSearchArtistsWithName:name];
+    [[APIManager sharedInstance] get:[URLManager urlForSearchArtistsWithName:url] completion:^(NSData *data, NSError *error) {
+        
+    }];
 }
 
 

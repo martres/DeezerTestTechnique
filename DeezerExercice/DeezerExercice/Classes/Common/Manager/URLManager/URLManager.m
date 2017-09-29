@@ -10,6 +10,10 @@
 
 @implementation URLManager
 
+static NSString *baseURL = @"http://api.deezer.com/";
 
++ (NSString *)urlForSearchArtistsWithName:(NSString *)name {
+    return [NSString stringWithFormat:@"%@search/artist?q=%@", baseURL, name];
+}
 
 @end

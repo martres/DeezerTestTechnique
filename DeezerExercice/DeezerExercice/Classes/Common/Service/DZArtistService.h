@@ -11,6 +11,6 @@
 
 @interface DZArtistService : NSObject<BaseService>
 
-- (void)getArtists:(NSArray *)artists;
+- (void)getArtists:(NSString *)name;
 
 @end

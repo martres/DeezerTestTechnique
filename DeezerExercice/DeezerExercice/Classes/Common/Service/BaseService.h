@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ApiManager.h"
+#import "URLManager.h"
+
 @protocol BaseService <NSObject>
 
 +(id)objectFromData:(NSData *)data;
