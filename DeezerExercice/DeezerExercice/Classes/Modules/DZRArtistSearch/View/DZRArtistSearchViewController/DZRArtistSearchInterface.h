@@ -11,16 +11,15 @@
 /**
  @protocol DZRArtistSearchInterface
  @brief DRZArtistInterface procotol
- @param searchArtist with NSString in param to handle the research of Artist
+ @param showEmptyResultMessage: to handle if the request send no data
+ @param reloadView: to reload the view
+ @param showResultsOfSearchArtist: to handle if the request send data with results
  **/
 
 @protocol DZRArtistSearchInterface <NSObject>
 
-/**
- @brief research of artists of Deezer
- @param textSearch NSString from the SearchBar
- **/
-
-- (void)searchArtistWithName:(NSString *)textSearch;
+- (void)showEmptyResultMessage;
+- (void)reloadView;
+- (void)showResultsOfSearchArtist;
 
 @end

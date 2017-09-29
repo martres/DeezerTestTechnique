@@ -134,6 +134,7 @@
                     <navigationItem key="navigationItem" title="Artist Search" id="rtH-4h-Mgp"/>
                     <connections>
                         <outlet property="collectionView" destination="G2z-Iq-UIH" id="IIW-82-eMc"/>
+                        <outlet property="noResultsView" destination="7Ow-jP-9ma" id="9CM-st-5cf"/>
                         <outlet property="searchBar" destination="pap-sx-raJ" id="Owf-DU-yQc"/>
                     </connections>
                 </viewController>

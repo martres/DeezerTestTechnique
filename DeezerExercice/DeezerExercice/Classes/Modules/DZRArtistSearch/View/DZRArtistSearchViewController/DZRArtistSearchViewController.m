@@ -46,7 +46,7 @@
 #pragma - DZRArtistSearchInterface
 
 - (void)searchArtistWithName:(NSString *)textSearch {
-    
+    [self.eventHandler searchArtistWithName:textSearch];
 }
 
 //#pragma - Search
