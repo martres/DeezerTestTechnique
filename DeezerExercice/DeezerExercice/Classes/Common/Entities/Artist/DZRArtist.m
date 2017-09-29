@@ -11,9 +11,9 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super initWithDictionary:dictionary];
     if (self) {
-        self.identifierEntity = dictionary objectForKey:@"id"];
-        self.artistName = [dictionary objectForKey:@"name"];
-        self.artistPictureUrl = [dictionary objectForKey:@"picture"];
+        self.titleEntity = [dictionary objectForKey:@"name"];
+        self.pictureUrl = [dictionary objectForKey:@"picture"];
+        self.artistAlbum = nil;
     }
     return self;
 }

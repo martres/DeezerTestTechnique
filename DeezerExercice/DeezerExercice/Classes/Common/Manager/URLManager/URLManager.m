@@ -16,4 +16,6 @@ static NSString *baseURL = @"http://api.deezer.com/";
     return [NSString stringWithFormat:@"%@search/artist?q=%@", baseURL, name];
 }
 
++ (NSString *)urlForSearchAlbum
+
 @end

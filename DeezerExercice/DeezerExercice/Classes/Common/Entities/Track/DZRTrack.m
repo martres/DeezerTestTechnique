@@ -13,9 +13,12 @@
 - (instancetype) initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
-        self.
+        [self setIsReadable:[[dictionary objectForKey:@"readable"] boolValue]];
+        self.titleEntity = [dictionary objectForKey:@"title"];
         self.pictureUrl = [dictionary objectForKey:@"preview"];
     }
+    return self;
 }
 
 @end
+ 

@@ -10,9 +10,6 @@
 
 @interface DZRArtist : BaseEntity
 
-@property (nonatomic, strong) NSString *artistPictureUrl;
-@property (nonatomic, strong) DZRAlbum *artistAlbume;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+@property (nonatomic, strong) DZRAlbum *artistAlbum;
 
 @end
