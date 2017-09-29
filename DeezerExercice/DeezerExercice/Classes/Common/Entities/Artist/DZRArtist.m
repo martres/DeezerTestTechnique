@@ -9,9 +9,9 @@
 @implementation DZRArtist
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
-        self.artistIdentifier = [dictionary objectForKey:@"id"];
+        self.identifierEntity = dictionary objectForKey:@"id"];
         self.artistName = [dictionary objectForKey:@"name"];
         self.artistPictureUrl = [dictionary objectForKey:@"picture"];
     }

@@ -35,7 +35,7 @@ static DZRArtistArray *artistTMP;
     
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-    [service getArtists:url completion:^(DZRArtistArray *artistArray, NSString *error) {
+    [service searchArtists:url completion:^(DZRArtistArray *artistArray, NSString *error) {
         XCTAssertNil(error, @"completion error %@", error);
         XCTAssert(artistArray, @"data is nil");
          artistTMP = artistArray;

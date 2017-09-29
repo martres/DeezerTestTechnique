@@ -13,6 +13,7 @@ typedef void(^DZRArtistCompletion)(DZRArtistArray *artistArray, NSString *error)
 
 @interface DZRArtistService : NSObject<BaseService>
 
-- (void)getArtists:(NSString *)name completion:(DZRArtistCompletion)completion;
+- (void)searchArtists:(NSString *)name completion:(DZRArtistCompletion)completion;
 
 @end
+

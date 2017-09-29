@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DZRArtist.h"
+#import "BaseEntity.h"
 
-@interface DZRAlbum : NSObject
+@interface DZRAlbum : BaseEntity
+
+@property (nonatomic, strong) NSString *albumCoverURL;
+@property (nonatomic, strong) NSString *tracklitURL;
 
 @end
