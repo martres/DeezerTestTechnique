@@ -13,7 +13,7 @@
     if (self) {
         self.artistIdentifier = [dictionary objectForKey:@"id"];
         self.artistName = [dictionary objectForKey:@"name"];
-        self.artistPictureUrl = [dictionary objectForKey:@"picture_medium"];
+        self.artistPictureUrl = [dictionary objectForKey:@"picture"];
     }
     return self;
 }

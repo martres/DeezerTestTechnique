@@ -19,10 +19,10 @@
         if (arrayArtists == nil) {
             return nil;
         }
-        
+        self.artists = [[NSMutableArray alloc] init];
         for (NSDictionary *artistDictionnary in arrayArtists) {
             DZRArtist *artist = [[DZRArtist alloc] initWithDictionary:artistDictionnary];
-            [self.artists addObject:artist];
+            [self.artists addObject :artist];
         }
     }
     return self;
