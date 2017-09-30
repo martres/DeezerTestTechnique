@@ -15,7 +15,7 @@
 #import "URLManager.h"
 
 static DZRArtistArray *artistArrayTMP;
-static DZRArtist *arstistTmp;
+static DZRArtist *artistTmp;
 
 @interface TestDZArtistService : XCTestCase
 
@@ -43,7 +43,7 @@ static DZRArtist *arstistTmp;
         XCTAssert(artistArray, @"data is nil");
         artistArrayTMP = artistArray;
         XCTAssertNotNil(artistArray.arrayItems[0], @"No results artists");
-        arstistTmp = artistArray.arrayItems[0];
+        artistTmp = artistArray.arrayItems[0];
         [self artistCheckData];
         [self getOneAlbum];
         
@@ -57,10 +57,10 @@ static DZRArtist *arstistTmp;
     DZRAlbumService *service = [[DZRAlbumService alloc] init];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-    [service getOneAlbum:arstistTmp.identifierEntity completion:^(DZRAlbum *album, NSString *error) {
+    [service getOneAlbum:artistTmp.identifierEntity completion:^(DZRAlbum *album, NSString *error) {
         XCTAssertNil(error, @"completion error %@", error);
         XCTAssert(album, @"data is nil");
-        arstistTmp.artistAlbum = album;
+        artistTmp.artistAlbum = album;
         [self artistAlbumCheckData];
         [self getTracksAlbum];
         dispatch_semaphore_signal(semaphore);
@@ -75,10 +75,10 @@ static DZRArtist *arstistTmp;
     DZRTrackService *service = [[DZRTrackService alloc] init];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-    [service getTracksFromAlbum:arstistTmp.artistAlbum.identifierEntity completion:^(DZRTrackArray *tracks, NSString *error) {
+    [service getTracksFromAlbum:artistTmp.artistAlbum.identifierEntity completion:^(DZRTrackArray *tracks, NSString *error) {
         XCTAssertNil(error, @"completion error %@", error);
         XCTAssert(tracks, @"data is nil");
-        arstistTmp.artistAlbum.trackList = tracks;
+        artistTmp.artistAlbum.trackList = tracks;
         
         [self checkTracksInAlbum];
         dispatch_semaphore_signal(semaphore);
@@ -90,20 +90,20 @@ static DZRArtist *arstistTmp;
 }
 
 - (void) artistAlbumCheckData {
-    if (arstistTmp == nil) {
-        XCTAssert(arstistTmp, @"data is nil");
+    if (artistTmp == nil) {
+        XCTAssert(artistTmp, @"data is nil");
         return;
     }
     
-    XCTAssertNotNil(arstistTmp.identifierEntity, "Identifier is nil");
-    XCTAssertNotNil(arstistTmp.artistAlbum, "Artist Album is nil");
-    XCTAssertNotNil(arstistTmp.titleEntity, "Title Entity is nil");
+    XCTAssertNotNil(artistTmp.identifierEntity, "Identifier is nil");
+    XCTAssertNotNil(artistTmp.artistAlbum, "Artist Album is nil");
+    XCTAssertNotNil(artistTmp.titleEntity, "Title Entity is nil");
 }
 
 - (void) checkTracksInAlbum {
-    XCTAssert(arstistTmp.artistAlbum.trackList, @"data is nil");
+    XCTAssert(artistTmp.artistAlbum.trackList, @"data is nil");
     
-    for (DZRArtist *artist in arstistTmp.artistAlbum.trackList.arrayItems) {
+    for (DZRArtist *artist in artistTmp.artistAlbum.trackList.arrayItems) {
         XCTAssertNotNil(artist.titleEntity, "NAME ARTIST is nil");
         XCTAssertNotNil(artist.pictureUrl, "PICTURE URL is nil");
         XCTAssertNotNil(artist.identifierEntity, "IDENTIFIER is nil");

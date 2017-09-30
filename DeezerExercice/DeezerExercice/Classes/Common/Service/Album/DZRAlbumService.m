@@ -36,7 +36,9 @@
         return nil;
     } else {
         if ([object isKindOfClass:[NSDictionary class]]) {
-            DZRAlbum *obj = [[DZRAlbum alloc] initWithDictionary:object];
+            NSArray *arrayAlbums = [object objectForKey:@"data"];
+            NSDictionary *albumDico = [arrayAlbums objectAtIndex:0];
+            DZRAlbum *obj = [[DZRAlbum alloc] initWithDictionary:albumDico];
             return obj;
         }
     }

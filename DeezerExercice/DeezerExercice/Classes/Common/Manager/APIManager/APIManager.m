@@ -53,12 +53,10 @@
 }
 
 - (void)startRequest:(NSMutableURLRequest *)request completion:(RequestCompletion)completion {
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:
-     ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-         completion(data, error);
-     }];
-    [dataTask resume];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        completion(data, connectionError);
+    }];
 }
 
 
