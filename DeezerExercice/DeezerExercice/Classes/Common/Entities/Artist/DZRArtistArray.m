@@ -12,17 +12,16 @@
 @implementation DZRArtistArray
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
-        self.nextURL = [dictionary objectForKey:@"next"];
         NSArray *arrayArtists = [dictionary objectForKey:@"data"];
         if (arrayArtists == nil) {
             return nil;
         }
-        self.artists = [[NSMutableArray alloc] init];
+        self.arrayItems = [[NSMutableArray alloc] init];
         for (NSDictionary *artistDictionnary in arrayArtists) {
             DZRArtist *artist = [[DZRArtist alloc] initWithDictionary:artistDictionnary];
-            [self.artists addObject :artist];
+            [self.arrayItems addObject :artist];
         }
     }
     return self;

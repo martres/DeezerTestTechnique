@@ -8,10 +8,14 @@
 
 #import <XCTest/XCTest.h>
 #import "DZRArtistService.h"
+#import "DZRAlbumService.h"
+#import "DZRTrackService.h"
 #import "DZRArtist.h"
+
 #import "URLManager.h"
 
-static DZRArtistArray *artistTMP;
+static DZRArtistArray *artistArrayTMP;
+static DZRArtist *arstistTmp;
 
 @interface TestDZArtistService : XCTestCase
 
@@ -31,30 +35,90 @@ static DZRArtistArray *artistTMP;
 
 - (void)testArtistsRequest {
     DZRArtistService *service = [[DZRArtistService alloc] init];
-    NSString *url = [URLManager urlDeezerBuilder:@"t" endPoint:SEARCH_ARTIST];
     
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
-    [service searchArtists:url completion:^(DZRArtistArray *artistArray, NSString *error) {
+    [service searchArtists:@"t" completion:^(DZRArtistArray *artistArray, NSString *error) {
         XCTAssertNil(error, @"completion error %@", error);
         XCTAssert(artistArray, @"data is nil");
-         artistTMP = artistArray;
+        artistArrayTMP = artistArray;
+        XCTAssertNotNil(artistArray.arrayItems[0], @"No results artists");
+        arstistTmp = artistArray.arrayItems[0];
+        [self artistCheckData];
+        [self getOneAlbum];
+        
         dispatch_semaphore_signal(semaphore);
     }];
     long time = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC));
     XCTAssertEqual(time, 0, @"network request timed out");
-
 }
 
-- (void) testCheckData {
-    if (artistTMP == nil) {
-        XCTAssert(artistTMP, @"data is nil");
+- (void)getOneAlbum{
+    DZRAlbumService *service = [[DZRAlbumService alloc] init];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    [service getOneAlbum:arstistTmp.identifierEntity completion:^(DZRAlbum *album, NSString *error) {
+        XCTAssertNil(error, @"completion error %@", error);
+        XCTAssert(album, @"data is nil");
+        arstistTmp.artistAlbum = album;
+        [self artistAlbumCheckData];
+        [self getTracksAlbum];
+        dispatch_semaphore_signal(semaphore);
+
+    }];
+
+    long time = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC));
+    XCTAssertEqual(time, 0, @"network request timed out");
+}
+
+- (void)getTracksAlbum {
+    DZRTrackService *service = [[DZRTrackService alloc] init];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    [service getTracksFromAlbum:arstistTmp.artistAlbum.identifierEntity completion:^(DZRTrackArray *tracks, NSString *error) {
+        XCTAssertNil(error, @"completion error %@", error);
+        XCTAssert(tracks, @"data is nil");
+        arstistTmp.artistAlbum.trackList = tracks;
+        
+        [self checkTracksInAlbum];
+        dispatch_semaphore_signal(semaphore);
+
+    }];
+    
+    long time = dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC));
+    XCTAssertEqual(time, 0, @"network request timed out");
+}
+
+- (void) artistAlbumCheckData {
+    if (arstistTmp == nil) {
+        XCTAssert(arstistTmp, @"data is nil");
         return;
     }
-    XCTAssertNotNil(artistTMP.nextURL, "Next URL is nil");
-    XCTAssertNotNil(artistTMP.artists, "Next URL is nil");
     
-    for (DZRArtist *artist in artistTMP.artists) {
+    XCTAssertNotNil(arstistTmp.identifierEntity, "Identifier is nil");
+    XCTAssertNotNil(arstistTmp.artistAlbum, "Artist Album is nil");
+    XCTAssertNotNil(arstistTmp.titleEntity, "Title Entity is nil");
+}
+
+- (void) checkTracksInAlbum {
+    XCTAssert(arstistTmp.artistAlbum.trackList, @"data is nil");
+    
+    for (DZRArtist *artist in arstistTmp.artistAlbum.trackList.arrayItems) {
+        XCTAssertNotNil(artist.titleEntity, "NAME ARTIST is nil");
+        XCTAssertNotNil(artist.pictureUrl, "PICTURE URL is nil");
+        XCTAssertNotNil(artist.identifierEntity, "IDENTIFIER is nil");
+    }
+}
+
+- (void) artistCheckData {
+    if (artistArrayTMP == nil) {
+        XCTAssert(artistArrayTMP, @"data is nil");
+        return;
+    }
+    XCTAssertNotNil(artistArrayTMP.nextURL, "Next URL is nil");
+    XCTAssertNotNil(artistArrayTMP.arrayItems, "Next URL is nil");
+    
+    for (DZRArtist *artist in artistArrayTMP.arrayItems) {
         XCTAssertNotNil(artist.titleEntity, "NAME ARTIST is nil");
         XCTAssertNotNil(artist.pictureUrl, "PICTURE URL is nil");
         XCTAssertNotNil(artist.identifierEntity, "IDENTIFIER is nil");

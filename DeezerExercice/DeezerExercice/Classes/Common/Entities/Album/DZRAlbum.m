@@ -16,7 +16,6 @@
     if (self) {
         self.titleEntity = [dictionary objectForKey:@"title"];
         self.pictureUrl = [dictionary objectForKey:@"cover"];
-        self.tracklitURL = [dictionary objectForKey:@"tracklist"];
     }
     return self;
 }

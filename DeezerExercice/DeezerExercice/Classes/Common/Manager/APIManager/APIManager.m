@@ -53,10 +53,12 @@
 }
 
 - (void)startRequest:(NSMutableURLRequest *)request completion:(RequestCompletion)completion {
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:
      ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
          completion(data, error);
-     }] resume];
+     }];
+    [dataTask resume];
 }
 
 

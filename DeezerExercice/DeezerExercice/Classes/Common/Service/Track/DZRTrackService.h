@@ -8,8 +8,9 @@
 
 #import "BaseService.h"
 #import "DZRTrack.h"
+#import "DZRTrackArray.h"
 
-typedef void(^DZRTracksCompletions)(NSMutableArray *album, NSString *error);
+typedef void(^DZRTracksCompletions)(DZRTrackArray *tracks, NSString *error);
 
 @interface DZRTrackService : NSObject<BaseService>
 

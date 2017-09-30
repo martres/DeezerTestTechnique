@@ -11,7 +11,7 @@
 @implementation DZRTrack
 
 - (instancetype) initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
+    self = [super initWithDictionary:dictionary];
     if (self) {
         [self setIsReadable:[[dictionary objectForKey:@"readable"] boolValue]];
         self.titleEntity = [dictionary objectForKey:@"title"];

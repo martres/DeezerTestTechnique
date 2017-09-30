@@ -6,13 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseArrayEntity.h"
 
-@interface DZRArtistArray : NSObject
-
-@property (nonatomic, strong) NSString *nextURL;
-@property (nonatomic, strong) NSMutableArray *artists;
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+@interface DZRArtistArray : BaseArrayEntity
 
 @end

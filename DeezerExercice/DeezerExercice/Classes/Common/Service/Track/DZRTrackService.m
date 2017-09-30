@@ -16,11 +16,11 @@
         if (error != nil) {
             completion(nil, error.debugDescription);
         } else {
-            DZRTrack *obj = [self objectFromData:data];
-            if (obj == nil) {
+            DZRTrackArray *tracks = [self objectFromData:data];
+            if (tracks == nil) {
                 completion(nil, @"An error occured, please retry");
             } else {
-                completion(obj, nil);
+                completion(tracks, nil);
             }
         }
     }];
@@ -28,14 +28,14 @@
 
 #pragma - BaseService
 
-- (DZRAlbum *)objectFromData:(NSData *)data {
+- (DZRTrackArray *)objectFromData:(NSData *)data {
     NSError *error = nil;
     id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     if (error) {
         return nil;
     } else {
         if ([object isKindOfClass:[NSDictionary class]]) {
-            DZRAlbum *obj = [[DZRAlbum alloc] initWithDictionary:object];
+            DZRTrackArray *obj = [[DZRTrackArray alloc] initWithDictionary:object];
             return obj;
         }
     }

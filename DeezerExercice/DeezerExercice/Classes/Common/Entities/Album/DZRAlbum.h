@@ -10,11 +10,11 @@
 
 @class DZRArtist;
 
+#import "DZRTrackArray.h"
 #import "BaseEntity.h"
 
 @interface DZRAlbum : BaseEntity
 
-@property (nonatomic, strong) NSString *tracklitURL;
-@property (nonatomic, strong) NSMutableArray *trackList;
+@property (nonatomic, strong) DZRTrackArray *trackList;
 
 @end
