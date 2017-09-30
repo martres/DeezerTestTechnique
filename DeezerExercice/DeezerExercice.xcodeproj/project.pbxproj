@@ -1,0 +1,1013 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */; };
+		5C1A7D851A6558BB00092761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A7D841A6558BB00092761 /* main.m */; };
+		5C1A7D881A6558BB00092761 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A7D871A6558BB00092761 /* AppDelegate.m */; };
+		5C1A7D8E1A6558BB00092761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A7D8C1A6558BB00092761 /* Main.storyboard */; };
+		5C1A7D901A6558BB00092761 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A7D8F1A6558BB00092761 /* Images.xcassets */; };
+		5C1A7D931A6558BB00092761 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A7D911A6558BB00092761 /* LaunchScreen.xib */; };
+		5C1A7DAA1A65897200092761 /* DZRArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A7DA91A65897200092761 /* DZRArtistSearchViewController.m */; };
+		5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E66191A67C07E00607EC5 /* DZRArtist.m */; };
+		5C2E661C1A67C3D500607EC5 /* DZRArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E661B1A67C3D500607EC5 /* DZRArtistTest.m */; };
+		6507917A1F7D67BA00297D7C /* DZRArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650791791F7D67BA00297D7C /* DZRArtistDetailViewController.m */; };
+		6507917D1F7D685400297D7C /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6507917C1F7D685400297D7C /* APIManager.m */; };
+		650791821F7D694500297D7C /* DZRArtistSearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 650791811F7D694500297D7C /* DZRArtistSearchPresenter.m */; };
+		650791871F7D6A0600297D7C /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 650791861F7D6A0600297D7C /* UIImageView+LoadImage.m */; };
+		6507918B1F7D6B1D00297D7C /* DZRRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6507918A1F7D6B1D00297D7C /* DZRRootWireframe.m */; };
+		6507918F1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6507918E1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m */; };
+		650791921F7D6FED00297D7C /* DZArtistDetailWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 650791911F7D6FED00297D7C /* DZArtistDetailWireframe.m */; };
+		652D27A41F7EC2CE007C2727 /* URLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27A31F7EC2CE007C2727 /* URLManager.m */; };
+		652D27A71F7EC4B7007C2727 /* TestURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27A61F7EC4B7007C2727 /* TestURLManager.m */; };
+		652D27AA1F7ECCD5007C2727 /* DZRArtistArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27A91F7ECCD5007C2727 /* DZRArtistArray.m */; };
+		652D27AD1F7ED6D7007C2727 /* TestDZArtistService.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27AC1F7ED6D7007C2727 /* TestDZArtistService.m */; };
+		652D27AF1F7ED7DD007C2727 /* DZRArtistService.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27AE1F7ED7DD007C2727 /* DZRArtistService.m */; };
+		652D27B51F7EF29E007C2727 /* DZRAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27B41F7EF29E007C2727 /* DZRAlbum.m */; };
+		652D27B81F7EF381007C2727 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27B71F7EF381007C2727 /* BaseEntity.m */; };
+		652D27BC1F7EF741007C2727 /* DZRTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27BB1F7EF741007C2727 /* DZRTrack.m */; };
+		655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */; };
+		655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */; };
+		6597A2271F7E8FCB003254D0 /* UIViewController+getIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */; };
+		6597A23B1F7EAF0B003254D0 /* DZRTestEnumMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */; };
+		6597A23F1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A23E1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m */; };
+		6597A2431F7EB97D003254D0 /* TestApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2421F7EB97D003254D0 /* TestApiManager.m */; };
+		659DE11C1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659DE11B1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard */; };
+		65F59D561F7F086400CAF5C7 /* DZRTrackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D551F7F086400CAF5C7 /* DZRTrackService.m */; };
+		65F59D591F7F087200CAF5C7 /* DZRAlbumService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D581F7F087200CAF5C7 /* DZRAlbumService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C1A7D991A6558BC00092761 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C1A7D771A6558BB00092761 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C1A7D7E1A6558BB00092761;
+			remoteInfo = DeezerExercice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C06C22D1A6E987F0051EF03 /* DZRArtistCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRArtistCollectionViewCell.h; sourceTree = "<group>"; };
+		5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtistCollectionViewCell.m; sourceTree = "<group>"; };
+		5C1A7D7F1A6558BB00092761 /* DeezerExercice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerExercice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1A7D831A6558BB00092761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1A7D841A6558BB00092761 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C1A7D861A6558BB00092761 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C1A7D871A6558BB00092761 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C1A7D8D1A6558BB00092761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C1A7D8F1A6558BB00092761 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5C1A7D921A6558BB00092761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5C1A7D981A6558BC00092761 /* DeezerExerciceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerExerciceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1A7D9D1A6558BC00092761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1A7DA91A65897200092761 /* DZRArtistSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtistSearchViewController.m; sourceTree = "<group>"; };
+		5C2E66181A67C07E00607EC5 /* DZRArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRArtist.h; sourceTree = "<group>"; };
+		5C2E66191A67C07E00607EC5 /* DZRArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtist.m; sourceTree = "<group>"; };
+		5C2E661B1A67C3D500607EC5 /* DZRArtistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtistTest.m; sourceTree = "<group>"; };
+		650791781F7D67BA00297D7C /* DZRArtistDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistDetailViewController.h; sourceTree = "<group>"; };
+		650791791F7D67BA00297D7C /* DZRArtistDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistDetailViewController.m; sourceTree = "<group>"; };
+		6507917B1F7D685400297D7C /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		6507917C1F7D685400297D7C /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		650791801F7D694500297D7C /* DZRArtistSearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchPresenter.h; sourceTree = "<group>"; };
+		650791811F7D694500297D7C /* DZRArtistSearchPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistSearchPresenter.m; sourceTree = "<group>"; };
+		650791851F7D69D800297D7C /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
+		650791861F7D6A0600297D7C /* UIImageView+LoadImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImage.m"; sourceTree = "<group>"; };
+		650791891F7D6B1D00297D7C /* DZRRootWireframe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRRootWireframe.h; sourceTree = "<group>"; };
+		6507918A1F7D6B1D00297D7C /* DZRRootWireframe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRRootWireframe.m; sourceTree = "<group>"; };
+		6507918C1F7D6BCE00297D7C /* DeezerExercice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeezerExercice-Prefix.pch"; sourceTree = "<group>"; };
+		6507918D1F7D6FDB00297D7C /* DZRArtistSearchWireframe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchWireframe.h; sourceTree = "<group>"; };
+		6507918E1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistSearchWireframe.m; sourceTree = "<group>"; };
+		650791901F7D6FED00297D7C /* DZArtistDetailWireframe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZArtistDetailWireframe.h; sourceTree = "<group>"; };
+		650791911F7D6FED00297D7C /* DZArtistDetailWireframe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZArtistDetailWireframe.m; sourceTree = "<group>"; };
+		652D27A21F7EC2CE007C2727 /* URLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLManager.h; sourceTree = "<group>"; };
+		652D27A31F7EC2CE007C2727 /* URLManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLManager.m; sourceTree = "<group>"; };
+		652D27A61F7EC4B7007C2727 /* TestURLManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestURLManager.m; sourceTree = "<group>"; };
+		652D27A81F7ECCD5007C2727 /* DZRArtistArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistArray.h; sourceTree = "<group>"; };
+		652D27A91F7ECCD5007C2727 /* DZRArtistArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistArray.m; sourceTree = "<group>"; };
+		652D27AC1F7ED6D7007C2727 /* TestDZArtistService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDZArtistService.m; sourceTree = "<group>"; };
+		652D27AE1F7ED7DD007C2727 /* DZRArtistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtistService.m; sourceTree = "<group>"; };
+		652D27B31F7EF29E007C2727 /* DZRAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAlbum.h; sourceTree = "<group>"; };
+		652D27B41F7EF29E007C2727 /* DZRAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRAlbum.m; sourceTree = "<group>"; };
+		652D27B61F7EF381007C2727 /* BaseEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		652D27B71F7EF381007C2727 /* BaseEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		652D27BA1F7EF741007C2727 /* DZRTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRTrack.h; sourceTree = "<group>"; };
+		652D27BB1F7EF741007C2727 /* DZRTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrack.m; sourceTree = "<group>"; };
+		655E5F5C1F7F1FB3007C7B8C /* DZRTrackArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRTrackArray.h; sourceTree = "<group>"; };
+		655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackArray.m; sourceTree = "<group>"; };
+		655E5F601F7F201E007C7B8C /* BaseArrayEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseArrayEntity.h; sourceTree = "<group>"; };
+		655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseArrayEntity.m; sourceTree = "<group>"; };
+		6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getIdentifier.m"; sourceTree = "<group>"; };
+		6597A22A1F7E9A71003254D0 /* DZRArtistSearchInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchInterface.h; sourceTree = "<group>"; };
+		6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+getIdentifier.h"; sourceTree = "<group>"; };
+		6597A22F1F7EA235003254D0 /* DZArtistSearchModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZArtistSearchModuleInterface.h; sourceTree = "<group>"; };
+		6597A2321F7EAC77003254D0 /* EnumHTTPMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumHTTPMethod.h; sourceTree = "<group>"; };
+		6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTestEnumMethod.m; sourceTree = "<group>"; };
+		6597A23E1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestUIViewController+getIdentifier.m"; sourceTree = "<group>"; };
+		6597A2421F7EB97D003254D0 /* TestApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestApiManager.m; sourceTree = "<group>"; };
+		6597A2451F7EBF29003254D0 /* DZRArtistService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistService.h; sourceTree = "<group>"; };
+		6597A2481F7EC07E003254D0 /* BaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		659DE11B1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArtistDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		659DE11D1F7E8DEC00E146ED /* DZRArtistSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchViewController.h; sourceTree = "<group>"; };
+		65F59D541F7F086400CAF5C7 /* DZRTrackService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRTrackService.h; sourceTree = "<group>"; };
+		65F59D551F7F086400CAF5C7 /* DZRTrackService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackService.m; sourceTree = "<group>"; };
+		65F59D571F7F087200CAF5C7 /* DZRAlbumService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAlbumService.h; sourceTree = "<group>"; };
+		65F59D581F7F087200CAF5C7 /* DZRAlbumService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRAlbumService.m; sourceTree = "<group>"; };
+		65F59D5B1F7F0B3000CAF5C7 /* EnumEndPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumEndPoint.h; sourceTree = "<group>"; };
+		65F59D5C1F7F0FCD00CAF5C7 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C1A7D7C1A6558BB00092761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1A7D951A6558BC00092761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C1A7D761A6558BB00092761 = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D811A6558BB00092761 /* DeezerExercice */,
+				5C1A7D9B1A6558BC00092761 /* DeezerExerciceTests */,
+				5C1A7D801A6558BB00092761 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C1A7D801A6558BB00092761 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D7F1A6558BB00092761 /* DeezerExercice.app */,
+				5C1A7D981A6558BC00092761 /* DeezerExerciceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C1A7D811A6558BB00092761 /* DeezerExercice */ = {
+			isa = PBXGroup;
+			children = (
+				6500E0451F7D4AF8005E0FEB /* Resources */,
+				6500E03E1F7D3DC7005E0FEB /* Classes */,
+				6507918C1F7D6BCE00297D7C /* DeezerExercice-Prefix.pch */,
+				65F59D5C1F7F0FCD00CAF5C7 /* Define.h */,
+				5C1A7D911A6558BB00092761 /* LaunchScreen.xib */,
+			);
+			path = DeezerExercice;
+			sourceTree = "<group>";
+		};
+		5C1A7D821A6558BB00092761 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D831A6558BB00092761 /* Info.plist */,
+				5C1A7D841A6558BB00092761 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5C1A7D9B1A6558BC00092761 /* DeezerExerciceTests */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2361F7EAEB8003254D0 /* Common */,
+				5C1A7D9C1A6558BC00092761 /* Supporting Files */,
+			);
+			path = DeezerExerciceTests;
+			sourceTree = "<group>";
+		};
+		5C1A7D9C1A6558BC00092761 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D9D1A6558BC00092761 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6500E03E1F7D3DC7005E0FEB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6500E0421F7D3E04005E0FEB /* Common */,
+				6500E0411F7D3DFD005E0FEB /* Modules */,
+				6500E0401F7D3DF0005E0FEB /* Application */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6500E0401F7D3DF0005E0FEB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D861A6558BB00092761 /* AppDelegate.h */,
+				5C1A7D871A6558BB00092761 /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6500E0411F7D3DFD005E0FEB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6500E0441F7D3E65005E0FEB /* DZRArtistDetail */,
+				6500E0431F7D3E56005E0FEB /* DZRArtistSearch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6500E0421F7D3E04005E0FEB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				650791711F7D5EB300297D7C /* Categories */,
+				65C03FC41F7D5CE5002F5028 /* Entities */,
+				6597A2441F7EBE7B003254D0 /* Service */,
+				650791721F7D619E00297D7C /* Manager */,
+				650791881F7D6AE800297D7C /* View */,
+				650791831F7D698800297D7C /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6500E0431F7D3E56005E0FEB /* DZRArtistSearch */ = {
+			isa = PBXGroup;
+			children = (
+				650791741F7D641A00297D7C /* Entities */,
+				6500E0491F7D5BC8005E0FEB /* Protocols */,
+				6500E0461F7D5BB1005E0FEB /* Presenter */,
+				6500E04D1F7D5C01005E0FEB /* Wireframe */,
+				6500E0481F7D5BBC005E0FEB /* View */,
+				659DE1191F7E8D9D00E146ED /* Storyboard */,
+			);
+			path = DZRArtistSearch;
+			sourceTree = "<group>";
+		};
+		6500E0441F7D3E65005E0FEB /* DZRArtistDetail */ = {
+			isa = PBXGroup;
+			children = (
+				650791731F7D640500297D7C /* Entities */,
+				6500E04A1F7D5BD0005E0FEB /* Protocols */,
+				6500E0471F7D5BB7005E0FEB /* Presenter */,
+				6500E04B1F7D5BD6005E0FEB /* View */,
+				6500E04C1F7D5BE7005E0FEB /* Wireframe */,
+				659DE11A1F7E8DAD00E146ED /* Storyboard */,
+			);
+			path = DZRArtistDetail;
+			sourceTree = "<group>";
+		};
+		6500E0451F7D4AF8005E0FEB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D821A6558BB00092761 /* Supporting Files */,
+				5C1A7D8F1A6558BB00092761 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6500E0461F7D5BB1005E0FEB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				650791801F7D694500297D7C /* DZRArtistSearchPresenter.h */,
+				650791811F7D694500297D7C /* DZRArtistSearchPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6500E0471F7D5BB7005E0FEB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6500E0481F7D5BBC005E0FEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6507917F1F7D68CB00297D7C /* DZRArtistCollectionViewCell */,
+				6507917E1F7D68AC00297D7C /* DZRArtistSearchViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6500E0491F7D5BC8005E0FEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6597A22F1F7EA235003254D0 /* DZArtistSearchModuleInterface.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6500E04A1F7D5BD0005E0FEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6500E04B1F7D5BD6005E0FEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				650791781F7D67BA00297D7C /* DZRArtistDetailViewController.h */,
+				650791791F7D67BA00297D7C /* DZRArtistDetailViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6500E04C1F7D5BE7005E0FEB /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				650791901F7D6FED00297D7C /* DZArtistDetailWireframe.h */,
+				650791911F7D6FED00297D7C /* DZArtistDetailWireframe.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		6500E04D1F7D5C01005E0FEB /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				6507918D1F7D6FDB00297D7C /* DZRArtistSearchWireframe.h */,
+				6507918E1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		650791711F7D5EB300297D7C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		650791721F7D619E00297D7C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				650791751F7D664A00297D7C /* APIManager */,
+				652D27A11F7EC2BA007C2727 /* URLManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		650791731F7D640500297D7C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		650791741F7D641A00297D7C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		650791751F7D664A00297D7C /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2311F7EAC2D003254D0 /* Enum */,
+				6507917B1F7D685400297D7C /* APIManager.h */,
+				6507917C1F7D685400297D7C /* APIManager.m */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		6507917E1F7D68AC00297D7C /* DZRArtistSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7DA91A65897200092761 /* DZRArtistSearchViewController.m */,
+				659DE11D1F7E8DEC00E146ED /* DZRArtistSearchViewController.h */,
+				6597A22A1F7E9A71003254D0 /* DZRArtistSearchInterface.h */,
+			);
+			path = DZRArtistSearchViewController;
+			sourceTree = "<group>";
+		};
+		6507917F1F7D68CB00297D7C /* DZRArtistCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C06C22D1A6E987F0051EF03 /* DZRArtistCollectionViewCell.h */,
+				5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */,
+			);
+			path = DZRArtistCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		650791831F7D698800297D7C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2301F7EA7D5003254D0 /* UIImageView */,
+				6597A2241F7E8ECE003254D0 /* UIViewController */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		650791881F7D6AE800297D7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				650791891F7D6B1D00297D7C /* DZRRootWireframe.h */,
+				6507918A1F7D6B1D00297D7C /* DZRRootWireframe.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		652D27A11F7EC2BA007C2727 /* URLManager */ = {
+			isa = PBXGroup;
+			children = (
+				65F59D5A1F7F0B1300CAF5C7 /* Enum */,
+				652D27A21F7EC2CE007C2727 /* URLManager.h */,
+				652D27A31F7EC2CE007C2727 /* URLManager.m */,
+			);
+			path = URLManager;
+			sourceTree = "<group>";
+		};
+		652D27A51F7EC4A0007C2727 /* URLManager */ = {
+			isa = PBXGroup;
+			children = (
+				652D27A61F7EC4B7007C2727 /* TestURLManager.m */,
+			);
+			path = URLManager;
+			sourceTree = "<group>";
+		};
+		652D27AB1F7ED6C5007C2727 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				652D27AC1F7ED6D7007C2727 /* TestDZArtistService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		652D27B01F7EDDB9007C2727 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C2E661B1A67C3D500607EC5 /* DZRArtistTest.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		652D27B11F7EF26C007C2727 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				5C2E66181A67C07E00607EC5 /* DZRArtist.h */,
+				5C2E66191A67C07E00607EC5 /* DZRArtist.m */,
+				652D27A81F7ECCD5007C2727 /* DZRArtistArray.h */,
+				652D27A91F7ECCD5007C2727 /* DZRArtistArray.m */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		652D27B21F7EF279007C2727 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				652D27B31F7EF29E007C2727 /* DZRAlbum.h */,
+				652D27B41F7EF29E007C2727 /* DZRAlbum.m */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		652D27B91F7EF71A007C2727 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				652D27BA1F7EF741007C2727 /* DZRTrack.h */,
+				652D27BB1F7EF741007C2727 /* DZRTrack.m */,
+				655E5F5C1F7F1FB3007C7B8C /* DZRTrackArray.h */,
+				655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		655E5F5F1F7F2009007C7B8C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				652D27B71F7EF381007C2727 /* BaseEntity.m */,
+				652D27B61F7EF381007C2727 /* BaseEntity.h */,
+				655E5F601F7F201E007C7B8C /* BaseArrayEntity.h */,
+				655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6597A2241F7E8ECE003254D0 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */,
+				6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		6597A2301F7EA7D5003254D0 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				650791861F7D6A0600297D7C /* UIImageView+LoadImage.m */,
+				650791851F7D69D800297D7C /* UIImageView+LoadImage.h */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		6597A2311F7EAC2D003254D0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2321F7EAC77003254D0 /* EnumHTTPMethod.h */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		6597A2361F7EAEB8003254D0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				652D27B01F7EDDB9007C2727 /* Entity */,
+				652D27AB1F7ED6C5007C2727 /* Service */,
+				6597A2381F7EAEC9003254D0 /* Manager */,
+				6597A23C1F7EB102003254D0 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6597A2371F7EAEC0003254D0 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2391F7EAED5003254D0 /* Enum */,
+				6597A2421F7EB97D003254D0 /* TestApiManager.m */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		6597A2381F7EAEC9003254D0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				652D27A51F7EC4A0007C2727 /* URLManager */,
+				6597A2371F7EAEC0003254D0 /* ApiManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6597A2391F7EAED5003254D0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		6597A23C1F7EB102003254D0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6597A23D1F7EB126003254D0 /* UIViewController */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6597A23D1F7EB126003254D0 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6597A23E1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		6597A2441F7EBE7B003254D0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				65F59D4D1F7F07E800CAF5C7 /* Artist */,
+				65F59D4E1F7F07F100CAF5C7 /* Album */,
+				65F59D4F1F7F07FB00CAF5C7 /* Track */,
+				6597A2481F7EC07E003254D0 /* BaseService.h */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		659DE1191F7E8D9D00E146ED /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7D8C1A6558BB00092761 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		659DE11A1F7E8DAD00E146ED /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				659DE11B1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		65C03FC41F7D5CE5002F5028 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				652D27B11F7EF26C007C2727 /* Artist */,
+				652D27B21F7EF279007C2727 /* Album */,
+				655E5F5F1F7F2009007C7B8C /* Base */,
+				652D27B91F7EF71A007C2727 /* Track */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		65F59D4D1F7F07E800CAF5C7 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2451F7EBF29003254D0 /* DZRArtistService.h */,
+				652D27AE1F7ED7DD007C2727 /* DZRArtistService.m */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		65F59D4E1F7F07F100CAF5C7 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				65F59D571F7F087200CAF5C7 /* DZRAlbumService.h */,
+				65F59D581F7F087200CAF5C7 /* DZRAlbumService.m */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		65F59D4F1F7F07FB00CAF5C7 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				65F59D541F7F086400CAF5C7 /* DZRTrackService.h */,
+				65F59D551F7F086400CAF5C7 /* DZRTrackService.m */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		65F59D5A1F7F0B1300CAF5C7 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				65F59D5B1F7F0B3000CAF5C7 /* EnumEndPoint.h */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C1A7D7E1A6558BB00092761 /* DeezerExercice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1A7DA21A6558BC00092761 /* Build configuration list for PBXNativeTarget "DeezerExercice" */;
+			buildPhases = (
+				5C1A7D7B1A6558BB00092761 /* Sources */,
+				5C1A7D7C1A6558BB00092761 /* Frameworks */,
+				5C1A7D7D1A6558BB00092761 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeezerExercice;
+			productName = DeezerExercice;
+			productReference = 5C1A7D7F1A6558BB00092761 /* DeezerExercice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C1A7D971A6558BC00092761 /* DeezerExerciceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1A7DA51A6558BC00092761 /* Build configuration list for PBXNativeTarget "DeezerExerciceTests" */;
+			buildPhases = (
+				5C1A7D941A6558BC00092761 /* Sources */,
+				5C1A7D951A6558BC00092761 /* Frameworks */,
+				5C1A7D961A6558BC00092761 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C1A7D9A1A6558BC00092761 /* PBXTargetDependency */,
+			);
+			name = DeezerExerciceTests;
+			productName = DeezerExerciceTests;
+			productReference = 5C1A7D981A6558BC00092761 /* DeezerExerciceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C1A7D771A6558BB00092761 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Deezer;
+				TargetAttributes = {
+					5C1A7D7E1A6558BB00092761 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					5C1A7D971A6558BC00092761 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 5C1A7D7E1A6558BB00092761;
+					};
+				};
+			};
+			buildConfigurationList = 5C1A7D7A1A6558BB00092761 /* Build configuration list for PBXProject "DeezerExercice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C1A7D761A6558BB00092761;
+			productRefGroup = 5C1A7D801A6558BB00092761 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C1A7D7E1A6558BB00092761 /* DeezerExercice */,
+				5C1A7D971A6558BC00092761 /* DeezerExerciceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C1A7D7D1A6558BB00092761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1A7D8E1A6558BB00092761 /* Main.storyboard in Resources */,
+				659DE11C1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard in Resources */,
+				5C1A7D931A6558BB00092761 /* LaunchScreen.xib in Resources */,
+				5C1A7D901A6558BB00092761 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1A7D961A6558BC00092761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C1A7D7B1A6558BB00092761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6507917A1F7D67BA00297D7C /* DZRArtistDetailViewController.m in Sources */,
+				652D27B81F7EF381007C2727 /* BaseEntity.m in Sources */,
+				652D27AA1F7ECCD5007C2727 /* DZRArtistArray.m in Sources */,
+				5C1A7DAA1A65897200092761 /* DZRArtistSearchViewController.m in Sources */,
+				5C1A7D881A6558BB00092761 /* AppDelegate.m in Sources */,
+				650791871F7D6A0600297D7C /* UIImageView+LoadImage.m in Sources */,
+				65F59D561F7F086400CAF5C7 /* DZRTrackService.m in Sources */,
+				65F59D591F7F087200CAF5C7 /* DZRAlbumService.m in Sources */,
+				6507918B1F7D6B1D00297D7C /* DZRRootWireframe.m in Sources */,
+				652D27B51F7EF29E007C2727 /* DZRAlbum.m in Sources */,
+				652D27BC1F7EF741007C2727 /* DZRTrack.m in Sources */,
+				6507918F1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m in Sources */,
+				5C1A7D851A6558BB00092761 /* main.m in Sources */,
+				6507917D1F7D685400297D7C /* APIManager.m in Sources */,
+				655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */,
+				652D27A41F7EC2CE007C2727 /* URLManager.m in Sources */,
+				5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */,
+				655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */,
+				5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */,
+				650791921F7D6FED00297D7C /* DZArtistDetailWireframe.m in Sources */,
+				6597A2271F7E8FCB003254D0 /* UIViewController+getIdentifier.m in Sources */,
+				650791821F7D694500297D7C /* DZRArtistSearchPresenter.m in Sources */,
+				652D27AF1F7ED7DD007C2727 /* DZRArtistService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1A7D941A6558BC00092761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652D27A71F7EC4B7007C2727 /* TestURLManager.m in Sources */,
+				6597A2431F7EB97D003254D0 /* TestApiManager.m in Sources */,
+				6597A23F1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m in Sources */,
+				6597A23B1F7EAF0B003254D0 /* DZRTestEnumMethod.m in Sources */,
+				652D27AD1F7ED6D7007C2727 /* TestDZArtistService.m in Sources */,
+				5C2E661C1A67C3D500607EC5 /* DZRArtistTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C1A7D9A1A6558BC00092761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C1A7D7E1A6558BB00092761 /* DeezerExercice */;
+			targetProxy = 5C1A7D991A6558BC00092761 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C1A7D8C1A6558BB00092761 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C1A7D8D1A6558BB00092761 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C1A7D911A6558BB00092761 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C1A7D921A6558BB00092761 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C1A7DA01A6558BC00092761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C1A7DA11A6558BC00092761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C1A7DA31A6558BC00092761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
+				INFOPLIST_FILE = DeezerExercice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C1A7DA41A6558BC00092761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
+				INFOPLIST_FILE = DeezerExercice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5C1A7DA61A6558BC00092761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DeezerExerciceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeezerExercice.app/DeezerExercice";
+			};
+			name = Debug;
+		};
+		5C1A7DA71A6558BC00092761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
+				INFOPLIST_FILE = DeezerExerciceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeezerExercice.app/DeezerExercice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C1A7D7A1A6558BB00092761 /* Build configuration list for PBXProject "DeezerExercice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1A7DA01A6558BC00092761 /* Debug */,
+				5C1A7DA11A6558BC00092761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1A7DA21A6558BC00092761 /* Build configuration list for PBXNativeTarget "DeezerExercice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1A7DA31A6558BC00092761 /* Debug */,
+				5C1A7DA41A6558BC00092761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1A7DA51A6558BC00092761 /* Build configuration list for PBXNativeTarget "DeezerExerciceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1A7DA61A6558BC00092761 /* Debug */,
+				5C1A7DA71A6558BC00092761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C1A7D771A6558BB00092761 /* Project object */;
+}
