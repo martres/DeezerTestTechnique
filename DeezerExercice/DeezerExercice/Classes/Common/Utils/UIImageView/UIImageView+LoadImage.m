@@ -8,7 +8,9 @@
 
 #import "UIImageView+LoadImage.h"
 
-@implementation UIImageView_LoadImage : NSObject 
+@implementation UIImageView (LoadImage)
 
-
+- (void)loadImage:(NSString *)url {
+    
+}
 @end

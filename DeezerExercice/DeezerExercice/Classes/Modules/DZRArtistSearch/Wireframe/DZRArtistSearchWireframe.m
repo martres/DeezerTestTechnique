@@ -10,11 +10,19 @@
 #import "DZRArtistSearchViewController.h"
 #import "UIViewController+getIdentifier.h"
 
+@interface DZRArtistSearchWireframe ()
+
+@property (nonatomic, strong)  DZRArtistSearchViewController *artistSearchViewController;
+
+@end
+
 @implementation DZRArtistSearchWireframe
 
 - (void)presentArtistSearchFromWindow:(UIWindow *)window {
     DZRArtistSearchViewController *searchViewController = [self artistSearchViewControllerFromStoryboard];
-    
+    searchViewController.eventHandler = self.searchPresenter;
+    self.searchPresenter.userInterface = searchViewController;
+    self.artistSearchViewController = searchViewController;
 //    self.searchPresenter
 }
 

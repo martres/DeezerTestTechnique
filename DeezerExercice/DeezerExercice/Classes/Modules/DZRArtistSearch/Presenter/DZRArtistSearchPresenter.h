@@ -6,8 +6,15 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "DZRArtistSearchInterface.h"
+#import "DZRArtistSearchWireframe.h"
+
 
 @interface DZRArtistSearchPresenter : NSObject
+
+
+@property (nonatomic, strong) id<
+@property (nonatomic, strong) DZRArtistSearchWireframe *artistSearchWireframe;
+@property (nonatomic, strong) UIViewController<DZRArtistSearchInterface> *userInterface;
 
 @end

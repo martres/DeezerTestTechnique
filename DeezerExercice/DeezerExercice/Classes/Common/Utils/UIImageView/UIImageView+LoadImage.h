@@ -6,8 +6,9 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@interface UIImageView (LoadImage)
 
-@interface UIImageView ()
+- (void)loadImage:(NSString *)url;
 
 @end
+

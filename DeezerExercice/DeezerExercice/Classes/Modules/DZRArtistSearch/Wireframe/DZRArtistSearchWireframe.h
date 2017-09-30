@@ -16,12 +16,10 @@
 @property (nonatomic, strong) DZRArtistDetailWireframe *artistDetailWireframe;
 @property (nonatomic, strong) DZRArtistSearchPresenter *searchPresenter;
 
-
-
 /**
  @brief present the current view controller of the module : DZRArtistSearchViewController
  @discussion: Call the wireframe of DZArtistDetail Module to present the view from DZArtistSearchViewController
- **/
+ **/ 
 
 - (void)presentArtistSearchFromWindow:(UIWindow *)window;
 
