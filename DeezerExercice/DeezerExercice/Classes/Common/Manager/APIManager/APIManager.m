@@ -47,7 +47,7 @@
 
 - (NSMutableURLRequest *)createRequest:(NSString *)url method:(HTTPMethod)method dataBody:(NSData *)dataBody {
     NSMutableURLRequest *APIRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-    [APIRequest setHTTPMethod:enumString(method)];
+    [APIRequest setHTTPMethod:HTTPMethodName[method]];
     [APIRequest setHTTPBody:dataBody];
     return APIRequest;
 }

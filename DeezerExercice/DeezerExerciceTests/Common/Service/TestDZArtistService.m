@@ -31,7 +31,7 @@ static DZRArtistArray *artistTMP;
 
 - (void)testArtistsRequest {
     DZRArtistService *service = [[DZRArtistService alloc] init];
-    NSString *url = [URLManager urlForSearchArtistsWithName:@"t"];
+    NSString *url = [URLManager urlDeezerBuilder:@"t" endPoint:SEARCH_ARTIST];
     
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     
@@ -55,9 +55,9 @@ static DZRArtistArray *artistTMP;
     XCTAssertNotNil(artistTMP.artists, "Next URL is nil");
     
     for (DZRArtist *artist in artistTMP.artists) {
-        XCTAssertNotNil(artist.artistName, "NAME ARTIST is nil");
-        XCTAssertNotNil(artist.artistPictureUrl, "PICTURE URL is nil");
-        XCTAssertNotNil(artist.artistIdentifier, "IDENTIFIER is nil");
+        XCTAssertNotNil(artist.titleEntity, "NAME ARTIST is nil");
+        XCTAssertNotNil(artist.pictureUrl, "PICTURE URL is nil");
+        XCTAssertNotNil(artist.identifierEntity, "IDENTIFIER is nil");
     }
 }
 

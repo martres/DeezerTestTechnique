@@ -12,10 +12,12 @@
 
 static NSString *baseURL = @"http://api.deezer.com/";
 
-+ (NSString *)urlForSearchArtistsWithName:(NSString *)name {
-    return [NSString stringWithFormat:@"%@search/artist?q=%@", baseURL, name];
++ (NSString *)urlDeezerBuilder:(NSString *)data endPoint:(EndPoint)endPoint {
+    if (data != nil) {
+        NSString *endPointFormat = [NSString stringWithFormat:EndPointName[endPoint], data];
+        return [NSString stringWithFormat:@"%@%@", baseURL, endPointFormat];
+    }
+    return [NSString stringWithFormat:@"%@%@", baseURL, EndPointName[endPoint]];
 }
-
-+ (NSString *)urlForSearchAlbum
 
 @end

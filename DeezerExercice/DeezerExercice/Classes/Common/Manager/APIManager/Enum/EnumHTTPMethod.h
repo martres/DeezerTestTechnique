@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#define enumString(arg) (@""#arg)
 typedef enum HTTPMethod: NSInteger {
     GET,
     POST,
     PUT,
     DELETE,
     PATCH
-} HTTPMethod ;
+    
+} HTTPMethod;
+
+static NSString *const HTTPMethodName[] = {
+    stringWithLiteral(GET),
+    stringWithLiteral(POST),
+    stringWithLiteral(PUT),
+    stringWithLiteral(DELETE),
+    stringWithLiteral(PATCH),
+};

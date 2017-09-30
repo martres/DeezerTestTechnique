@@ -28,11 +28,11 @@
 - (void)testCheckStringOfEnumWorking {
     
     // Test value of the Enum
-    NSString *get = enumString(GET);
-    NSString *post = enumString(POST);
-    NSString *patch = enumString(PATCH);
-    NSString *delete = enumString(DELETE);
-    NSString *put = enumString(PUT);
+    NSString *get = HTTPMethodName[GET];
+    NSString *post = HTTPMethodName[POST];
+    NSString *patch = HTTPMethodName[PATCH];
+    NSString *delete = HTTPMethodName[DELETE];
+    NSString *put = HTTPMethodName[PUT];
     
     XCTAssertEqual(get, @"GET");
     XCTAssertEqual(post, @"POST");

@@ -26,10 +26,23 @@
 }
 
 - (void)testUrlSearchArtist {
-    NSString *urlSearchArtist = [URLManager urlForSearchArtistsWithName:@"test"];
+    NSString *urlSearchArtist = [URLManager urlDeezerBuilder:@"test" endPoint:SEARCH_ARTIST];
     
     XCTAssertTrue([urlSearchArtist isEqualToString:@"http://api.deezer.com/search/artist?q=test"], "URL MANAGER URL FOR SEARCH ARTIST FAIL");
 }
+
+-(void)testUrlGetAlbum {
+    NSString *urlAlbum = [URLManager urlDeezerBuilder:@"3333" endPoint:GET_ONE_ALBUM_ARTIST];
+    
+    XCTAssertTrue([urlAlbum isEqualToString:@"http://api.deezer.com/artist/3333/albums"], "URL MANAGER URL FOR SEARCH ARTIST FAIL");
+}
+
+-(void)testUrlGetTracks {
+    NSString *urlTracks = [URLManager urlDeezerBuilder:@"3333" endPoint:GET_TRACKS_ALBUM];
+    XCTAssertTrue([urlTracks isEqualToString:@"http://api.deezer.com/album/3333/tracks"], "URL MANAGER URL FOR SEARCH ARTIST FAIL");
+    
+}
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

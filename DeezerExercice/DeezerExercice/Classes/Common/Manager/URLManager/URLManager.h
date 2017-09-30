@@ -6,9 +6,10 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+#import "EnumEndPoint.h"
 
 @interface URLManager : NSObject
 
-+ (NSString *)urlForSearchArtistsWithName:(NSString *)name;
++ (NSString * _Nonnull)urlDeezerBuilder:(NSString  * _Nullable)data endPoint:(EndPoint)endPoint;
 
 @end
