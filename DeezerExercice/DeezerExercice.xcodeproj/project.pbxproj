@@ -41,6 +41,7 @@
 		65CAAECC1F81445300659461 /* UIView+round.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAECB1F81445300659461 /* UIView+round.m */; };
 		65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */; };
 		65CAAED31F814FA000659461 /* DZRArtistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */; };
+		65CAAED61F81556100659461 /* DZRAppDepencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAED51F81556100659461 /* DZRAppDepencies.m */; };
 		65F59D561F7F086400CAF5C7 /* DZRTrackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D551F7F086400CAF5C7 /* DZRTrackService.m */; };
 		65F59D591F7F087200CAF5C7 /* DZRAlbumService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D581F7F087200CAF5C7 /* DZRAlbumService.m */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,8 @@
 		65CAAECF1F814FA000659461 /* DZRArtistCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistCollectionViewCell.h; sourceTree = "<group>"; };
 		65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistCollectionViewCell.m; sourceTree = "<group>"; };
 		65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZRArtistCollectionViewCell.xib; sourceTree = "<group>"; };
+		65CAAED41F81556100659461 /* DZRAppDepencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAppDepencies.h; sourceTree = "<group>"; };
+		65CAAED51F81556100659461 /* DZRAppDepencies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRAppDepencies.m; sourceTree = "<group>"; };
 		65F59D541F7F086400CAF5C7 /* DZRTrackService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRTrackService.h; sourceTree = "<group>"; };
 		65F59D551F7F086400CAF5C7 /* DZRTrackService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackService.m; sourceTree = "<group>"; };
 		65F59D571F7F087200CAF5C7 /* DZRAlbumService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAlbumService.h; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 			children = (
 				5C1A7D861A6558BB00092761 /* AppDelegate.h */,
 				5C1A7D871A6558BB00092761 /* AppDelegate.m */,
+				65CAAED41F81556100659461 /* DZRAppDepencies.h */,
+				65CAAED51F81556100659461 /* DZRAppDepencies.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				6507917D1F7D685400297D7C /* APIManager.m in Sources */,
 				655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */,
 				652D27A41F7EC2CE007C2727 /* URLManager.m in Sources */,
+				65CAAED61F81556100659461 /* DZRAppDepencies.m in Sources */,
 				655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */,
 				65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */,
 				5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */,

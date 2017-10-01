@@ -5,8 +5,11 @@
 //
 
 #import "AppDelegate.h"
+#import "DZRAppDepencies.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) DZRAppDepencies *dependencies;
 
 @end
 
@@ -14,8 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    DZRAppDepencies *dependencies = [[DZRAppDepencies alloc] init];
+    self.dependencies = dependencies;
     
+    [dependencies startRootViewControllerIntoWindow:self.window];
     return YES;
 }
 

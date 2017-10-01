@@ -41,7 +41,7 @@
 #pragma DZRArtistSearchModuleInterface delegate
 
 - (void)searchArtistWithName:(NSString *)textSearch {
-    [self.artistSearchInteractorInput searchArtistWithName:textSearch];
+    [self.artistSearchInteractor searchArtistWithName:textSearch];
 }
 
 @end

@@ -15,7 +15,7 @@
 @interface DZRArtistSearchPresenter : NSObject<DZRArtistSearchInteractorOutput, DZRArtistSearchModuleInterface>
 
 //DZRArtistSearchInteractorInput : Search Interactor Input to ask the data
-@property (nonatomic, strong) id<DZRArtistSearchInteractorInput>            artistSearchInteractorInput;
+@property (nonatomic, strong) id<DZRArtistSearchInteractorInput>            artistSearchInteractor;
 
 //DZRArtistSearchWireframe : Router to update the view
 @property (nonatomic, strong) DZRArtistSearchWireframe*                     artistSearchWireframe;

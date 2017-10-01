@@ -40,7 +40,7 @@
  **/
 
 - (UIStoryboard *)mainStoryboard {
-    return [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    return [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 }
 
 /**
