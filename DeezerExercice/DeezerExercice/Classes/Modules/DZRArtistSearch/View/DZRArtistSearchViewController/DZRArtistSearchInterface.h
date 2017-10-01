@@ -6,20 +6,21 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "DZRArtistArray.h"
 
 /**
  @protocol DZRArtistSearchInterface
  @brief DRZArtistInterface procotol
  @param showEmptyResultMessage: to handle if the request send no data
  @param reloadView: to reload the view
- @param showResultsOfSearchArtist: to handle if the request send data with results
+ @param showResultsOfSearchArtist: to ask to the presenter the data
  **/
 
 @protocol DZRArtistSearchInterface <NSObject>
 
 - (void)showEmptyResultMessage;
+- (void)showError:(NSString *)error;
 - (void)reloadView;
-- (void)showResultsOfSearchArtist;
+- (void)showResultsOfSearchArtist:(DZRArtistArray *)artists;
 
 @end

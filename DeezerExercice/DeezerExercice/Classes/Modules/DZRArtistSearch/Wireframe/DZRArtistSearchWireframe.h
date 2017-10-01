@@ -12,9 +12,9 @@
 
 @interface DZRArtistSearchWireframe : NSObject
 
-@property (nonatomic, strong) DZRRootWireframe *rootWireframe;
-@property (nonatomic, strong) DZRArtistDetailWireframe *artistDetailWireframe;
-@property (nonatomic, strong) DZRArtistSearchPresenter *searchPresenter;
+@property (nonatomic, strong) DZRRootWireframe*             rootWireframe;
+@property (nonatomic, strong) DZRArtistDetailWireframe*     artistDetailWireframe;
+@property (nonatomic, strong) DZRArtistSearchPresenter*     searchPresenter;
 
 /**
  @brief present the current view controller of the module : DZRArtistSearchViewController

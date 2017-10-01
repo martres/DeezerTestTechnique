@@ -9,6 +9,9 @@
 #import "DZRArtistSearchWireframe.h"
 #import "DZRArtistSearchViewController.h"
 #import "UIViewController+getIdentifier.h"
+#import "DZRArtistSearchModuleInterface.h"
+#import "DZRArtistSearchPresenter.h"
+#import "DZRRootWireframe.h"
 
 @interface DZRArtistSearchWireframe ()
 
@@ -20,10 +23,10 @@
 
 - (void)presentArtistSearchFromWindow:(UIWindow *)window {
     DZRArtistSearchViewController *searchViewController = [self artistSearchViewControllerFromStoryboard];
-    searchViewController.eventHandler = self.searchPresenter;
+    searchViewController.eventHandler = (id<DZRArtistSearchModuleInterface>) self.searchPresenter;
     self.searchPresenter.userInterface = searchViewController;
     self.artistSearchViewController = searchViewController;
-//    self.searchPresenter
+    [self.rootWireframe showRootViewController:searchViewController inWindow:window];
 }
 
 - (void)presentArtistDetail {

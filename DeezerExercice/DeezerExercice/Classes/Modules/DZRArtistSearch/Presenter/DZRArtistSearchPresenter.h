@@ -18,9 +18,9 @@
 @property (nonatomic, strong) id<DZRArtistSearchInteractorInput>            artistSearchInteractorInput;
 
 //DZRArtistSearchWireframe : Router to update the view
-@property (nonatomic, strong) DZRArtistSearchWireframe                      *artistSearchWireframe;
+@property (nonatomic, strong) DZRArtistSearchWireframe*                     artistSearchWireframe;
 
 //DZRArtistSearchInterface : Reference on the current view controller
-@property (nonatomic, strong) UIViewController<DZRArtistSearchInterface>    *userInterface;
+@property (nonatomic, strong) UIViewController<DZRArtistSearchInterface>*   userInterface;
 
 @end

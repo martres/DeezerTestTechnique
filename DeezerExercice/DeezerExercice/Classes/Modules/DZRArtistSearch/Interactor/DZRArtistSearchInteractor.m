@@ -8,10 +8,27 @@
 
 #import "DZRArtistSearchInteractor.h"
 
+@interface DZRArtistSearchInteractor()
+
+@property (nonatomic, strong) DZRArtistService *service;
+
+@end
+
 @implementation DZRArtistSearchInteractor
 
+- (instancetype)initWithService:(DZRArtistService *)service {
+    self = [super init];
+    if (self) {
+        self.service = service;
+    }
+    return self;
+}
+
 - (void)searchArtistWithName:(NSString *)name {
-    
+    __weak typeof(self) weak = self;
+    [self.service searchArtists:name completion:^(DZRArtistArray *artistArray, NSString *error) {
+        [weak.output resultSearchArtistWithName:artistArray error:error];
+    }];
 }
 
 @end

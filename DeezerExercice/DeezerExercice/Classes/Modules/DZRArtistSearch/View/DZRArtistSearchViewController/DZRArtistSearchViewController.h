@@ -7,7 +7,7 @@
 //
 
 #import "DZRArtistSearchInterface.h"
-#import "DZArtistSearchModuleInterface.h"
+#import "DZRArtistSearchModuleInterface.h"
 
 @interface DZRArtistSearchViewController : UIViewController<DZRArtistSearchInterface>
 
@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, weak) IBOutlet UIView *noResultsView;
 
+//Get the delegate methods for example : searchArtist
 @property (nonatomic, strong) id<DZRArtistSearchModuleInterface> eventHandler;
 
 @end

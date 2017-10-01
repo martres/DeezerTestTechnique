@@ -6,12 +6,13 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "DZRArtistSearchInteractorInputOuput.h"
+#import "DZRArtistService.h"
 
 @interface DZRArtistSearchInteractor : NSObject <DZRArtistSearchInteractorInput>
 
 @property (nonatomic, weak) id<DZRArtistSearchInteractorOutput> output;
+
+- (instancetype)initWithService:(DZRArtistService *)service;
 
 @end

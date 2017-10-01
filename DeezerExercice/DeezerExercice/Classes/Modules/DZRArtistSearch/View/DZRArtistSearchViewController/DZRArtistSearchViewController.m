@@ -9,7 +9,7 @@
 
 @interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 
-@property (nonatomic, strong) NSArray *artists;
+@property (nonatomic, strong) DZRArtistArray *artists;
 
 @end
 
@@ -22,8 +22,22 @@
 }
 
 - (void)configureView {
-    self.navigationItem.title = @"Search Artist";
-    [self.noResultsView setHidden:false];
+    self.navigationItem.title = @"Artist Search";
+}
+
+- (void)searchArtistWithName:(NSString *)textSearch {
+    [self.eventHandler searchArtistWithName:textSearch];
+}
+
+#pragma - DZRArtistSearchInterface
+
+- (void)showResultsOfSearchArtist:(DZRArtistArray *)artists {
+    self.artists = artists;
+    [self reloadView];
+}
+
+- (void) reloadView {
+    [self.collectionView reloadData];
 }
 
 - (void)showEmptyResultMessage {
@@ -31,70 +45,42 @@
     self.noResultsView.hidden = false;
 }
 
-- (void) reloadView {
-    [self.collectionView reloadData];
+- (void) showError:(NSString *)error {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
+                                                    message:error
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
-
-- (void)showResultsOfSearchArtist {
-    self.noResultsView.hidden = true;
-    self.collectionView.hidden = false;
-
-    
-    [self reloadView];
-}
-
-#pragma - DZRArtistSearchInterface
-
-- (void)searchArtistWithName:(NSString *)textSearch {
-    [self.eventHandler searchArtistWithName:textSearch];
-}
-
-//#pragma - Search
-//
-//- (void)searchArtistsWithName:(NSString *)name {
-//    NSString *urlRequest = [NSString stringWithFormat:@"http://api.deezer.com/search/artist?q=%@", name];
-//    NSURLRequest *APIRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlRequest]];
-//
-//    [NSURLConnection sendAsynchronousRequest:APIRequest
-//                                       queue:[NSOperationQueue mainQueue]
-//                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//                               if (connectionError) {
-//                                   // TODO
-//                               }
-//                               else {
-//                                   NSDictionary *retData = [NSJSONSerialization JSONObjectWithData:data
-//                                                                                           options:kNilOptions
-//                                                                                             error:&connectionError];
-//                                   NSLog(@"%@", [retData objectForKey:@"data"]);
-//                                   self.artists = [retData objectForKey:@"data"];
-//                                   [self.collectionView reloadData];
-//                               }
-//                           }];
-//}
 
 #pragma - UISearchBarDelegate
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.collectionView.hidden = false;
+    self.noResultsView.hidden = false;
+    searchBar.text = @"";
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self searchArtistWithName:searchText];
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
 }
 
 #pragma - UICollectionViewDataSource
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.artists.count;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.artists.arrayItems.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *CellIdentifier = [DZRArtistCollectionViewCell identifierCell];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
 //    NSDictionary *artistDictionary = [self.artists objectAtIndex:indexPath.row];
 //    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[artistDictionary objectForKey:@"picture"]]];
 //    cell.artistImage.image = [UIImage imageWithData:imageData];
