@@ -105,7 +105,7 @@
 		6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getIdentifier.m"; sourceTree = "<group>"; };
 		6597A22A1F7E9A71003254D0 /* DZRArtistSearchInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchInterface.h; sourceTree = "<group>"; };
 		6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+getIdentifier.h"; sourceTree = "<group>"; };
-		6597A22F1F7EA235003254D0 /* DZArtistSearchModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZArtistSearchModuleInterface.h; sourceTree = "<group>"; };
+		6597A22F1F7EA235003254D0 /* DZRArtistSearchModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchModuleInterface.h; sourceTree = "<group>"; };
 		6597A2321F7EAC77003254D0 /* EnumHTTPMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumHTTPMethod.h; sourceTree = "<group>"; };
 		6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTestEnumMethod.m; sourceTree = "<group>"; };
 		6597A23E1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestUIViewController+getIdentifier.m"; sourceTree = "<group>"; };
@@ -306,7 +306,7 @@
 		6500E0491F7D5BC8005E0FEB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				6597A22F1F7EA235003254D0 /* DZArtistSearchModuleInterface.h */,
+				6597A22F1F7EA235003254D0 /* DZRArtistSearchModuleInterface.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";

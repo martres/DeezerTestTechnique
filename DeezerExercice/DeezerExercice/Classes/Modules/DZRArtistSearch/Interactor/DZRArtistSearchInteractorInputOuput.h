@@ -8,13 +8,13 @@
 
 #import "DZRArtistArray.h"
 
-@protocol DZRArtistSearchInteractorInput <NSOjbect>
+@protocol DZRArtistSearchInteractorInput <NSObject>
 
 - (void)searchArtistWithName:(NSString *)name;
 
 @end
 
-@protocol DZRArtistSearchInteractorOutput <NSOjbect>
+@protocol DZRArtistSearchInteractorOutput <NSObject>
 
 - (void)resultSearchArtistWithName:(DZRArtistArray *)artistArray error:(NSString *)error;
 
