@@ -72,43 +72,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtistCollectionViewCellIdentifier" id="X9a-y1-Ew0" customClass="DZRArtistCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h04-Ub-2zf">
-                                                    <rect key="frame" x="0.0" y="99" width="80" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="rdP-f9-hzc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kKI-XC-AWa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="h04-Ub-2zf" secondAttribute="bottom" id="4oJ-Wy-KRc"/>
-                                            <constraint firstItem="kKI-XC-AWa" firstAttribute="top" secondItem="X9a-y1-Ew0" secondAttribute="top" id="Hnr-rg-4mg"/>
-                                            <constraint firstAttribute="trailing" secondItem="h04-Ub-2zf" secondAttribute="trailing" id="SSp-Bb-6dC"/>
-                                            <constraint firstAttribute="bottom" secondItem="kKI-XC-AWa" secondAttribute="bottom" constant="20" id="bEW-EK-2qz"/>
-                                            <constraint firstItem="h04-Ub-2zf" firstAttribute="leading" secondItem="X9a-y1-Ew0" secondAttribute="leading" id="krr-QS-uXi"/>
-                                            <constraint firstItem="kKI-XC-AWa" firstAttribute="leading" secondItem="X9a-y1-Ew0" secondAttribute="leading" id="muo-oH-MC9"/>
-                                            <constraint firstAttribute="trailing" secondItem="kKI-XC-AWa" secondAttribute="trailing" id="odk-Ep-hdV"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="artistImage" destination="kKI-XC-AWa" id="b8i-GL-RMi"/>
-                                            <outlet property="artistName" destination="h04-Ub-2zf" id="AYg-Li-nfV"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="t1i-yi-ig2" id="q8a-Bi-Dqk"/>
                                     <outlet property="delegate" destination="t1i-yi-ig2" id="mL9-sW-euF"/>

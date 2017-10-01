@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */; };
 		5C1A7D851A6558BB00092761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A7D841A6558BB00092761 /* main.m */; };
 		5C1A7D881A6558BB00092761 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A7D871A6558BB00092761 /* AppDelegate.m */; };
 		5C1A7D8E1A6558BB00092761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1A7D8C1A6558BB00092761 /* Main.storyboard */; };
@@ -40,6 +39,8 @@
 		659DE11C1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659DE11B1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard */; };
 		65ADDAC11F7FFC0700B92A20 /* DZRArtistSearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADDAC01F7FFC0700B92A20 /* DZRArtistSearchInteractor.m */; };
 		65CAAECC1F81445300659461 /* UIView+round.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAECB1F81445300659461 /* UIView+round.m */; };
+		65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */; };
+		65CAAED31F814FA000659461 /* DZRArtistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */; };
 		65F59D561F7F086400CAF5C7 /* DZRTrackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D551F7F086400CAF5C7 /* DZRTrackService.m */; };
 		65F59D591F7F087200CAF5C7 /* DZRAlbumService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D581F7F087200CAF5C7 /* DZRAlbumService.m */; };
 /* End PBXBuildFile section */
@@ -55,8 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C06C22D1A6E987F0051EF03 /* DZRArtistCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRArtistCollectionViewCell.h; sourceTree = "<group>"; };
-		5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtistCollectionViewCell.m; sourceTree = "<group>"; };
 		5C1A7D7F1A6558BB00092761 /* DeezerExercice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerExercice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1A7D831A6558BB00092761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1A7D841A6558BB00092761 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +119,9 @@
 		65ADDAC21F7FFC3900B92A20 /* DZRArtistSearchInteractorInputOuput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchInteractorInputOuput.h; sourceTree = "<group>"; };
 		65CAAECA1F81445300659461 /* UIView+round.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+round.h"; sourceTree = "<group>"; };
 		65CAAECB1F81445300659461 /* UIView+round.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+round.m"; sourceTree = "<group>"; };
+		65CAAECF1F814FA000659461 /* DZRArtistCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistCollectionViewCell.h; sourceTree = "<group>"; };
+		65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistCollectionViewCell.m; sourceTree = "<group>"; };
+		65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZRArtistCollectionViewCell.xib; sourceTree = "<group>"; };
 		65F59D541F7F086400CAF5C7 /* DZRTrackService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRTrackService.h; sourceTree = "<group>"; };
 		65F59D551F7F086400CAF5C7 /* DZRTrackService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackService.m; sourceTree = "<group>"; };
 		65F59D571F7F087200CAF5C7 /* DZRAlbumService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAlbumService.h; sourceTree = "<group>"; };
@@ -235,7 +237,6 @@
 		6500E0421F7D3E04005E0FEB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				650791711F7D5EB300297D7C /* Categories */,
 				65C03FC41F7D5CE5002F5028 /* Entities */,
 				6597A2441F7EBE7B003254D0 /* Service */,
 				650791721F7D619E00297D7C /* Manager */,
@@ -348,13 +349,6 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
-		650791711F7D5EB300297D7C /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		650791721F7D619E00297D7C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,8 +388,9 @@
 		6507917F1F7D68CB00297D7C /* DZRArtistCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5C06C22D1A6E987F0051EF03 /* DZRArtistCollectionViewCell.h */,
-				5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */,
+				65CAAECF1F814FA000659461 /* DZRArtistCollectionViewCell.h */,
+				65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */,
+				65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */,
 			);
 			path = DZRArtistCollectionViewCell;
 			sourceTree = "<group>";
@@ -780,6 +775,7 @@
 				659DE11C1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard in Resources */,
 				5C1A7D931A6558BB00092761 /* LaunchScreen.xib in Resources */,
 				5C1A7D901A6558BB00092761 /* Images.xcassets in Resources */,
+				65CAAED31F814FA000659461 /* DZRArtistCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,8 +810,8 @@
 				6507917D1F7D685400297D7C /* APIManager.m in Sources */,
 				655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */,
 				652D27A41F7EC2CE007C2727 /* URLManager.m in Sources */,
-				5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */,
 				655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */,
+				65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */,
 				5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */,
 				650791921F7D6FED00297D7C /* DZArtistDetailWireframe.m in Sources */,
 				6597A2271F7E8FCB003254D0 /* UIViewController+getIdentifier.m in Sources */,

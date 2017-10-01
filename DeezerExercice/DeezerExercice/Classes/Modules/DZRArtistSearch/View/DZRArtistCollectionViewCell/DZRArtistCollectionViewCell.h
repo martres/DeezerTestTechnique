@@ -8,6 +8,11 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *artistImage;
 @property (weak, nonatomic) IBOutlet UILabel *artistName;
-@property (class, nonatomic, assign, readonly) NSString *identifierCell;
+@property (weak, nonatomic) IBOutlet UIView *container;
+
++(UINib *) getNibOfCell;
++(NSString *)getIdentifier;
+
+-(void) loadImageArtist:(NSString *)url;
 
 @end

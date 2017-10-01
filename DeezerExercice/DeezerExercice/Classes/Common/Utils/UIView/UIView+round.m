@@ -19,7 +19,7 @@
     self.layer.borderColor = color.CGColor;
     self.layer.borderWidth = borderSize;
     self.layer.cornerRadius = radius;
-    self.clipsToBounds = true:
+    self.clipsToBounds = true;
 }
 
 @end

@@ -6,8 +6,9 @@
 
 #import "DZRArtistSearchViewController.h"
 #import "DZRArtistCollectionViewCell.h"
+#import "DZRArtist.h"
 
-@interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
+@interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) DZRArtistArray *artists;
 
@@ -23,6 +24,8 @@
 
 - (void)configureView {
     self.navigationItem.title = @"Artist Search";
+    
+    [self.collectionView registerNib:[DZRArtistCollectionViewCell getNibOfCell] forCellWithReuseIdentifier:[DZRArtistCollectionViewCell getIdentifier]];
 }
 
 - (void)searchArtistWithName:(NSString *)textSearch {
@@ -78,14 +81,21 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = [DZRArtistCollectionViewCell identifierCell];
-    DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    DZRArtist *artist = self.artists.arrayItems[indexPath.row];
     
-//    NSDictionary *artistDictionary = [self.artists objectAtIndex:indexPath.row];
-//    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[artistDictionary objectForKey:@"picture"]]];
-//    cell.artistImage.image = [UIImage imageWithData:imageData];
-//    cell.artistName.text = [artistDictionary objectForKey:@"name"];
+    NSString *CellIdentifier = [DZRArtistCollectionViewCell getIdentifier];
+    DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    [cell loadImageArtist:artist.pictureUrl];
+    cell.artistName.text = artist.titleEntity;
     return cell;
+}
+
+#pragma - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = collectionView.frame.size.width / 2;
+    CGSize size = CGSizeMake(width, width);
+    return size;
 }
 
 @end
