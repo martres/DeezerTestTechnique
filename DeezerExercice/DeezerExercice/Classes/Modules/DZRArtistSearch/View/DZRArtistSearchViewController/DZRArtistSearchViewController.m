@@ -40,7 +40,9 @@
 }
 
 - (void) reloadView {
-    [self.collectionView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView reloadData];
+    });
 }
 
 - (void)showEmptyResultMessage {
@@ -49,12 +51,14 @@
 }
 
 - (void) showError:(NSString *)error {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
-                                                    message:error
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
+                                                        message:error
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    });
 }
 
 #pragma - UISearchBarDelegate

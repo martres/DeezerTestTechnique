@@ -30,6 +30,7 @@
 		652D27B51F7EF29E007C2727 /* DZRAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27B41F7EF29E007C2727 /* DZRAlbum.m */; };
 		652D27B81F7EF381007C2727 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27B71F7EF381007C2727 /* BaseEntity.m */; };
 		652D27BC1F7EF741007C2727 /* DZRTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27BB1F7EF741007C2727 /* DZRTrack.m */; };
+		6533E6951F8162F0000DBE2E /* DZRArtistSearchWireframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 6507918D1F7D6FDB00297D7C /* DZRArtistSearchWireframe.h */; };
 		655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */; };
 		655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */; };
 		6597A2271F7E8FCB003254D0 /* UIViewController+getIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */; };
@@ -698,6 +699,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		6533E6941F8162DC000DBE2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6533E6951F8162F0000DBE2E /* DZRArtistSearchWireframe.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		5C1A7D7E1A6558BB00092761 /* DeezerExercice */ = {
 			isa = PBXNativeTarget;
@@ -706,6 +718,7 @@
 				5C1A7D7B1A6558BB00092761 /* Sources */,
 				5C1A7D7C1A6558BB00092761 /* Frameworks */,
 				5C1A7D7D1A6558BB00092761 /* Resources */,
+				6533E6941F8162DC000DBE2E /* Headers */,
 			);
 			buildRules = (
 			);

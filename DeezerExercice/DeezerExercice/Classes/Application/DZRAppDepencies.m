@@ -47,7 +47,8 @@
 - (void)searchModuleInit:(DZRRootWireframe *)rootWireframe {
     DZRArtistSearchWireframe *artistSearchWireframe = [[DZRArtistSearchWireframe alloc] init];
     DZRArtistSearchPresenter *artistSearchPresent = [[DZRArtistSearchPresenter alloc] init];
-    DZRArtistSearchInteractor *artistSearchInteractor = [[DZRArtistSearchInteractor alloc] initWithService:];
+    DZRArtistService *artistService = [[DZRArtistService alloc] init];
+    DZRArtistSearchInteractor *artistSearchInteractor = [[DZRArtistSearchInteractor alloc] initWithService:artistService];
     
     artistSearchPresent.artistSearchWireframe = artistSearchWireframe;
     artistSearchPresent.artistSearchInteractor = artistSearchInteractor;
