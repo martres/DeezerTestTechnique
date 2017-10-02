@@ -8,6 +8,12 @@
 
 #import "DZRArtistSearchPresenter.h"
 
+@interface DZRArtistSearchPresenter()
+
+@property (nonatomic, assign) BOOL isStartingRequest;
+
+@end
+
 @implementation DZRArtistSearchPresenter
 
 #pragma DZRArtistSearchInteractorOutput delegate
@@ -18,6 +24,7 @@
 
 - (void)resultMoreArtist:(DZRArtistArray *)artistArray error:(NSString *)error {
     [self execResults:artistArray error:error isSearch:false];
+    self.isStartingRequest = false;
 }
 
 - (void)execResults:(DZRArtistArray *)artistArray error:(NSString *)error isSearch:(BOOL)isSearch {
@@ -54,8 +61,11 @@
 
 #pragma DZRArtistSearchModuleInterface delegate
 
-- (void)showMoreArtists:(DZRArtistArray *)artistarray {
-    [self.artistSearchInteractor showMoreArtistWith:artistarray];
+- (void)showMoreArtists:(DZRArtistArray *)artistarray {    
+    if (!self.isStartingRequest) {
+        [self.artistSearchInteractor showMoreArtistWith:artistarray];
+    }
+    self.isStartingRequest = true;
 }
 
 - (void)searchArtistWithName:(NSString *)textSearch {

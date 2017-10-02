@@ -52,11 +52,7 @@
 }
 
 - (void)insertArtists:(DZRArtistArray *)artistArray {
-    DZRArtistArray *newArtistArray = [[DZRArtistArray alloc] init];
-    newArtistArray.nextURL = artistArray.nextURL;
-    newArtistArray.arrayItems = self.artists.arrayItems;
-    [newArtistArray.arrayItems addObjectsFromArray:artistArray.arrayItems];
-    self.artists = newArtistArray;
+    self.artists = artistArray;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
     });
@@ -95,16 +91,21 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
-    if (bottomEdge >= scrollView.contentSize.height) {
+    CGPoint offset = scrollView.contentOffset;
+    CGRect bounds = scrollView.bounds;
+    CGSize size = scrollView.contentSize;
+    UIEdgeInsets inset = scrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    
+    float reload_distance = 50;
+    if(y > h - reload_distance)
+    {
         [self.eventHandler showMoreArtists:self.artists];
     }
 }
 
 #pragma - UISearchBarDelegate
-
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-}
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (self.timerSearchArtist != nil) {
@@ -130,14 +131,7 @@
     
     NSString *CellIdentifier = [DZRArtistCollectionViewCell getIdentifier];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    if (artist.pictureCache) {
-        [cell.artistImage setImage:artist.pictureCache];
-    } else {
-        [cell loadImageArtist:artist.pictureUrl indexPath:indexPath completion:^(UIImage *image, NSIndexPath *oldIndexPath) {
-            DZRArtist *oldArtist = (DZRArtist *)self.artists.arrayItems[oldIndexPath.row];
-            oldArtist.pictureCache = image;
-        }];
-    }
+    [cell.artistImage loadImage:artist.pictureUrl defaultImage:@"artist_default_image"];
     cell.artistName.text = artist.titleEntity;
     return cell;
 }

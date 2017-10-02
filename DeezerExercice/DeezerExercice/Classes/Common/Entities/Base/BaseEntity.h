@@ -14,7 +14,6 @@
 @property (nonatomic, strong) NSString *titleEntity;
 @property (nonatomic, strong) NSString *classEntity;
 @property (nonatomic, strong) NSString *pictureUrl;
-@property (nonatomic, strong) UIImage  *pictureCache;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

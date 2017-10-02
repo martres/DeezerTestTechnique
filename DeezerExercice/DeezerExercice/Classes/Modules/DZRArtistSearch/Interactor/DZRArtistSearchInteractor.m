@@ -7,6 +7,7 @@
 //
 
 #import "DZRArtistSearchInteractor.h"
+#import "DZRArtist.h"
 
 @interface DZRArtistSearchInteractor()
 
@@ -32,9 +33,17 @@
 }
 
 - (void)showMoreArtistWith:(DZRArtistArray *)artistArray {
+    if (artistArray.nextURL == nil) {
+        return;
+    }
+    
     __weak typeof(self) weak = self;
     [self.service moreArtists:artistArray completion:^(DZRArtistArray *artistsMore, NSString *error) {
-        [weak.output resultMoreArtist:artistsMore error:error];
+        DZRArtistArray *newArray = [[DZRArtistArray alloc] init];
+        newArray.nextURL = artistsMore.nextURL;
+        newArray.arrayItems = artistArray.arrayItems;
+        [newArray.arrayItems addObjectsFromArray:artistsMore.arrayItems];
+        [weak.output resultMoreArtist:newArray error:error];
     }];
 }
 
