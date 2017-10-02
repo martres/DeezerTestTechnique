@@ -8,7 +8,7 @@
 
 @interface UIImageView (LoadImage)
 
-- (void)loadImage:(NSString *)url;
+- (void)loadImage:(NSString *)url defaultImage:(NSString *)defaultImage;
 
 @end
 

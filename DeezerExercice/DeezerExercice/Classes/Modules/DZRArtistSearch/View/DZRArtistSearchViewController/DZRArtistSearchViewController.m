@@ -8,9 +8,10 @@
 #import "DZRArtistCollectionViewCell.h"
 #import "DZRArtist.h"
 
-@interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout>
+@interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property (nonatomic, strong) DZRArtistArray *artists;
+@property (nonatomic, assign) NSTimer *timerSearchArtist;
 
 @end
 
@@ -24,12 +25,15 @@
 
 - (void)configureView {
     self.navigationItem.title = @"Artist Search";
-    
     [self.collectionView registerNib:[DZRArtistCollectionViewCell getNibOfCell] forCellWithReuseIdentifier:[DZRArtistCollectionViewCell getIdentifier]];
 }
 
-- (void)searchArtistWithName:(NSString *)textSearch {
-    [self.eventHandler searchArtistWithName:textSearch];
+- (void)searchArtistWithName {
+    if (![self.searchBar.text isEqualToString:@""]) {
+        [self.eventHandler searchArtistWithName:self.searchBar.text];
+    }
+    [self.timerSearchArtist invalidate];
+    self.timerSearchArtist = nil;
 }
 
 #pragma - DZRArtistSearchInterface
@@ -61,6 +65,12 @@
     });
 }
 
+#pragma - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.searchBar resignFirstResponder];
+}
+
 #pragma - UISearchBarDelegate
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
@@ -70,9 +80,11 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    if (![searchText isEqualToString:@""]) {
-        [self searchArtistWithName:searchText];
+    if (self.timerSearchArtist != nil) {
+        [self.timerSearchArtist invalidate];
+        self.timerSearchArtist = nil;
     }
+    self.timerSearchArtist = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(searchArtistWithName) userInfo:nil repeats:false];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -93,8 +105,17 @@
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     [cell loadImageArtist:artist.pictureUrl];
     cell.artistName.text = artist.titleEntity;
-    [cell layoutIfNeeded];
+    [cell setNeedsLayout];
     return cell;
+}
+
+#pragma - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DZRArtist *artist = self.artists.arrayItems[indexPath.row];
+    if (artist != nil) {
+        [self.eventHandler showDetailOfArtist:artist];
+    }
 }
 
 #pragma - UICollectionViewDelegateFlowLayout

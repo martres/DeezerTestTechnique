@@ -6,6 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+@class DZRArtist;
+
 /**
  @protocol DZRArtistSearchModuleInterface
  @brief DZRArtistSearchModuleInterface procotol, Event Handler of the ArtistSearch module
@@ -14,11 +16,19 @@
 
 @protocol DZRArtistSearchModuleInterface <NSObject>
 
+
 /**
  @brief research of artists of Deezer
  @param textSearch NSString from the SearchBar
  **/
 
 - (void)searchArtistWithName:(NSString *)textSearch;
+
+/**
+ @brief Show the detail of an artist
+ @param an Artist (DZRArtist)
+ **/
+
+- (void)showDetailOfArtist:(DZRArtist *)artist;
 
 @end

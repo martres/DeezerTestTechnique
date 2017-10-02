@@ -9,6 +9,7 @@
 @class DZRRootWireframe;
 @class DZRArtistDetailWireframe;
 @class DZRArtistSearchPresenter;
+@class DZRArtist;
 
 @interface DZRArtistSearchWireframe : NSObject
 
@@ -28,6 +29,6 @@
  @discussion: Call the wireframe of DZArtistDetail Module to present the view from DZArtistSearchViewController
  **/
 
-- (void)presentArtistDetail;
+- (void)presentArtistDetail:(DZRArtist *)artist;
 
 @end

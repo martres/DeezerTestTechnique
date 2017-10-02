@@ -25,7 +25,7 @@
 }
 
 - (void)loadImageArtist:(NSString *)url {
-    [self.artistImage loadImage:url];
+    [self.artistImage loadImage:url defaultImage:@"artist_default_image"];
 }
 
 @end

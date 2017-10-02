@@ -44,4 +44,8 @@
     [self.artistSearchInteractor searchArtistWithName:textSearch];
 }
 
+- (void)showDetailOfArtist:(DZRArtist *)artist {
+    [self.artistSearchWireframe presentArtistDetail:artist];
+}
+
 @end
