@@ -6,6 +6,7 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+#import "DZRArtistDetailWireframe.h"
 #import "DZRArtistSearchWireframe.h"
 #import "DZRArtistSearchViewController.h"
 #import "UIViewController+getIdentifier.h"
@@ -21,6 +22,12 @@
 
 @implementation DZRArtistSearchWireframe
 
+/**
+ @brief     the main view controller of the module Search
+ @params    the current window of the application
+ **/
+
+
 - (void)presentArtistSearchFromWindow:(UIWindow *)window {
     DZRArtistSearchViewController *searchViewController = [self artistSearchViewControllerFromStoryboard];
     searchViewController.eventHandler = (id<DZRArtistSearchModuleInterface>) self.searchPresenter;
@@ -29,14 +36,18 @@
     [self.rootWireframe showRootViewController:searchViewController inWindow:window];
 }
 
-- (void)presentArtistDetail {
-//    [self.artistDetailWireframe ]
+/**
+ @brief     presentArtist Detail change the current viewcontroller to show the detail of an artist
+ @params    DZRArtist to send the data to the next module
+ **/
+
+- (void)presentArtistDetail:(DZRArtist *)artist {
+    [self.artistDetailWireframe presentArtistDetailFromViewController:_artistSearchViewController detailArtist:artist];
 }
 
-
 /**
- @brief get the Main.Storyboard
- @return Main.Storyboard
+ @brief     get the Main.Storyboard
+ @return    Main.Storyboard
  **/
 
 - (UIStoryboard *)mainStoryboard {
@@ -44,8 +55,8 @@
 }
 
 /**
- @brief get DZRArtistSearchViewController
- @return an instance of DZRArtistSearchViewController
+ @brief     get DZRArtistSearchViewController
+ @return    an instance of DZRArtistSearchViewController
  **/
 
 - (DZRArtistSearchViewController *)artistSearchViewControllerFromStoryboard {

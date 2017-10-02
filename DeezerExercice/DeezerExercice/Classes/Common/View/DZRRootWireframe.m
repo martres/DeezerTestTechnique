@@ -17,7 +17,6 @@
     navigationController.viewControllers = @[viewController];
 }
 
-
 - (UINavigationController *)navigationControllerFromWindow:(UIWindow *)window
 {
     UINavigationController *navigationController = (UINavigationController *)[window rootViewController];

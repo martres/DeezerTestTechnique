@@ -44,7 +44,7 @@
     
 }
 
-- (void)searchModuleInit:(DZRRootWireframe *)rootWireframe {
+- (void)searchModuleInit:(DZRRootWireframe *)rootWireframe{
     DZRArtistSearchWireframe *artistSearchWireframe = [[DZRArtistSearchWireframe alloc] init];
     DZRArtistSearchPresenter *artistSearchPresent = [[DZRArtistSearchPresenter alloc] init];
     DZRArtistService *artistService = [[DZRArtistService alloc] init];
