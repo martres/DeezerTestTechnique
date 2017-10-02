@@ -6,7 +6,7 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "BaseEntity.h"
+#import "Entities.h"
 
 @implementation BaseEntity
 

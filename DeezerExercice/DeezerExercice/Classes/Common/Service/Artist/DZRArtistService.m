@@ -6,7 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "DZRArtistService.h"
+#import "Service.h"
+#import "Manager.h"
 
 @implementation DZRArtistService
 

@@ -6,8 +6,6 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 typedef enum HTTPMethod: NSInteger {
     GET,
     POST,

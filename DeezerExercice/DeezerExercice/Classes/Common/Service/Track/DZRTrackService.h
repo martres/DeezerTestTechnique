@@ -7,8 +7,7 @@
 //
 
 #import "BaseService.h"
-#import "DZRTrack.h"
-#import "DZRTrackArray.h"
+#import "Entities.h"
 
 typedef void(^DZRTracksCompletions)(DZRTrackArray *tracks, NSString *error);
 

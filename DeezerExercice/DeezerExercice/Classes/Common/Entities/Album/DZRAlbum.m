@@ -8,7 +8,6 @@
 
 #import "DZRAlbum.h"
 
-
 @implementation DZRAlbum
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {

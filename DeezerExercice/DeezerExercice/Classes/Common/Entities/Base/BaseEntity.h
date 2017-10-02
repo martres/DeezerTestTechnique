@@ -6,8 +6,6 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface BaseEntity : NSObject
 
 @property (nonatomic, strong) NSString *identifierEntity;

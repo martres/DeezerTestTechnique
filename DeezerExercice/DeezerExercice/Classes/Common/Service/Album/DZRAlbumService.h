@@ -7,7 +7,7 @@
 //
 
 #import "BaseService.h"
-#import "DZRAlbum.h"
+#import "Entities.h"
 
 typedef void(^DZRAlbumCompletion)(DZRAlbum *album, NSString *error);
 

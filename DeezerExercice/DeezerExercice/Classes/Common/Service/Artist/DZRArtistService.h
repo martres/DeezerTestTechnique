@@ -6,8 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "BaseService.h"
-#import "DZRArtistArray.h"
+#import "Entities.h"
+#import "Service.h"
 
 typedef void(^DZRArtistCompletion)(DZRArtistArray *artistArray, NSString *error);
 

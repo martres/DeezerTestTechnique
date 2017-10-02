@@ -6,7 +6,7 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Manager.h"
 
 typedef void(^RequestCompletion)(NSData *data, NSError *error);
 

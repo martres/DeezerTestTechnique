@@ -4,7 +4,7 @@
 //  Copyright (c) 2015 Deezer. All rights reserved.
 //
 
-#import "DZRArtist.h"
+#import "Entities.h"
 
 @implementation DZRArtist
 

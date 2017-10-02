@@ -7,7 +7,6 @@
 //
 
 #import "DZRArtistArray.h"
-#import "DZRArtist.h"
 
 @implementation DZRArtistArray
 

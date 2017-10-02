@@ -21,6 +21,8 @@
 		6507918B1F7D6B1D00297D7C /* DZRRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6507918A1F7D6B1D00297D7C /* DZRRootWireframe.m */; };
 		6507918F1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6507918E1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m */; };
 		650791921F7D6FED00297D7C /* DZRArtistDetailWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 650791911F7D6FED00297D7C /* DZRArtistDetailWireframe.m */; };
+		650CB6971F82DA7400909960 /* DZRArtistArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D27A81F7ECCD5007C2727 /* DZRArtistArray.h */; };
+		650CB6991F82DA7400909960 /* DZRArtistSearchInteractorInputOuput.h in Headers */ = {isa = PBXBuildFile; fileRef = 65ADDAC21F7FFC3900B92A20 /* DZRArtistSearchInteractorInputOuput.h */; };
 		652D27A41F7EC2CE007C2727 /* URLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27A31F7EC2CE007C2727 /* URLManager.m */; };
 		652D27A71F7EC4B7007C2727 /* TestURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27A61F7EC4B7007C2727 /* TestURLManager.m */; };
 		652D27AA1F7ECCD5007C2727 /* DZRArtistArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D27A91F7ECCD5007C2727 /* DZRArtistArray.m */; };
@@ -45,10 +47,50 @@
 		65B95B081F82C10E00F0487D /* DZRArtistDetailInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B061F82C10E00F0487D /* DZRArtistDetailInteractor.h */; };
 		65B95B091F82C10E00F0487D /* DZRArtistDetailInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B95B071F82C10E00F0487D /* DZRArtistDetailInteractor.m */; };
 		65B95B0C1F82C12400F0487D /* DZRArtistDetailInteractorInputOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B0A1F82C12400F0487D /* DZRArtistDetailInteractorInputOutput.h */; };
+		65B95B101F82C5EA00F0487D /* DZRArtistDetailInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B0F1F82C5EA00F0487D /* DZRArtistDetailInterface.h */; };
+		65B95B141F82D09E00F0487D /* ServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B121F82D09E00F0487D /* ServiceManager.h */; };
+		65B95B151F82D09E00F0487D /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B95B131F82D09E00F0487D /* ServiceManager.m */; };
+		65B95B191F82D3A400F0487D /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B95B181F82D3A400F0487D /* BaseService.m */; };
+		65B95B1B1F82D5BB00F0487D /* BaseEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D27B61F7EF381007C2727 /* BaseEntity.h */; };
+		65B95B1C1F82D5BB00F0487D /* BaseArrayEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 655E5F601F7F201E007C7B8C /* BaseArrayEntity.h */; };
+		65B95B1D1F82D5BB00F0487D /* DZRArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C2E66181A67C07E00607EC5 /* DZRArtist.h */; };
+		65B95B1E1F82D5BB00F0487D /* DZRAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D27B31F7EF29E007C2727 /* DZRAlbum.h */; };
+		65B95B1F1F82D5BB00F0487D /* DZRTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D27BA1F7EF741007C2727 /* DZRTrack.h */; };
+		65B95B201F82D5BB00F0487D /* DZRTrackArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 655E5F5C1F7F1FB3007C7B8C /* DZRTrackArray.h */; };
+		65B95B211F82D5BB00F0487D /* BaseService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A2481F7EC07E003254D0 /* BaseService.h */; };
+		65B95B221F82D5BB00F0487D /* DZRArtistService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A2451F7EBF29003254D0 /* DZRArtistService.h */; };
+		65B95B231F82D5BB00F0487D /* DZRAlbumService.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F59D571F7F087200CAF5C7 /* DZRAlbumService.h */; };
+		65B95B241F82D5BB00F0487D /* DZRTrackService.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F59D541F7F086400CAF5C7 /* DZRTrackService.h */; };
+		65B95B251F82D5BB00F0487D /* EnumHTTPMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A2321F7EAC77003254D0 /* EnumHTTPMethod.h */; };
+		65B95B261F82D5BB00F0487D /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6507917B1F7D685400297D7C /* APIManager.h */; };
+		65B95B271F82D5BB00F0487D /* EnumService.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B171F82D2B700F0487D /* EnumService.h */; };
+		65B95B281F82D5BB00F0487D /* EnumEndPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F59D5B1F7F0B3000CAF5C7 /* EnumEndPoint.h */; };
+		65B95B291F82D5BB00F0487D /* URLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D27A21F7EC2CE007C2727 /* URLManager.h */; };
+		65B95B2A1F82D5BB00F0487D /* DZRRootWireframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791891F7D6B1D00297D7C /* DZRRootWireframe.h */; };
+		65B95B2B1F82D5BB00F0487D /* UIView+round.h in Headers */ = {isa = PBXBuildFile; fileRef = 65CAAECA1F81445300659461 /* UIView+round.h */; };
+		65B95B2C1F82D5BB00F0487D /* UIViewController+getIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */; };
+		65B95B2D1F82D5BB00F0487D /* DZRArtistDetailModuleInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B0E1F82C54300F0487D /* DZRArtistDetailModuleInterface.h */; };
+		65B95B2E1F82D5BB00F0487D /* DZRArtistDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791781F7D67BA00297D7C /* DZRArtistDetailViewController.h */; };
+		65B95B2F1F82D5BB00F0487D /* DZRArtistDetailWireframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791901F7D6FED00297D7C /* DZRArtistDetailWireframe.h */; };
+		65B95B301F82D5BB00F0487D /* DZRArtistSearchInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 65ADDABF1F7FFC0700B92A20 /* DZRArtistSearchInteractor.h */; };
+		65B95B311F82D5BB00F0487D /* DZRArtistSearchModuleInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A22F1F7EA235003254D0 /* DZRArtistSearchModuleInterface.h */; };
+		65B95B321F82D5BB00F0487D /* DZRArtistSearchPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791801F7D694500297D7C /* DZRArtistSearchPresenter.h */; };
+		65B95B331F82D5BB00F0487D /* DZRArtistCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 65CAAECF1F814FA000659461 /* DZRArtistCollectionViewCell.h */; };
+		65B95B341F82D5BB00F0487D /* DZRArtistSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 659DE11D1F7E8DEC00E146ED /* DZRArtistSearchViewController.h */; };
+		65B95B351F82D5BB00F0487D /* DZRArtistSearchInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A22A1F7E9A71003254D0 /* DZRArtistSearchInterface.h */; };
+		65B95B361F82D5BB00F0487D /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1A7D861A6558BB00092761 /* AppDelegate.h */; };
+		65B95B371F82D5BB00F0487D /* DZRAppDepencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 65CAAED41F81556100659461 /* DZRAppDepencies.h */; };
+		65B95B381F82D5BB00F0487D /* Define.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F59D5C1F7F0FCD00CAF5C7 /* Define.h */; };
 		65CAAECC1F81445300659461 /* UIView+round.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAECB1F81445300659461 /* UIView+round.m */; };
 		65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */; };
 		65CAAED31F814FA000659461 /* DZRArtistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */; };
 		65CAAED61F81556100659461 /* DZRAppDepencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAED51F81556100659461 /* DZRAppDepencies.m */; };
+		65D33AC41F82E94100D1DB4F /* Entities.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D33AC01F82E14600D1DB4F /* Entities.h */; };
+		65D33AC51F82E94100D1DB4F /* Service.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D33AC21F82E54D00D1DB4F /* Service.h */; };
+		65D33AC61F82E94100D1DB4F /* Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D33AC11F82E4FE00D1DB4F /* Manager.h */; };
+		65D33AC71F82E94100D1DB4F /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D33AC31F82E75900D1DB4F /* Utils.h */; };
+		65D33ACD1F82F2F900D1DB4F /* DZRBaseInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D33ACB1F82F2F900D1DB4F /* DZRBaseInteractor.h */; };
+		65D33ACE1F82F2F900D1DB4F /* DZRBaseInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D33ACC1F82F2F900D1DB4F /* DZRBaseInteractor.m */; };
 		65F59D561F7F086400CAF5C7 /* DZRTrackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D551F7F086400CAF5C7 /* DZRTrackService.m */; };
 		65F59D591F7F087200CAF5C7 /* DZRAlbumService.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F59D581F7F087200CAF5C7 /* DZRAlbumService.m */; };
 /* End PBXBuildFile section */
@@ -131,6 +173,11 @@
 		65B95B071F82C10E00F0487D /* DZRArtistDetailInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRArtistDetailInteractor.m; sourceTree = "<group>"; };
 		65B95B0A1F82C12400F0487D /* DZRArtistDetailInteractorInputOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistDetailInteractorInputOutput.h; sourceTree = "<group>"; };
 		65B95B0E1F82C54300F0487D /* DZRArtistDetailModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistDetailModuleInterface.h; sourceTree = "<group>"; };
+		65B95B0F1F82C5EA00F0487D /* DZRArtistDetailInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistDetailInterface.h; sourceTree = "<group>"; };
+		65B95B121F82D09E00F0487D /* ServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
+		65B95B131F82D09E00F0487D /* ServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
+		65B95B171F82D2B700F0487D /* EnumService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumService.h; sourceTree = "<group>"; };
+		65B95B181F82D3A400F0487D /* BaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		65CAAECA1F81445300659461 /* UIView+round.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+round.h"; sourceTree = "<group>"; };
 		65CAAECB1F81445300659461 /* UIView+round.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+round.m"; sourceTree = "<group>"; };
 		65CAAECF1F814FA000659461 /* DZRArtistCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistCollectionViewCell.h; sourceTree = "<group>"; };
@@ -138,6 +185,14 @@
 		65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZRArtistCollectionViewCell.xib; sourceTree = "<group>"; };
 		65CAAED41F81556100659461 /* DZRAppDepencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAppDepencies.h; sourceTree = "<group>"; };
 		65CAAED51F81556100659461 /* DZRAppDepencies.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRAppDepencies.m; sourceTree = "<group>"; };
+		65D33AC01F82E14600D1DB4F /* Entities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
+		65D33AC11F82E4FE00D1DB4F /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		65D33AC21F82E54D00D1DB4F /* Service.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		65D33AC31F82E75900D1DB4F /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		65D33ACB1F82F2F900D1DB4F /* DZRBaseInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRBaseInteractor.h; sourceTree = "<group>"; };
+		65D33ACC1F82F2F900D1DB4F /* DZRBaseInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRBaseInteractor.m; sourceTree = "<group>"; };
+		65D33ACF1F82F33600D1DB4F /* Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		65D33AD01F82F34900D1DB4F /* Modules.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Modules.h; sourceTree = "<group>"; };
 		65F59D541F7F086400CAF5C7 /* DZRTrackService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRTrackService.h; sourceTree = "<group>"; };
 		65F59D551F7F086400CAF5C7 /* DZRTrackService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackService.m; sourceTree = "<group>"; };
 		65F59D571F7F087200CAF5C7 /* DZRAlbumService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRAlbumService.h; sourceTree = "<group>"; };
@@ -246,8 +301,9 @@
 		6500E0411F7D3DFD005E0FEB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				6500E0441F7D3E65005E0FEB /* DZRArtistDetail */,
-				6500E0431F7D3E56005E0FEB /* DZRArtistSearch */,
+				65D33AC81F82F2B900D1DB4F /* Base */,
+				65D33AC91F82F2C100D1DB4F /* DZRArtist */,
+				65D33AD01F82F34900D1DB4F /* Modules.h */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -348,6 +404,7 @@
 			children = (
 				650791781F7D67BA00297D7C /* DZRArtistDetailViewController.h */,
 				650791791F7D67BA00297D7C /* DZRArtistDetailViewController.m */,
+				65B95B0F1F82C5EA00F0487D /* DZRArtistDetailInterface.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,7 +431,9 @@
 			isa = PBXGroup;
 			children = (
 				650791751F7D664A00297D7C /* APIManager */,
+				65B95B111F82D08300F0487D /* ServiceManager */,
 				652D27A11F7EC2BA007C2727 /* URLManager */,
+				65D33AC11F82E4FE00D1DB4F /* Manager.h */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -415,6 +474,7 @@
 				65CAAEC91F81443600659461 /* UIView */,
 				6597A2301F7EA7D5003254D0 /* UIImageView */,
 				6597A2241F7E8ECE003254D0 /* UIViewController */,
+				65D33AC31F82E75900D1DB4F /* Utils.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -586,10 +646,11 @@
 		6597A2441F7EBE7B003254D0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6597A2481F7EC07E003254D0 /* BaseService.h */,
+				65B95B1A1F82D3A700F0487D /* Base */,
 				65F59D4D1F7F07E800CAF5C7 /* Artist */,
 				65F59D4E1F7F07F100CAF5C7 /* Album */,
 				65F59D4F1F7F07FB00CAF5C7 /* Track */,
+				65D33AC21F82E54D00D1DB4F /* Service.h */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -660,6 +721,33 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		65B95B111F82D08300F0487D /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				65B95B161F82D29F00F0487D /* Enum */,
+				65B95B121F82D09E00F0487D /* ServiceManager.h */,
+				65B95B131F82D09E00F0487D /* ServiceManager.m */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		65B95B161F82D29F00F0487D /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				65B95B171F82D2B700F0487D /* EnumService.h */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		65B95B1A1F82D3A700F0487D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6597A2481F7EC07E003254D0 /* BaseService.h */,
+				65B95B181F82D3A400F0487D /* BaseService.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		65C03FC41F7D5CE5002F5028 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +755,7 @@
 				652D27B11F7EF26C007C2727 /* Artist */,
 				652D27B21F7EF279007C2727 /* Album */,
 				652D27B91F7EF71A007C2727 /* Track */,
+				65D33AC01F82E14600D1DB4F /* Entities.h */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -680,11 +769,38 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		65D33AC81F82F2B900D1DB4F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65D33ACA1F82F2E000D1DB4F /* Interactor */,
+				65D33ACF1F82F33600D1DB4F /* Base.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65D33AC91F82F2C100D1DB4F /* DZRArtist */ = {
+			isa = PBXGroup;
+			children = (
+				6500E0441F7D3E65005E0FEB /* DZRArtistDetail */,
+				6500E0431F7D3E56005E0FEB /* DZRArtistSearch */,
+			);
+			path = DZRArtist;
+			sourceTree = "<group>";
+		};
+		65D33ACA1F82F2E000D1DB4F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				65D33ACB1F82F2F900D1DB4F /* DZRBaseInteractor.h */,
+				65D33ACC1F82F2F900D1DB4F /* DZRBaseInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		65F59D4D1F7F07E800CAF5C7 /* Artist */ = {
 			isa = PBXGroup;
 			children = (
-				6597A2451F7EBF29003254D0 /* DZRArtistService.h */,
 				652D27AE1F7ED7DD007C2727 /* DZRArtistService.m */,
+				6597A2451F7EBF29003254D0 /* DZRArtistService.h */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -722,9 +838,48 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D33AC41F82E94100D1DB4F /* Entities.h in Headers */,
+				65D33AC51F82E94100D1DB4F /* Service.h in Headers */,
+				65D33AC61F82E94100D1DB4F /* Manager.h in Headers */,
+				65D33AC71F82E94100D1DB4F /* Utils.h in Headers */,
+				650CB6971F82DA7400909960 /* DZRArtistArray.h in Headers */,
+				650CB6991F82DA7400909960 /* DZRArtistSearchInteractorInputOuput.h in Headers */,
+				65B95B1B1F82D5BB00F0487D /* BaseEntity.h in Headers */,
+				65B95B1C1F82D5BB00F0487D /* BaseArrayEntity.h in Headers */,
+				65B95B1D1F82D5BB00F0487D /* DZRArtist.h in Headers */,
+				65B95B1E1F82D5BB00F0487D /* DZRAlbum.h in Headers */,
+				65B95B1F1F82D5BB00F0487D /* DZRTrack.h in Headers */,
+				65B95B201F82D5BB00F0487D /* DZRTrackArray.h in Headers */,
+				65B95B211F82D5BB00F0487D /* BaseService.h in Headers */,
+				65B95B221F82D5BB00F0487D /* DZRArtistService.h in Headers */,
+				65B95B231F82D5BB00F0487D /* DZRAlbumService.h in Headers */,
+				65B95B241F82D5BB00F0487D /* DZRTrackService.h in Headers */,
+				65B95B251F82D5BB00F0487D /* EnumHTTPMethod.h in Headers */,
+				65B95B261F82D5BB00F0487D /* APIManager.h in Headers */,
+				65B95B271F82D5BB00F0487D /* EnumService.h in Headers */,
+				65B95B281F82D5BB00F0487D /* EnumEndPoint.h in Headers */,
+				65B95B291F82D5BB00F0487D /* URLManager.h in Headers */,
+				65B95B2A1F82D5BB00F0487D /* DZRRootWireframe.h in Headers */,
+				65B95B2B1F82D5BB00F0487D /* UIView+round.h in Headers */,
+				65B95B2C1F82D5BB00F0487D /* UIViewController+getIdentifier.h in Headers */,
+				65B95B2D1F82D5BB00F0487D /* DZRArtistDetailModuleInterface.h in Headers */,
+				65B95B2E1F82D5BB00F0487D /* DZRArtistDetailViewController.h in Headers */,
+				65B95B2F1F82D5BB00F0487D /* DZRArtistDetailWireframe.h in Headers */,
+				65B95B301F82D5BB00F0487D /* DZRArtistSearchInteractor.h in Headers */,
+				65B95B311F82D5BB00F0487D /* DZRArtistSearchModuleInterface.h in Headers */,
+				65B95B321F82D5BB00F0487D /* DZRArtistSearchPresenter.h in Headers */,
+				65B95B331F82D5BB00F0487D /* DZRArtistCollectionViewCell.h in Headers */,
+				65B95B341F82D5BB00F0487D /* DZRArtistSearchViewController.h in Headers */,
+				65B95B351F82D5BB00F0487D /* DZRArtistSearchInterface.h in Headers */,
+				65B95B361F82D5BB00F0487D /* AppDelegate.h in Headers */,
+				65B95B371F82D5BB00F0487D /* DZRAppDepencies.h in Headers */,
+				65D33ACD1F82F2F900D1DB4F /* DZRBaseInteractor.h in Headers */,
+				65B95B381F82D5BB00F0487D /* Define.h in Headers */,
 				6533E6951F8162F0000DBE2E /* DZRArtistSearchWireframe.h in Headers */,
 				6533E6981F829180000DBE2E /* ImageViewLoad.h in Headers */,
 				65B95B081F82C10E00F0487D /* DZRArtistDetailInteractor.h in Headers */,
+				65B95B101F82C5EA00F0487D /* DZRArtistDetailInterface.h in Headers */,
+				65B95B141F82D09E00F0487D /* ServiceManager.h in Headers */,
 				65B95B0C1F82C12400F0487D /* DZRArtistDetailInteractorInputOutput.h in Headers */,
 				65B95B031F82C0E900F0487D /* DZRArtistDetailPresenter.h in Headers */,
 			);
@@ -842,11 +997,14 @@
 				6533E6991F829180000DBE2E /* ImageViewLoad.m in Sources */,
 				65F59D561F7F086400CAF5C7 /* DZRTrackService.m in Sources */,
 				65B95B091F82C10E00F0487D /* DZRArtistDetailInteractor.m in Sources */,
+				65B95B151F82D09E00F0487D /* ServiceManager.m in Sources */,
 				65F59D591F7F087200CAF5C7 /* DZRAlbumService.m in Sources */,
 				6507918B1F7D6B1D00297D7C /* DZRRootWireframe.m in Sources */,
 				65B95B041F82C0E900F0487D /* DZRArtistDetailPresenter.m in Sources */,
 				652D27B51F7EF29E007C2727 /* DZRAlbum.m in Sources */,
+				65D33ACE1F82F2F900D1DB4F /* DZRBaseInteractor.m in Sources */,
 				652D27BC1F7EF741007C2727 /* DZRTrack.m in Sources */,
+				65B95B191F82D3A400F0487D /* BaseService.m in Sources */,
 				6507918F1F7D6FDB00297D7C /* DZRArtistSearchWireframe.m in Sources */,
 				5C1A7D851A6558BB00092761 /* main.m in Sources */,
 				65CAAECC1F81445300659461 /* UIView+round.m in Sources */,
@@ -1008,8 +1166,10 @@
 		5C1A7DA31A6558BC00092761 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5846527P6G;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
 				INFOPLIST_FILE = DeezerExercice/Info.plist;
@@ -1023,8 +1183,10 @@
 		5C1A7DA41A6558BC00092761 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5846527P6G;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
 				INFOPLIST_FILE = DeezerExercice/Info.plist;

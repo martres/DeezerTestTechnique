@@ -7,7 +7,6 @@
 //
 
 #import "BaseArrayEntity.h"
-#import "DZRTrack.h"
 
 @interface DZRTrackArray : BaseArrayEntity
 

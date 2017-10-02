@@ -7,6 +7,7 @@
 //
 
 #import "BaseArrayEntity.h"
+#import "DZRArtist.h"
 
 @interface DZRArtistArray : BaseArrayEntity
 

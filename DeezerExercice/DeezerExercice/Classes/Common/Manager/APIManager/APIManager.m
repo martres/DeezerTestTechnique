@@ -7,7 +7,6 @@
 //
 
 #import "APIManager.h"
-#import "EnumHTTPMethod.h"
 
 @implementation APIManager
 

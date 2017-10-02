@@ -6,8 +6,7 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "UIView+round.h"
-#import <QuartzCore/QuartzCore.h>
+#import "Utils.h"
 
 @implementation UIView (round)
 

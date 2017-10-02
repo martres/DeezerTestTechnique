@@ -6,7 +6,7 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "UIViewController+getIdentifier.h"
+#import "Utils.h"
 
 @implementation UIViewController (getIdentifier)
 

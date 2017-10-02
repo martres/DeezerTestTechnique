@@ -7,6 +7,7 @@
 //
 
 #import "DZRTrackArray.h"
+#import "DZRTrack.h"
 
 @implementation DZRTrackArray
 

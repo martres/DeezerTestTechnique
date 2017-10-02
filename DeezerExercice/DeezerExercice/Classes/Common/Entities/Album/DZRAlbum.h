@@ -6,12 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@class DZRArtist;
-
-#import "DZRTrackArray.h"
 #import "BaseEntity.h"
+#import "DZRTrackArray.h"
 
 @interface DZRAlbum : BaseEntity
 

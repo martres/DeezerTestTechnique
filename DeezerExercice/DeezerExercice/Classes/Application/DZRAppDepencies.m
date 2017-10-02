@@ -11,6 +11,7 @@
 #import "DZRRootWireframe.h"
 #import "DZRArtistSearchPresenter.h"
 #import "DZRArtistSearchInteractor.h"
+#import "Manager.h"
 
 @interface DZRAppDepencies()
 
@@ -47,8 +48,7 @@
 - (void)searchModuleInit:(DZRRootWireframe *)rootWireframe{
     DZRArtistSearchWireframe *artistSearchWireframe = [[DZRArtistSearchWireframe alloc] init];
     DZRArtistSearchPresenter *artistSearchPresent = [[DZRArtistSearchPresenter alloc] init];
-    DZRArtistService *artistService = [[DZRArtistService alloc] init];
-    DZRArtistSearchInteractor *artistSearchInteractor = [[DZRArtistSearchInteractor alloc] initWithService:artistService];
+    DZRArtistSearchInteractor *artistSearchInteractor = [[DZRArtistSearchInteractor alloc] initWithService:ServiceManager.sharedInstance];
     
     artistSearchPresent.artistSearchWireframe = artistSearchWireframe;
     artistSearchPresent.artistSearchInteractor = artistSearchInteractor;

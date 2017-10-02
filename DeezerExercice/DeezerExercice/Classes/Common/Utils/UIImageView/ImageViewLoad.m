@@ -6,8 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-#import "ImageViewLoad.h"
-#import "APIManager.h"
+#import "Utils.h"
+#import "Manager.h"
 
 @implementation ImageViewLoad
 
