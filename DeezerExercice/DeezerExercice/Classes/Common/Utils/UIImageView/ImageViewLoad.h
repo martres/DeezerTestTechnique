@@ -12,6 +12,6 @@ static NSCache *cacheImage;
 
 @property (nonatomic, strong) NSString *imageUrlString;
 
-- (void)loadImage:(NSString *)imageUrlString defaultImage:(NSString *)defaultImage;
+- (void)loadImage:(NSString *)imageUrlString;
 
 @end

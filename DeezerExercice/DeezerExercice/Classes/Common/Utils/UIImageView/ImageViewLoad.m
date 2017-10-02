@@ -11,16 +11,15 @@
 
 @implementation ImageViewLoad
 
-- (void)loadImage:(NSString *)imageUrlString defaultImage:(NSString *)defaultImage {
+- (void)loadImage:(NSString *)imageUrlString {
     self.imageUrlString = imageUrlString;
     
-    self.image = [UIImage imageNamed:defaultImage];
     UIImage *imageFromCache = [cacheImage objectForKey:imageUrlString];
     if (imageFromCache != nil) {
         self.image = imageFromCache;
         return;
     }
-    
+    self.hidden = true;
     [APIManager.sharedInstance get:imageUrlString completion:^(NSData *data, NSError *error) {
         if (error != nil) {
             NSLog(@"ERROR DOWNLOAD IMAGE : %@ %@", imageUrlString, error);
@@ -31,6 +30,7 @@
             UIImage *imageToCache = [UIImage imageWithData:data];
             if (self.imageUrlString == imageUrlString) {
                 self.image = imageToCache;
+                self.hidden = false;
             }
             [cacheImage setObject:imageToCache forKey:imageUrlString];
         });

@@ -33,10 +33,6 @@
 }
 
 - (void)showMoreArtistWith:(DZRArtistArray *)artistArray {
-    if (artistArray.nextURL == nil) {
-        return;
-    }
-    
     __weak typeof(self) weak = self;
     [self.service moreArtists:artistArray completion:^(DZRArtistArray *artistsMore, NSString *error) {
         DZRArtistArray *newArray = [[DZRArtistArray alloc] init];

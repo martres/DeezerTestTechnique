@@ -52,9 +52,15 @@
 }
 
 - (void)insertArtists:(DZRArtistArray *)artistArray {
-    self.artists = artistArray;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.collectionView reloadData];
+        self.artists = artistArray;
+        [self.collectionView performBatchUpdates:^{
+            NSMutableArray *arrayWithIndexPaths = [NSMutableArray array];
+            for (NSUInteger i = [self.collectionView numberOfItemsInSection:0]; i < self.artists.arrayItems.count ; i++) {
+                [arrayWithIndexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+            }
+            [self.collectionView insertItemsAtIndexPaths:arrayWithIndexPaths];
+        } completion:nil];
     });
 }
 
@@ -131,7 +137,8 @@
     
     NSString *CellIdentifier = [DZRArtistCollectionViewCell getIdentifier];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    [cell.artistImage loadImage:artist.pictureUrl defaultImage:@"artist_default_image"];
+    [cell.artistImage loadImage:artist.pictureUrl];
+    [cell.artistImage rounded:cell.artistImage.frame.size.width / 2];
     cell.artistName.text = artist.titleEntity;
     return cell;
 }

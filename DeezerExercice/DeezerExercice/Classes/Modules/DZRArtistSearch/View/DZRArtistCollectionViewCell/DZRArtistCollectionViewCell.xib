@@ -35,7 +35,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lya-YT-ARi">
                                         <rect key="frame" x="6" y="91" width="358" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                        <color key="textColor" red="0.97254901959999995" green="0.58039215690000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -51,7 +51,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.58039215690000001" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CzM-qd-Bg1" firstAttribute="leading" secondItem="GvI-aD-h8b" secondAttribute="leading" constant="1" id="DeI-yq-Kyy"/>
                             <constraint firstItem="CzM-qd-Bg1" firstAttribute="centerX" secondItem="GvI-aD-h8b" secondAttribute="centerX" id="Oey-hs-CKv"/>

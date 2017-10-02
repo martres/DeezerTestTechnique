@@ -61,10 +61,12 @@
 
 #pragma DZRArtistSearchModuleInterface delegate
 
-- (void)showMoreArtists:(DZRArtistArray *)artistarray {    
-    if (!self.isStartingRequest) {
-        [self.artistSearchInteractor showMoreArtistWith:artistarray];
+- (void)showMoreArtists:(DZRArtistArray *)artistarray {
+    if (self.isStartingRequest || artistarray.nextURL == nil) {
+        return;
     }
+    
+    [self.artistSearchInteractor showMoreArtistWith:artistarray];
     self.isStartingRequest = true;
 }
 
