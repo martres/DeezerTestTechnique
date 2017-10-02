@@ -8,30 +8,37 @@
 
 #import "DZRArtistDetailViewController.h"
 
-@interface DZRArtistDetailViewController ()
-
-@property (nonatomic, strong) DZRArtist *artist;
-
-@end
-
 @implementation DZRArtistDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configureView];
+}
+
+- (void) configureView {
+    self.navigationItem.title = self.artist.titleEntity;
 }
 
 #pragma - DZRArtistDetailInterface
 
 - (void) showError:(NSString *)error {
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
+                                                        message:error
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    });
 }
 
 - (void) showResultsOfGetOneAlbum:(DZRArtist *)artist {
-    
+    self.artist = artist;
+    [self.eventHandler getTracksOf:artist];
 }
 
 - (void) showResultsOfTrackOfAlbum:(DZRArtist *)artist {
-    
+    self.artist = artist;
 }
 
 - (void) startingSong:(DZRTrack *)track {

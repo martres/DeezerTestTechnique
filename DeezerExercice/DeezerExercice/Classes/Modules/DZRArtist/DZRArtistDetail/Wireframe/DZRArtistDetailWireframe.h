@@ -7,10 +7,11 @@
 //
 
 #import "Modules.h"
+#import "DZRRootWireframe.h"
 
 @interface DZRArtistDetailWireframe : NSObject
 
-- (void)presentArtistDetailFromViewController:(UIViewController *)viewController detailArtist:(DZRArtist *)detailArtist;
+- (void)presentArtistDetailFromViewController:(UIViewController *)viewController detailArtist:(DZRArtist *)detailArtist rootWireframe:(DZRRootWireframe *)rootWireframe;
 - (void)dismissArtistDetail;
 
 @end

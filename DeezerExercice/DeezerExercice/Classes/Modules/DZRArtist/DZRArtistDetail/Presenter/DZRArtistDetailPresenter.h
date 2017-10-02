@@ -8,11 +8,13 @@
 
 #import "DZRArtistDetailInteractorInputOutput.h"
 #import "DZRArtistDetailWireframe.h"
+#import "DZRArtistDetailInterface.h"
+#import "DZRArtistDetailModuleInterface.h"
 
-@interface DZRArtistDetailPresenter : NSObject<DZRArtistDetailInteractorOutput>
+@interface DZRArtistDetailPresenter : NSObject<DZRArtistDetailInteractorOutput, DZRArtistDetailModuleInterface>
 
-@property (nonatomic, strong) id<DZRArtistDetailInteractorInput>    detailInteractor;
-@property (nonatomic, strong) DZRArtistDetailWireframe              *detailWireframe;
-@property (nonatomic, strong) UIViewController                      *userInterface;
+@property (nonatomic, strong) id<DZRArtistDetailInteractorInput>            detailInteractor;
+@property (nonatomic, strong) DZRArtistDetailWireframe                      *detailWireframe;
+@property (nonatomic, strong) UIViewController<DZRArtistDetailInterface>    *userInterface;
 
 @end

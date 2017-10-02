@@ -9,5 +9,6 @@
 @interface DZRRootWireframe : NSObject
 
 - (void) showRootViewController:(UIViewController *)viewController  inWindow:(UIWindow *)window;
+- (void) pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
 @end

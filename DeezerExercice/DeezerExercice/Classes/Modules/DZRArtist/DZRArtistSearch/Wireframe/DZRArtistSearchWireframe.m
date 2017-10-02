@@ -27,12 +27,12 @@
  @params    the current window of the application
  **/
 
-
 - (void)presentArtistSearchFromWindow:(UIWindow *)window {
     DZRArtistSearchViewController *searchViewController = [self artistSearchViewControllerFromStoryboard];
     searchViewController.eventHandler = (id<DZRArtistSearchModuleInterface>) self.searchPresenter;
     self.searchPresenter.userInterface = searchViewController;
     self.artistSearchViewController = searchViewController;
+    self.artistDetailWireframe = [[DZRArtistDetailWireframe alloc] init];
     [self.rootWireframe showRootViewController:searchViewController inWindow:window];
 }
 
@@ -42,7 +42,7 @@
  **/
 
 - (void)presentArtistDetail:(DZRArtist *)artist {
-    [self.artistDetailWireframe presentArtistDetailFromViewController:_artistSearchViewController detailArtist:artist];
+    [self.artistDetailWireframe presentArtistDetailFromViewController:self.artistSearchViewController detailArtist:artist rootWireframe:self.rootWireframe];
 }
 
 /**

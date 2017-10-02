@@ -8,10 +8,14 @@
 
 #import "Modules.h"
 
-@protocol DZRArtistDetailModuleInterface <NSObject
+@protocol DZRArtistDetailModuleInterface <NSObject>
 
-- (void)getOneAlbumeAndTracks:(DZRArtist *)artist;
+-(void)getOneAlbumOf:(DZRArtist *)artist;
 
-- (void)launchSong:(DZTrack *)track;
+-(void)getTracksOf:(DZRArtist *)artist;
+
+-(void)launchSong:(DZRTrack *)track;
+
+-(void)stopSong:(DZRTrack *)track;
 
 @end

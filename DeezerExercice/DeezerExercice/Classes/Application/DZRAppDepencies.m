@@ -40,9 +40,6 @@
     
     // Artist Search Module Classes
     [self searchModuleInit:rootWireframe];
-    
-    // Artist Detail Module Classes
-    
 }
 
 - (void)searchModuleInit:(DZRRootWireframe *)rootWireframe{

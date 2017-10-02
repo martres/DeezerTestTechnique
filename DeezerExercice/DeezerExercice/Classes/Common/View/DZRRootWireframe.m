@@ -17,6 +17,13 @@
     navigationController.viewControllers = @[viewController];
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    UINavigationController *navigationController = (UINavigationController *)[viewController navigationController];
+    if (navigationController != nil) {
+        [navigationController pushViewController:viewController animated:animated];
+    }
+}
+
 - (UINavigationController *)navigationControllerFromWindow:(UIWindow *)window
 {
     UINavigationController *navigationController = (UINavigationController *)[window rootViewController];

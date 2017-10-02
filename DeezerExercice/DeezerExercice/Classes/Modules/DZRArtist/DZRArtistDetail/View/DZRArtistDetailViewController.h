@@ -7,9 +7,11 @@
 //
 
 #import "DZRArtistDetailInterface.h"
+#import "DZRArtistDetailModuleInterface.h"
 
 @interface DZRArtistDetailViewController : UIViewController<DZRArtistDetailInterface>
 
-@property (nonatomic, strong) id<DZRArtistDetailInterface>        eventHandler;
+@property (nonatomic, strong) id<DZRArtistDetailModuleInterface>        eventHandler;
+@property (nonatomic, strong) DZRArtist                                 *artist;
 
 @end

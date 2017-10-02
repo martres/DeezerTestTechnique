@@ -10,12 +10,16 @@
 
 @protocol DZRArtistDetailInteractorInput <NSObject>
 
-- (void)getOneAlbumAndTracks:(DZRArtist *)artist;
+- (void)getTracksOf:(DZRArtist *)artist;
+
+- (void)getOneAlbumOf:(DZRArtist *)artist;
 
 @end
 
 @protocol DZRArtistDetailInteractorOutput <NSObject>
 
-- (void)resultAlbumAndTracks:(DZRArtist *)artist error:(NSString *)error;
+- (void)resultTracksOf:(DZRArtist *)artist error:(NSString *)error;
+
+- (void)resultOneAlbumOf:(DZRArtist *)artist error:(NSString *)error;
 
 @end
