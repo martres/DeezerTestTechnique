@@ -14,13 +14,13 @@
 
 - (void)resultSearchArtistWithName:(DZRArtistArray *)artistArray error:(NSString *)error {
     if (error != nil) {
+        [self showError:error];
+    } else {
         if (artistArray.arrayItems.count == 0) {
             [self showNoContent];
         } else {
             [self showResultsSearch:artistArray];
         }
-    } else {
-        [self showError:error];
     }
 }
 

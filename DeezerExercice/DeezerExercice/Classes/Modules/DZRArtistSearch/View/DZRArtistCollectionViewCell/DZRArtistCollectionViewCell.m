@@ -22,7 +22,6 @@
     [super awakeFromNib];
     
     [self.artistImage roundedWithColor:[UIColor whiteColor] borderSize:1 radius:self.artistImage.frame.size.width / 2];
-    [self.container rounded:self.container.frame.size.width / 2];
 }
 
 - (void)loadImageArtist:(NSString *)url {

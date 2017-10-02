@@ -70,7 +70,9 @@
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self searchArtistWithName:searchText];
+    if (![searchText isEqualToString:@""]) {
+        [self searchArtistWithName:searchText];
+    }
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -91,6 +93,7 @@
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     [cell loadImageArtist:artist.pictureUrl];
     cell.artistName.text = artist.titleEntity;
+    [cell layoutIfNeeded];
     return cell;
 }
 
