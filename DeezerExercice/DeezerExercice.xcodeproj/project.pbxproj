@@ -758,6 +758,7 @@
 				TargetAttributes = {
 					5C1A7D7E1A6558BB00092761 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5846527P6G;
 					};
 					5C1A7D971A6558BC00092761 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -984,12 +985,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5846527P6G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
 				INFOPLIST_FILE = DeezerExercice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = come.me.DeezerExercice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -998,12 +1000,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5846527P6G;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Prefix.pch";
 				INFOPLIST_FILE = DeezerExercice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = come.me.DeezerExercice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -26,16 +26,15 @@
 
 - (void)showResultsSearch:(DZRArtistArray *)artistArray {
     [self.userInterface showResultsOfSearchArtist:artistArray];
+    [self.userInterface reloadView];
 }
 
 - (void)showNoContent {
     [self.userInterface showEmptyResultMessage];
-    [self.userInterface reloadView];
 }
 
 - (void)showError:(NSString *)error {
     [self.userInterface showError:error];
-    [self.userInterface reloadView];
 }
 
 #pragma DZRArtistSearchModuleInterface delegate

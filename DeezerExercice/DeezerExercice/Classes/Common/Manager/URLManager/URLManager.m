@@ -13,11 +13,14 @@
 static NSString *baseURL = @"http://api.deezer.com/";
 
 + (NSString *)urlDeezerBuilder:(NSString *)data endPoint:(EndPoint)endPoint {
+    NSString *urlDeezer = @"";
     if (data != nil) {
         NSString *endPointFormat = [NSString stringWithFormat:EndPointName[endPoint], data];
-        return [NSString stringWithFormat:@"%@%@", baseURL, endPointFormat];
+        urlDeezer = [NSString stringWithFormat:@"%@%@", baseURL, endPointFormat];
+    } else {
+        urlDeezer = [NSString stringWithFormat:@"%@%@", baseURL, EndPointName[endPoint]];
     }
-    return [NSString stringWithFormat:@"%@%@", baseURL, EndPointName[endPoint]];
+    return [urlDeezer stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end

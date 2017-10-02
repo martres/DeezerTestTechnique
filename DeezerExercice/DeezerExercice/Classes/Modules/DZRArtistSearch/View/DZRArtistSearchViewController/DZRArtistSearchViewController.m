@@ -7,6 +7,7 @@
 #import "DZRArtistSearchViewController.h"
 #import "DZRArtistCollectionViewCell.h"
 #import "DZRArtist.h"
+#import "UIView+round.h"
 
 @interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
@@ -40,21 +41,27 @@
 
 - (void)showResultsOfSearchArtist:(DZRArtistArray *)artists {
     self.artists = artists;
-    [self reloadView];
 }
 
 - (void) reloadView {
     dispatch_async(dispatch_get_main_queue(), ^{
+        self.collectionView.hidden = false;
+        self.noResultsView.hidden = true;
         [self.collectionView reloadData];
+        [self.collectionView setContentOffset:CGPointZero animated:true];
     });
 }
 
 - (void)showEmptyResultMessage {
-    self.collectionView.hidden = true;
-    self.noResultsView.hidden = false;
+    self.artists = nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.collectionView.hidden = true;
+        self.noResultsView.hidden = false;
+    });
 }
 
 - (void) showError:(NSString *)error {
+    self.artists = nil;
     dispatch_async(dispatch_get_main_queue(), ^{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
                                                         message:error
@@ -74,9 +81,6 @@
 #pragma - UISearchBarDelegate
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    self.collectionView.hidden = false;
-    self.noResultsView.hidden = false;
-    searchBar.text = @"";
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
@@ -105,7 +109,6 @@
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     [cell loadImageArtist:artist.pictureUrl];
     cell.artistName.text = artist.titleEntity;
-    [cell setNeedsLayout];
     return cell;
 }
 
@@ -121,7 +124,7 @@
 #pragma - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat width = collectionView.frame.size.width / 2;
+    CGFloat width = collectionView.frame.size.width / 3;
     CGSize size = CGSizeMake(width, width);
     return size;
 }

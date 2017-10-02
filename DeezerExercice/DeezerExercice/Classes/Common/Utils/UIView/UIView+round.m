@@ -7,19 +7,20 @@
 //
 
 #import "UIView+round.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (round)
 
 - (void)rounded:(CGFloat)radius {
-    self.layer.cornerRadius = radius;
     self.clipsToBounds = true;
+    self.layer.cornerRadius = radius;
 }
 
 - (void)roundedWithColor:(UIColor *)color borderSize:(CGFloat)borderSize radius:(CGFloat)radius {
-    self.layer.borderColor = color.CGColor;
-    self.layer.borderWidth = borderSize;
-    self.layer.cornerRadius = radius;
     self.clipsToBounds = true;
+    [self.layer setBorderColor:color.CGColor];
+    [self.layer setBorderWidth:borderSize];
+    [self.layer setCornerRadius:radius];
 }
 
 @end
