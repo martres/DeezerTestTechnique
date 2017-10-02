@@ -22,5 +22,7 @@
 - (void)showError:(NSString *)error;
 - (void)reloadView;
 - (void)showResultsOfSearchArtist:(DZRArtistArray *)artists;
+- (void)showTopOfScroll;
+- (void)insertArtists:(DZRArtistArray *)artistArray;
 
 @end

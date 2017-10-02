@@ -31,4 +31,11 @@
     }];
 }
 
+- (void)showMoreArtistWith:(DZRArtistArray *)artistArray {
+    __weak typeof(self) weak = self;
+    [self.service moreArtists:artistArray completion:^(DZRArtistArray *artistsMore, NSString *error) {
+        [weak.output resultMoreArtist:artistsMore error:error];
+    }];
+}
+
 @end

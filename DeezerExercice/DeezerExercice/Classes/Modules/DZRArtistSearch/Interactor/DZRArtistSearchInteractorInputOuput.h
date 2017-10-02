@@ -12,11 +12,15 @@
 
 - (void)searchArtistWithName:(NSString *)name;
 
+- (void)showMoreArtistWith:(DZRArtistArray *)artistArray;
+
 @end
 
 @protocol DZRArtistSearchInteractorOutput <NSObject>
 
 - (void)resultSearchArtistWithName:(DZRArtistArray *)artistArray error:(NSString *)error;
+
+- (void)resultMoreArtist:(DZRArtistArray *)artistArray error:(NSString *)error;
 
 @end
 

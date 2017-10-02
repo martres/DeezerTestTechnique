@@ -4,6 +4,8 @@
 //  Copyright (c) 2015 Deezer. All rights reserved.
 //
 
+#import "UIImageView+LoadImage.h"
+
 @interface DZRArtistCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *artistImage;
@@ -13,6 +15,6 @@
 +(UINib *) getNibOfCell;
 +(NSString *)getIdentifier;
 
--(void) loadImageArtist:(NSString *)url;
+-(void) loadImageArtist:(NSString *)url indexPath:(NSIndexPath *)indexPath completion:(void(^)(UIImage *image, NSIndexPath *indexPath))completion;
 
 @end

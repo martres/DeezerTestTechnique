@@ -13,13 +13,27 @@
 #pragma DZRArtistSearchInteractorOutput delegate
 
 - (void)resultSearchArtistWithName:(DZRArtistArray *)artistArray error:(NSString *)error {
+    [self execResults:artistArray error:error isSearch:true];
+}
+
+- (void)resultMoreArtist:(DZRArtistArray *)artistArray error:(NSString *)error {
+    [self execResults:artistArray error:error isSearch:false];
+}
+
+- (void)execResults:(DZRArtistArray *)artistArray error:(NSString *)error isSearch:(BOOL)isSearch {
     if (error != nil) {
         [self showError:error];
     } else {
-        if (artistArray.arrayItems.count == 0) {
-            [self showNoContent];
+        if (artistArray.arrayItems.count != 0) {
+            if (isSearch) {
+                [self showResultsSearch:artistArray];
+            } else {
+                [self.userInterface insertArtists:artistArray];
+            }
         } else {
-            [self showResultsSearch:artistArray];
+            if (isSearch) {
+                [self showNoContent];
+            }
         }
     }
 }
@@ -27,6 +41,7 @@
 - (void)showResultsSearch:(DZRArtistArray *)artistArray {
     [self.userInterface showResultsOfSearchArtist:artistArray];
     [self.userInterface reloadView];
+    [self.userInterface showTopOfScroll];
 }
 
 - (void)showNoContent {
@@ -38,6 +53,10 @@
 }
 
 #pragma DZRArtistSearchModuleInterface delegate
+
+- (void)showMoreArtists:(DZRArtistArray *)artistarray {
+    [self.artistSearchInteractor showMoreArtistWith:artistarray];
+}
 
 - (void)searchArtistWithName:(NSString *)textSearch {
     [self.artistSearchInteractor searchArtistWithName:textSearch];

@@ -6,9 +6,11 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+typedef void(^ImageLoader)(UIImage *image);
+
 @interface UIImageView (LoadImage)
 
-- (void)loadImage:(NSString *)url defaultImage:(NSString *)defaultImage;
+- (void)loadImage:(NSString *)url defaultImage:(NSString *)defaultImage completion:(ImageLoader)completion;
 
 @end
 

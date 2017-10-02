@@ -26,6 +26,22 @@
     }];
 }
 
+- (void)moreArtists:(DZRArtistArray *)artistArray completion:(DZRArtistCompletion)completion {
+    NSString* urlMoreArtist = artistArray.nextURL;
+    [[APIManager sharedInstance] get:urlMoreArtist completion:^(NSData *data, NSError *error) {
+        if (error != nil) {
+            completion(nil, error.debugDescription);
+        } else {
+            DZRArtistArray *obj = [self objectFromData:data];
+            if (obj == nil) {
+                completion(nil, @"An error occured, please retry");
+            } else {
+                completion(obj, nil);
+            }
+        }
+    }];
+}
+
 #pragma - BaseService
 
 - (DZRArtistArray *)objectFromData:(NSData *)data {

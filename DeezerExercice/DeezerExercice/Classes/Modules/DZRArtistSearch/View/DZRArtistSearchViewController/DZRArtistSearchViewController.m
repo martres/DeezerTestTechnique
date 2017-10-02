@@ -48,6 +48,22 @@
         self.collectionView.hidden = false;
         self.noResultsView.hidden = true;
         [self.collectionView reloadData];
+    });
+}
+
+- (void)insertArtists:(DZRArtistArray *)artistArray {
+    DZRArtistArray *newArtistArray = [[DZRArtistArray alloc] init];
+    newArtistArray.nextURL = artistArray.nextURL;
+    newArtistArray.arrayItems = self.artists.arrayItems;
+    [newArtistArray.arrayItems addObjectsFromArray:artistArray.arrayItems];
+    self.artists = newArtistArray;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView reloadData];
+    });
+}
+
+- (void) showTopOfScroll {
+    dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView setContentOffset:CGPointZero animated:true];
     });
 }
@@ -76,6 +92,13 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.searchBar resignFirstResponder];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+    if (bottomEdge >= scrollView.contentSize.height) {
+        [self.eventHandler showMoreArtists:self.artists];
+    }
 }
 
 #pragma - UISearchBarDelegate
@@ -107,7 +130,14 @@
     
     NSString *CellIdentifier = [DZRArtistCollectionViewCell getIdentifier];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    [cell loadImageArtist:artist.pictureUrl];
+    if (artist.pictureCache) {
+        [cell.artistImage setImage:artist.pictureCache];
+    } else {
+        [cell loadImageArtist:artist.pictureUrl indexPath:indexPath completion:^(UIImage *image, NSIndexPath *oldIndexPath) {
+            DZRArtist *oldArtist = (DZRArtist *)self.artists.arrayItems[oldIndexPath.row];
+            oldArtist.pictureCache = image;
+        }];
+    }
     cell.artistName.text = artist.titleEntity;
     return cell;
 }

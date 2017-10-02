@@ -31,4 +31,11 @@
 
 - (void)showDetailOfArtist:(DZRArtist *)artist;
 
+/**
+ @brief Show more Artist
+ @param DZArtistArray
+ **/
+
+- (void)showMoreArtists:(DZRArtistArray *)artistarray;
+
 @end
