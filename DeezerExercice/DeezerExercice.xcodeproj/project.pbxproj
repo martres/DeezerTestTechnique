@@ -280,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				6597A2361F7EAEB8003254D0 /* Common */,
-				65ADDABA1F7FF40500B92A20 /* Modules */,
 				5C1A7D9C1A6558BC00092761 /* Supporting Files */,
 			);
 			path = DeezerExerciceTests;
@@ -733,29 +732,6 @@
 				659DE11B1F7E8DBF00E146ED /* ArtistDetailStoryboard.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		65ADDABA1F7FF40500B92A20 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				65ADDABB1F7FF41300B92A20 /* DZArtistSearch */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		65ADDABB1F7FF41300B92A20 /* DZArtistSearch */ = {
-			isa = PBXGroup;
-			children = (
-				65ADDABC1F7FF41D00B92A20 /* Wireframe */,
-			);
-			path = DZArtistSearch;
-			sourceTree = "<group>";
-		};
-		65ADDABC1F7FF41D00B92A20 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		65ADDABE1F7FFBCD00B92A20 /* Interactor */ = {
