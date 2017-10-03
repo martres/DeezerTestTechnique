@@ -82,27 +82,45 @@
 #pragma - ScrollViewDelegate
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"CONTENT TABLEVIEW %f", self.tableViewTracks.contentOffset.y);
+    if (scrollView.contentSize.height < self.tableViewTracks.frame.size.height) {
+        return;
+    }
+    
+    //Change the HeightViewTop to show all the rows inside the tableView
     CGFloat newHeight = self.heightMaxViewTop - self.tableViewTracks.contentOffset.y;
-    if (newHeight < 60) {
+    if (newHeight < 60 || [self isReachingBottomOfTableView:scrollView]) {
         newHeight = 60;
     }
     [self.view layoutIfNeeded];
     self.heightViewTop.constant = newHeight;
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+-(BOOL)isReachingBottomOfTableView:(UIScrollView *)scrollView {
+    CGPoint offset = scrollView.contentOffset;
+    CGRect bounds = scrollView.bounds;
+    CGSize size = scrollView.contentSize;
+    UIEdgeInsets inset = scrollView.contentInset;
+    float y = offset.y + bounds.size.height - inset.bottom;
+    float h = size.height;
+    if (y >= h) {
+        return TRUE;
+    }
+    return FALSE;
 }
 
 
 #pragma - DZRArtistDetailInterface
 
 - (void) showError:(NSString *)error {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An error occured"
                                                         message:error
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
-        [alert show];
-    });
+    [alert show];
 }
 
 - (void) showResultsOfGetOneAlbum:(DZRArtist *)artist {
@@ -117,11 +135,11 @@
 }
 
 - (void) startingSong:(DZRTrack *)track {
-    
+    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void) stoppingSong:(DZRTrack *)track {
-    
+    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void) reloadView {
@@ -163,15 +181,12 @@
     DZRTrack *track = self.artist.artistAlbum.trackList.arrayItems[index];
     self.currentRowPlayling = -1;
     [self.eventHandler stopSong:track];
-    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationNone];
-
 }
 
 - (void)startSongAtIndex:(NSInteger)index {
     DZRTrack *track = self.artist.artistAlbum.trackList.arrayItems[index];
     self.currentRowPlayling = index;
     [self.eventHandler launchSong:track];
-    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end

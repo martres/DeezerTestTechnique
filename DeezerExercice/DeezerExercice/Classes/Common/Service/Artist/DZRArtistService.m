@@ -19,7 +19,7 @@
         } else {
             DZRArtistArray *obj = [self objectFromData:data];
             if (obj == nil) {
-                completion(nil, @"An error occured, please retry");
+                completion(nil, @"Impossible to get an artist.");
             } else {
                 completion(obj, nil);
             }
@@ -35,7 +35,7 @@
         } else {
             DZRArtistArray *obj = [self objectFromData:data];
             if (obj == nil) {
-                completion(nil, @"An error occured, please retry");
+                completion(nil, @"Impossible to get more artists");
             } else {
                 completion(obj, nil);
             }

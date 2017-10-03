@@ -19,7 +19,7 @@
         } else {
             DZRTrackArray *tracks = [self objectFromData:data];
             if (tracks == nil) {
-                completion(nil, @"An error occured, please retry");
+                completion(nil, @"Impossible to get tracks of the album");
             } else {
                 completion(tracks, nil);
             }

@@ -30,10 +30,12 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if (error != nil) {
             [self showError:error];
+            [self dismissViewDetail];
             return;
         }
         if (artist.artistAlbum == nil) {
             [self showError:@"Impossible to get the album"];
+            [self dismissViewDetail];
         } else {
             [self.userInterface showResultsOfGetOneAlbum:artist];
         }

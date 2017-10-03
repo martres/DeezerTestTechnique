@@ -20,7 +20,7 @@
         } else {
             DZRAlbum *obj = [self objectFromData:data];
             if (obj == nil) {
-                completion(nil, @"An error occured, please retry");
+                completion(nil, @"Impossible to get the album.");
             } else {
                 completion(obj, nil);
             }
