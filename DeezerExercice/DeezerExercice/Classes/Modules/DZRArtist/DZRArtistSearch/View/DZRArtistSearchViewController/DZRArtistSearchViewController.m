@@ -139,7 +139,6 @@
     NSString *CellIdentifier = [DZRArtistCollectionViewCell getIdentifier];
     DZRArtistCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     [cell.artistImage loadImage:artist.pictureUrl];
-    [cell.artistImage rounded:cell.artistImage.frame.size.width / 2];
     cell.artistName.text = artist.titleEntity;
     return cell;
 }
