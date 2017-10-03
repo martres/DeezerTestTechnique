@@ -14,6 +14,10 @@
 
 - (void)getOneAlbumOf:(DZRArtist *)artist;
 
+- (void)launchSong:(DZRTrack *)track;
+
+- (void)stopSong:(DZRTrack *)track;
+
 @end
 
 @protocol DZRArtistDetailInteractorOutput <NSObject>
@@ -21,5 +25,11 @@
 - (void)resultTracksOf:(DZRArtist *)artist error:(NSString *)error;
 
 - (void)resultOneAlbumOf:(DZRArtist *)artist error:(NSString *)error;
+
+- (void)startingSong:(DZRTrack *)track;
+
+- (void)stoppingSong:(DZRTrack *)track;
+
+- (void)errorPlaylingSong:(DZRTrack *)track;
 
 @end

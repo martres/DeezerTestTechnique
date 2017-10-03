@@ -13,6 +13,7 @@
 #import "URLManager.h"
 #import "ServiceManager.h"
 #import "APIManager.h"
+#import "PlayerManager.h"
 
 // ENUM
 #import "EnumHTTPMethod.h"

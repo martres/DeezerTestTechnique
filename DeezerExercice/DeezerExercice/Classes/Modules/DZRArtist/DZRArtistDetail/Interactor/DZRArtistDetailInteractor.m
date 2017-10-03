@@ -8,12 +8,19 @@
 
 #import "DZRArtistDetailInteractor.h"
 
+@interface DZRArtistDetailInteractor()
+
+@property (nonatomic, strong) PlayerManager *playerManager;
+
+@end
+
 @implementation DZRArtistDetailInteractor
 
-- (instancetype)initWithService:(ServiceManager *)serviceManager {
+- (instancetype)initWithService:(ServiceManager *)serviceManager playerManager:(PlayerManager *)playerManager {
     self = [super initWithService:serviceManager];
     if (self) {
         self.serviceManager = serviceManager;
+        self.playerManager = playerManager;
     }
     return self;
 }
@@ -34,6 +41,21 @@
         artist.artistAlbum.trackList = tracks;
         [weak.output resultTracksOf:artist error:error];
     }];
+}
+
+-(void)stopSong:(DZRTrack *)track {
+    [self.playerManager stopSong];
+    [self.output stoppingSong:track];
+}
+
+-(void)launchSong:(DZRTrack *)track {
+    if (track.isReadable && track.mediaUrl != nil) {
+        [self.playerManager launchSong:track];
+        [self.output startingSong:track];
+    } else {
+        [self.playerManager stopSong];
+        [self.output errorPlaylingSong:track];
+    }
 }
 
 @end

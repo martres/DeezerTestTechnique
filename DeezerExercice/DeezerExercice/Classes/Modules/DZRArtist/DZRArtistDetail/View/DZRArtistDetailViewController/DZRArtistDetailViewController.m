@@ -35,10 +35,11 @@
 }
 
 - (void) configureView {
+    //To change the color background of the status bar
     UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 20)];
     view.backgroundColor = [UIColor colorWithRed:52.0/255.0 green:73.0/255.0 blue:94.0/255.0 alpha:1];
     [self.view addSubview:view];
-
+    
     [self.artistPicture rounded:self.artistPicture.frame.size.width / 2];
     
     self.heightViewTop.constant = self.view.frame.size.height / 2;
@@ -162,7 +163,7 @@
     DZRTrack *track = self.artist.artistAlbum.trackList.arrayItems[index];
     self.currentRowPlayling = -1;
     [self.eventHandler stopSong:track];
-    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationNone];
 
 }
 
@@ -170,7 +171,7 @@
     DZRTrack *track = self.artist.artistAlbum.trackList.arrayItems[index];
     self.currentRowPlayling = index;
     [self.eventHandler launchSong:track];
-    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableViewTracks reloadRowsAtIndexPaths:[self.tableViewTracks indexPathsForVisibleRows]  withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end

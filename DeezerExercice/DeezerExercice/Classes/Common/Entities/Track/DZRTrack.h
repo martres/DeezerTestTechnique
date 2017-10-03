@@ -11,5 +11,6 @@
 @interface DZRTrack : BaseEntity
 
 @property (nonatomic, assign) BOOL isReadable;
+@property (nonatomic, strong) NSString *mediaUrl;
 
 @end

@@ -13,4 +13,6 @@
 
 @property (nonatomic, weak) id<DZRArtistDetailInteractorOutput> output;
 
+- (instancetype)initWithService:(ServiceManager *)serviceManager playerManager:(PlayerManager *)playerManager;
+
 @end

@@ -44,14 +44,29 @@
     [self.userInterface showError:error];
 }
 
+- (void)stoppingSong:(DZRTrack *)track {
+    [self.userInterface stoppingSong:track];
+}
+
+- (void)startingSong:(DZRTrack *)track {
+    [self.userInterface startingSong:track];
+}
+
+- (void)errorPlaylingSong:(DZRTrack *)track {
+    NSString *error = [NSString stringWithFormat:@"Impossible to play track : %@", track.titleEntity];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.userInterface showError:error];
+    });
+}
+
 #pragma - DZRArtistDetailModuleDelegate
 
 - (void)stopSong:(DZRTrack *)track {
-    
+    [self.detailInteractor stopSong:track];
 }
 
 - (void)launchSong:(DZRTrack *)track {
-    
+    [self.detailInteractor launchSong:track];
 }
 
 - (void)getTracksOf:(DZRArtist *)artist {
@@ -63,6 +78,7 @@
 }
 
 - (void)dismissViewDetail {
+    [self stopSong:nil];
     [self.detailWireframe dismissArtistDetail];
 }
 

@@ -7,12 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "DZRArtistService.h"
-#import "DZRAlbumService.h"
-#import "DZRTrackService.h"
-#import "DZRArtist.h"
-
-#import "URLManager.h"
+#import "Entities.h"
+#import "Manager.h"
+#import "Service.h"
 
 static DZRArtistArray *artistArrayTMP;
 static DZRArtist *artistTmp;
@@ -103,10 +100,11 @@ static DZRArtist *artistTmp;
 - (void) checkTracksInAlbum {
     XCTAssert(artistTmp.artistAlbum.trackList, @"data is nil");
     
-    for (DZRArtist *artist in artistTmp.artistAlbum.trackList.arrayItems) {
-        XCTAssertNotNil(artist.titleEntity, "NAME ARTIST is nil");
-        XCTAssertNotNil(artist.pictureUrl, "PICTURE URL is nil");
-        XCTAssertNotNil(artist.identifierEntity, "IDENTIFIER is nil");
+    for (DZRTrack *track in artistTmp.artistAlbum.trackList.arrayItems) {
+        XCTAssertNotNil(track.titleEntity, "NAME ARTIST is nil");
+        XCTAssertNotNil(track.mediaUrl, "MEDIA URL is nil");
+        NSLog(@"%@", track.mediaUrl);
+        XCTAssertNotNil(track.identifierEntity, "IDENTIFIER is nil");
     }
 }
 

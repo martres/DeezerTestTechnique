@@ -24,7 +24,7 @@
 - (void) presentArtistDetailFromViewController:(UIViewController *)viewController detailArtist:(DZRArtist *)detailArtist rootWireframe:(DZRRootWireframe *)rootWireframe {
     DZRArtistDetailViewController *controller = [self detailViewController];
     DZRArtistDetailPresenter *presenter = [[DZRArtistDetailPresenter alloc] init];
-    DZRArtistDetailInteractor *interactor = [[DZRArtistDetailInteractor alloc] initWithService:ServiceManager.sharedInstance];
+    DZRArtistDetailInteractor *interactor = [[DZRArtistDetailInteractor alloc] initWithService:ServiceManager.sharedInstance playerManager:PlayerManager.sharedInstance];
     
     presenter.detailInteractor = interactor;
     presenter.userInterface = controller;

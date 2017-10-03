@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "DZRArtistSearchViewController.h"
-#import "UIViewController+getIdentifier.h"
+#import "Utils.h"
 
 @interface TestUIViewController_getIdentifier : XCTestCase
 

@@ -15,7 +15,7 @@
     if (self) {
         [self setIsReadable:[[dictionary objectForKey:@"readable"] boolValue]];
         self.titleEntity = [dictionary objectForKey:@"title"];
-        self.pictureUrl = [dictionary objectForKey:@"preview"];
+        self.mediaUrl = [dictionary objectForKey:@"preview"];
     }
     return self;
 }
