@@ -59,4 +59,8 @@
     [self.detailInteractor getOneAlbumOf:artist];
 }
 
+- (void)dismissViewDetail {
+    [self.detailWireframe dismissArtistDetail];
+}
+
 @end

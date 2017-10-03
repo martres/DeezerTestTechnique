@@ -8,16 +8,37 @@
 
 #import "DZRArtistDetailViewController.h"
 
+@interface DZRArtistDetailViewController() <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, weak) IBOutlet UILabel *nameAlbum;
+@property (nonatomic, weak) IBOutlet UILabel *nameArtist;
+@property (nonatomic, weak) IBOutlet UILabel *numberTracks;
+@property (nonatomic, weak) IBOutlet UITableView *tableViewTracks;
+@property (nonatomic, weak) IBOutlet UIImageView *artistPicture;
+@property (nonatomic, weak) IBOutlet UIImageView *albumPicture;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *heightViewTop;
+
+@end
+
 @implementation DZRArtistDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureView];
+    [self.eventHandler getOneAlbumOf:self.artist];
 }
 
 - (void) configureView {
-    self.navigationItem.title = self.artist.titleEntity;
+//    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]]
 }
+
+#pragma - Actions
+
+- (IBAction)closeCurrentView:(id)sender {
+    [self.eventHandler dismissViewDetail];
+}
+
 
 #pragma - DZRArtistDetailInterface
 
@@ -52,5 +73,10 @@
 - (void) reloadView {
     
 }
+
+#pragma - TableViewDataSource
+
+
+#pragma - TableViewDelegate
 
 @end

@@ -18,4 +18,6 @@
 
 -(void)stopSong:(DZRTrack *)track;
 
+- (void)dismissViewDetail;
+
 @end

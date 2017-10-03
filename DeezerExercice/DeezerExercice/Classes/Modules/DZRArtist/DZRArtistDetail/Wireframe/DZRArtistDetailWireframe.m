@@ -34,7 +34,7 @@
     controller.artist = detailArtist;
     
     self.rootWireframe = rootWireframe;
-    [self.rootWireframe pushViewController:controller animated:true];
+    [self.presentedViewController presentViewController:controller animated:true completion:nil];
 }
 
 - (void)dismissArtistDetail {
