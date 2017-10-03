@@ -8,10 +8,23 @@
 
 #import "Manager.h"
 
+/*
+ * @brief DZRBaseInteractor
+ * @discussion class abstract for every interactor of a module
+ */
+
 @interface DZRBaseInteractor : NSObject
+
+/*
+ * @brief initWithService
+ * @params serviceManager : Manager to handle every service
+ * @discussion instance of an interactor with a service manager to handle request
+ */
 
 - (instancetype)initWithService:(ServiceManager *)serviceManager;
 
+
+// serviceManager : Manager to handle every service
 @property (nonatomic, strong) ServiceManager *serviceManager;
 
 @end

@@ -9,6 +9,11 @@
 #import "BaseArrayEntity.h"
 #import "DZRArtist.h"
 
+/*
+ * @brief DZRArtistArray
+ * @discussion Entity to handle an array of artists
+ */
+
 @interface DZRArtistArray : BaseArrayEntity
 
 @end

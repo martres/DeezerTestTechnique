@@ -10,6 +10,12 @@
 
 @implementation UIViewController (Extension)
 
+/*
+ * @brief identifierStoryboard
+ * @discussion get the current identifier of the view controller from storyboard
+ * Cast the name of class
+ */
+
 + (NSString *)identifierStoryboard {
     NSString *nameClass = [NSString stringWithFormat:@"%@", [self class]];
     return nameClass;

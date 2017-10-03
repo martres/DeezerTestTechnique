@@ -11,6 +11,12 @@
 
 @implementation ImageViewLoad
 
+/*
+ * @brief loadImage
+ * @params imageUrlString : the url to load the image
+ * @discussion load an image with an url string and use cache to save the data
+ */
+
 - (void)loadImage:(NSString *)imageUrlString {
     self.imageUrlString = imageUrlString;
     

@@ -12,6 +12,14 @@
 
 static NSString *baseURL = @"http://api.deezer.com/";
 
+/*
+ * @brief urlDeezerBuilder
+ * @params data : string of the data to build the url
+ * @params endPoint : enum endPoint to get the right one
+ * @discussion builder to create the url of Deezer
+ * @return return url string for calling deezer service
+ */
+
 + (NSString *)urlDeezerBuilder:(NSString *)data endPoint:(EndPoint)endPoint {
     NSString *urlDeezer = @"";
     if (data != nil) {

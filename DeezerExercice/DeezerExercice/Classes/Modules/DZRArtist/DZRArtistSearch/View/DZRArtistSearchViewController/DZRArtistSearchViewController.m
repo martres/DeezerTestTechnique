@@ -11,6 +11,8 @@
 @interface DZRArtistSearchViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property (nonatomic, strong) DZRArtistArray *artists;
+
+// timerSearchArtist to handle the request of search while the user tap
 @property (nonatomic, assign) NSTimer *timerSearchArtist;
 
 @end

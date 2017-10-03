@@ -10,6 +10,7 @@
 #import "DZRArtistTrackTableViewCell.h"
 #import "Modules.h"
 
+//Value for the height of the ViewTop after a scroll
 static CGFloat SIZE_HEADER_TOP = 60;
 
 @interface DZRArtistDetailViewController() <UITableViewDelegate, UITableViewDataSource, DZRArtistTrackProtocol, UIScrollViewDelegate>
@@ -24,6 +25,8 @@ static CGFloat SIZE_HEADER_TOP = 60;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *heightViewTop;
 
 @property (nonatomic, assign) NSInteger currentRowPlayling;
+
+// self.view.frame.size.height / 2
 @property (nonatomic, assign) CGFloat   heightMaxViewTop;
 
 @end

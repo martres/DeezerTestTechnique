@@ -10,6 +10,12 @@
 
 @implementation DZRArtistArray
 
+/*
+ * @brief InitWithDictionary DZRArtistArray
+ * @params Dictionary of the data
+ * @discussion create an instance of DZRArtistArray and get all artists inside the dictionary
+ */
+
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super initWithDictionary:dictionary];
     if (self) {

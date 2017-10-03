@@ -18,14 +18,35 @@
 
 #pragma DZRArtistSearchInteractorOutput delegate
 
+/*
+ * @brief resultSearchArtistWithName
+ * @params DZRArtistArray array of artists result of the request search
+ * @params error string if the request failed
+ * @discussion get the results of artists search
+ */
+
 - (void)resultSearchArtistWithName:(DZRArtistArray *)artistArray error:(NSString *)error {
     [self execResults:artistArray error:error isSearch:true];
 }
+
+/*
+ * @brief resultMoreArtist
+ * @params DZRArtistArray array of all artists with the same search
+ * @params error string if the request failed
+ * @discussion get the results of more artist
+ */
 
 - (void)resultMoreArtist:(DZRArtistArray *)artistArray error:(NSString *)error {
     [self execResults:artistArray error:error isSearch:false];
     self.isStartingRequest = false;
 }
+
+/*
+ * @brief execResults
+ * @params DZRArtistArray array of all artists
+ * @params error string if the request failed
+ * @params isSearch to handle 2 kind of action for the user interface
+ */
 
 - (void)execResults:(DZRArtistArray *)artistArray error:(NSString *)error isSearch:(BOOL)isSearch {
     if (error != nil) {
@@ -45,6 +66,12 @@
     }
 }
 
+/*
+ * @brief showResultsSearch
+ * @params DZRArtistArray array of all artists
+ * @discussion call function of the user interface to show the result of artistArray from request
+ */
+
 - (void)showResultsSearch:(DZRArtistArray *)artistArray {
     [self.userInterface showResultsOfSearchArtist:artistArray];
     [self.userInterface reloadView];
@@ -61,6 +88,11 @@
 
 #pragma DZRArtistSearchModuleInterface delegate
 
+/**
+ @brief Show more Artist
+ @param DZArtistArray
+ **/
+
 - (void)showMoreArtists:(DZRArtistArray *)artistarray {
     if (self.isStartingRequest || artistarray.nextURL == nil) {
         return;
@@ -70,9 +102,20 @@
     self.isStartingRequest = true;
 }
 
+/*
+ * @brief searchArtistWithName
+ * @params string of the search text
+ * @discussion search artist and send the result to the presenter
+ */
+
 - (void)searchArtistWithName:(NSString *)textSearch {
     [self.artistSearchInteractor searchArtistWithName:textSearch];
 }
+
+/**
+ @brief Show the detail of an artist
+ @param an Artist (DZRArtist)
+ **/
 
 - (void)showDetailOfArtist:(DZRArtist *)artist {
     [self.artistSearchWireframe presentArtistDetail:artist];

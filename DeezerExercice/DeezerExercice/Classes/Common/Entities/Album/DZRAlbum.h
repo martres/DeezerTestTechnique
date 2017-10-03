@@ -9,8 +9,14 @@
 #import "BaseEntity.h"
 #import "DZRTrackArray.h"
 
+/*
+ * @brief DZRAlbum
+ * @discussion Entity to handle an album of Deezer with a reference of tracks
+ */
+
 @interface DZRAlbum : BaseEntity
 
+//  trackList = reference of an array of track
 @property (nonatomic, strong) DZRTrackArray *trackList;
 
 @end

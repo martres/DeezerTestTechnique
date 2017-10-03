@@ -11,6 +11,13 @@
 
 @implementation DZRTrackService
 
+/*
+ * @brief getTracksFromAlbum
+ * @params albumId : id of the album
+ * @params completion : to get the result of the service
+ * @discussion get tracks of an album with his id
+ */
+
 -(void)getTracksFromAlbum:(NSString *)albumId completion:(DZRTracksCompletions)completion {
     NSString *urlGetTrackFromAlbum = [URLManager urlDeezerBuilder:albumId endPoint:GET_TRACKS_ALBUM];
     [[APIManager sharedInstance] get:urlGetTrackFromAlbum completion:^(NSData *data, NSError *error) {

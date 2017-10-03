@@ -6,11 +6,21 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+/*
+ * @brief EntityService
+ * @discussion Enum for each kind of service
+ */
+
 typedef enum EntityService: NSInteger {
     ARTIST,
     ALBUM,
     TRACK,
 } EntityService;
+
+/*
+ * @brief NameService
+ * @discussion Enum for each service
+ */
 
 typedef enum NameService: NSInteger {
     SEARCH_ARTIST_WITH_PARAM,

@@ -6,6 +6,11 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+/*
+ * @brief BaseService protocol
+ * @discussion Protocol for every service
+ */
+
 @protocol BaseService <NSObject>
 
 - (id)objectFromData:(NSData *)data;

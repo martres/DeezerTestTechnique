@@ -10,6 +10,12 @@
 
 @implementation DZRBaseInteractor
 
+/*
+ * @brief initWithService
+ * @params serviceManager : Manager to handle every service
+ * @discussion instance of an interactor with a service manager to handle request
+ */
+
 - (instancetype)initWithService:(id)serviceManager {
     self = [super init];
     if (self) { }

@@ -6,6 +6,11 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+/*
+ * @brief DZRArtistTrackProtocol
+ * protocol to handle to start and stop song at index
+ */
+
 @protocol DZRArtistTrackProtocol
 
 - (void)startSongAtIndex:(NSInteger)index;

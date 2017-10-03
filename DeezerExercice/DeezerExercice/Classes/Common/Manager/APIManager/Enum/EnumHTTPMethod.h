@@ -6,6 +6,11 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+/*
+ * @brief HTTPMethod
+ * @discussion Enum to handle a kind of request
+ */
+
 typedef enum HTTPMethod: NSInteger {
     GET,
     POST,
@@ -14,6 +19,11 @@ typedef enum HTTPMethod: NSInteger {
     PATCH
     
 } HTTPMethod;
+
+/*
+ * @brief HTTPMethodName
+ * @discussion Array of NSString to handle a kind of request
+ */
 
 static NSString *const HTTPMethodName[] = {
     stringWithLiteral(GET),

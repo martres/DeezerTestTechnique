@@ -12,7 +12,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *artistName;
 @property (weak, nonatomic) IBOutlet UIView *container;
 
+//get nib of the cell DZRArtistCollectionViewCell
 +(UINib *) getNibOfCell;
+
+//get identifier of the cell DZRArtistCollectionViewCell
 +(NSString *)getIdentifier;
 
 @end

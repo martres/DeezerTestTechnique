@@ -11,6 +11,13 @@
 
 @implementation DZRArtistService
 
+/*
+ * @brief Search artist
+ * @params name : string for search an artist
+ * @params completion : to get the result of the service
+ * @discussion function to search an artist by a string
+ */
+
 - (void)searchArtists:(NSString *)name completion:(DZRArtistCompletion)completion {
     NSString *urlSearchArtist = [URLManager urlDeezerBuilder:name endPoint:SEARCH_ARTIST];
     [[APIManager sharedInstance] get:urlSearchArtist completion:^(NSData *data, NSError *error) {
@@ -26,6 +33,14 @@
         }
     }];
 }
+
+/*
+ * @brief More artist
+ * @params artistArray : entity of DZRAristArray to get the next url for more artist
+ * @params completion : to get the result of the service
+ * @discussion function to get more artist with the same search
+ * nextURL is from the request of search artist
+ */
 
 - (void)moreArtists:(DZRArtistArray *)artistArray completion:(DZRArtistCompletion)completion {
     NSString* urlMoreArtist = artistArray.nextURL;

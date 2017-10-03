@@ -11,6 +11,13 @@
 
 @implementation DZRAlbumService
 
+/*
+ * @brief get one album
+ * @params artistId : id of the artist to search one album of an artist
+ * @params completion : to get the result of the service
+ * @discussion function to get only one album of the artist with his id (only take the first album)
+ */
+
 - (void)getOneAlbum:(NSString *)artistId completion:(DZRAlbumCompletion)completion {
     NSString *urlGetOneAlbum = [URLManager urlDeezerBuilder:artistId endPoint:GET_ONE_ALBUM_ARTIST];
     

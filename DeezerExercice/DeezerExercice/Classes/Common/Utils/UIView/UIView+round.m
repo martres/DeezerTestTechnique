@@ -10,10 +10,24 @@
 
 @implementation UIView (round)
 
+/*
+ * @brief rounded
+ * @params radius : radius of the border
+ * @discussion round a view
+ */
+
 - (void)rounded:(CGFloat)radius {
     self.clipsToBounds = true;
     self.layer.cornerRadius = radius;
 }
+
+/*
+ * @brief roundedWithColor
+ * @params color : color of the border
+ * @params borderSize : size of the border
+ * @params radius : radius of the border
+ * @discussion round a view with color and borderSize
+ */
 
 - (void)roundedWithColor:(UIColor *)color borderSize:(CGFloat)borderSize radius:(CGFloat)radius {
     self.clipsToBounds = true;

@@ -6,22 +6,29 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
+#import "Modules.h"
+
 /**
  @protocol DZRArtistDetailInterface
  @brief DZRArtistDetailInterface procotol
- @param showEmptyResultMessage: to handle if the request send no data
- @param reloadView: to reload the view
- @param showResultsOfSearchArtist: to ask to the presenter the data
+ function called by the view controller
  **/
-#import "Modules.h"
 
 @protocol DZRArtistDetailInterface <NSObject>
 
-- (void)reloadView;
+// showError if the request fail for example
 - (void)showError:(NSString *)error;
+
+// result of the request for one album of an artist
 - (void)showResultsOfGetOneAlbum:(DZRArtist *)artist;
+
+// result of the request for tracks of an album of an artist
 - (void)showResultsOfTrackOfAlbum:(DZRArtist *)artist;
+
+// song has been start
 - (void)startingSong:(DZRTrack *)track;
+
+// song has been stop
 - (void)stoppingSong:(DZRTrack *)track;
 
 @end

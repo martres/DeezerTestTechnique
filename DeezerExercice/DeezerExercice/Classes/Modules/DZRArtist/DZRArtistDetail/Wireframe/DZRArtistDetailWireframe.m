@@ -21,6 +21,13 @@
 
 @implementation DZRArtistDetailWireframe
 
+/**
+ @brief presentArtistDetailFromViewController
+ @params viewController: view controller need to be present
+ @params detailArtist: artist to send the module
+ @params rootWireFrame: root wireframe to a reference on rootViewController
+ **/
+
 - (void) presentArtistDetailFromViewController:(UIViewController *)viewController detailArtist:(DZRArtist *)detailArtist rootWireframe:(DZRRootWireframe *)rootWireframe {
     DZRArtistDetailViewController *controller = [self detailViewController];
     DZRArtistDetailPresenter *presenter = [[DZRArtistDetailPresenter alloc] init];

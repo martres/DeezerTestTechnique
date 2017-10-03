@@ -8,6 +8,11 @@
 
 #import "BaseArrayEntity.h"
 
+/*
+ * @brief DZRTrackArray
+ * @discussion Entity to handle an array of tracks
+ */
+
 @interface DZRTrackArray : BaseArrayEntity
 
 @end

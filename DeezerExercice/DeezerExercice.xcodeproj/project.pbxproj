@@ -334,7 +334,6 @@
 		6500E0431F7D3E56005E0FEB /* DZRArtistSearch */ = {
 			isa = PBXGroup;
 			children = (
-				65ADDABD1F7FF4DC00B92A20 /* Builder */,
 				65ADDABE1F7FFBCD00B92A20 /* Interactor */,
 				6500E0491F7D5BC8005E0FEB /* Protocols */,
 				6500E0461F7D5BB1005E0FEB /* Presenter */,
@@ -724,13 +723,6 @@
 			children = (
 			);
 			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		65ADDABD1F7FF4DC00B92A20 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Builder;
 			sourceTree = "<group>";
 		};
 		65ADDABE1F7FFBCD00B92A20 /* Interactor */ = {

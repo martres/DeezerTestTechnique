@@ -9,8 +9,15 @@
 #import "DZRArtistSearchInteractorInputOuput.h"
 #import "Modules.h"
 
+/*
+ * @brief DZRArtistSearchInteractor class of base Interactor
+ * @protocols DZRArtistSearchInteractorInput input call by the presenter
+ * @discussion class to handle the interactor for making request for the module artist search
+ */
+
 @interface DZRArtistSearchInteractor : DZRBaseInteractor<DZRArtistSearchInteractorInput>
 
+//  DZRArtistSearchInteractorOutput to call function from the presenter
 @property (nonatomic, weak) id<DZRArtistSearchInteractorOutput> output;
 
 @end
