@@ -10,6 +10,8 @@
 #import "DZRArtistTrackTableViewCell.h"
 #import "Modules.h"
 
+static CGFloat SIZE_HEADER_TOP = 60;
+
 @interface DZRArtistDetailViewController() <UITableViewDelegate, UITableViewDataSource, DZRArtistTrackProtocol, UIScrollViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UILabel *nameAlbum;
@@ -82,14 +84,15 @@
 #pragma - ScrollViewDelegate
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.contentSize.height < self.tableViewTracks.frame.size.height) {
+    //Not enough content to update the constraint 
+    if (scrollView.contentSize.height < self.tableViewTracks.frame.size.height && self.heightViewTop.constant != SIZE_HEADER_TOP) {
         return;
     }
     
     //Change the HeightViewTop to show all the rows inside the tableView
     CGFloat newHeight = self.heightMaxViewTop - self.tableViewTracks.contentOffset.y;
-    if (newHeight < 60 || [self isReachingBottomOfTableView:scrollView]) {
-        newHeight = 60;
+    if (newHeight < SIZE_HEADER_TOP || [self isReachingBottomOfTableView:scrollView]) {
+        newHeight = SIZE_HEADER_TOP;
     }
     [self.view layoutIfNeeded];
     self.heightViewTop.constant = newHeight;

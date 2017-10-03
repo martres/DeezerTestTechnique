@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lp-VC-LMZ">
-                                                <rect key="frame" x="54" y="40" width="112.5" height="12"/>
+                                                <rect key="frame" x="54" y="40" width="27.5" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -89,7 +89,6 @@
                                     <constraint firstItem="ftd-wY-Ghz" firstAttribute="top" secondItem="Y9e-gB-fUd" secondAttribute="top" id="b6f-oS-xT5"/>
                                     <constraint firstItem="8Lp-VC-LMZ" firstAttribute="leading" secondItem="aV9-iP-RJb" secondAttribute="trailing" constant="6" id="evP-57-xxy"/>
                                     <constraint firstAttribute="height" constant="60" id="gJU-S6-O8a"/>
-                                    <constraint firstItem="CGq-oy-wGN" firstAttribute="leading" secondItem="8Lp-VC-LMZ" secondAttribute="trailing" id="iqT-EV-68h"/>
                                     <constraint firstItem="8Lp-VC-LMZ" firstAttribute="bottom" secondItem="aV9-iP-RJb" secondAttribute="bottom" id="k8L-eN-VIx"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Y4S-Pi-C5y" secondAttribute="trailing" constant="6" id="kfS-Z4-uvH"/>
                                     <constraint firstItem="g3h-D2-KKY" firstAttribute="leading" secondItem="Y9e-gB-fUd" secondAttribute="leading" id="pNO-8S-SVz"/>
