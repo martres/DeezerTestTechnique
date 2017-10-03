@@ -22,6 +22,7 @@
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *heightViewTop;
 
 @property (nonatomic, assign) NSInteger currentRowPlayling;
+@property (nonatomic, assign) CGFloat   heightMaxViewTop;
 
 @end
 
@@ -34,8 +35,17 @@
 }
 
 - (void) configureView {
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 20)];
+    view.backgroundColor = [UIColor colorWithRed:52.0/255.0 green:73.0/255.0 blue:94.0/255.0 alpha:1];
+    [self.view addSubview:view];
+
+    [self.artistPicture rounded:self.artistPicture.frame.size.width / 2];
+    
     self.heightViewTop.constant = self.view.frame.size.height / 2;
+    self.heightMaxViewTop = self.heightViewTop.constant;
+    
     self.currentRowPlayling = -1;
+    
     self.tableViewTracks.delegate = self;
     self.tableViewTracks.dataSource = self;
     self.tableViewTracks.estimatedRowHeight = 60;
@@ -56,6 +66,9 @@
 
 - (void) loadArtistWithTrackView {
     self.numberTracks.text =  [NSString stringWithFormat:@"%lu tracks",(unsigned long)self.artist.artistAlbum.trackList.arrayItems.count];
+    self.numberTracks.hidden = false;
+    
+    self.tableViewTracks.hidden = false;
     [self reloadView];
 }
 
@@ -67,9 +80,14 @@
 
 #pragma - ScrollViewDelegate
 
--(void)scrollViewDidZoom:(UIScrollView *)scrollView {
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"CONTENT TABLEVIEW %f", self.tableViewTracks.contentOffset.y);
-    
+    CGFloat newHeight = self.heightMaxViewTop - self.tableViewTracks.contentOffset.y;
+    if (newHeight < 60) {
+        newHeight = 60;
+    }
+    [self.view layoutIfNeeded];
+    self.heightViewTop.constant = newHeight;
 }
 
 
@@ -94,6 +112,7 @@
 
 - (void) showResultsOfTrackOfAlbum:(DZRArtist *)artist {
     self.artist = artist;
+    [self loadArtistWithTrackView];
 }
 
 - (void) startingSong:(DZRTrack *)track {
@@ -121,7 +140,7 @@
     cell.eventPlayer = self;
     cell.index = indexPath.row;
     cell.nameTrack.text = track.titleEntity;
-    cell.numberTrack.text = [NSString stringWithFormat:@"#%ld", (long)indexPath.row];
+    cell.numberTrack.text = [NSString stringWithFormat:@"#%ld", (long)indexPath.row + 1];
     cell.playButton.selected = indexPath.row == self.currentRowPlayling;
     return cell;
 }

@@ -17,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        
     DZRAppDepencies *dependencies = [[DZRAppDepencies alloc] init];
     self.dependencies = dependencies;
     [dependencies startRootViewControllerIntoWindow:self.window];

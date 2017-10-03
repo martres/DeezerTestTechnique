@@ -13,28 +13,31 @@
 #pragma - DZRArtistDetailInteractorOutput
 
 - (void) resultTracksOf:(DZRArtist *)artist error:(NSString *)error {
-    if (error != nil) {
-        [self showError:error];
-        return;
-    }
-    if (artist.artistAlbum.trackList == nil) {
-        [self showError:@"Impossible to get tracks of the album"];
-    } else {
-        [self.userInterface showResultsOfGetOneAlbum:artist];
-    }
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (error != nil) {
+            [self showError:error];
+            return;
+        }
+        if (artist.artistAlbum.trackList == nil) {
+            [self showError:@"Impossible to get tracks of the album"];
+        } else {
+            [self.userInterface showResultsOfTrackOfAlbum:artist];
+        }
+    });
 }
 
 - (void) resultOneAlbumOf:(DZRArtist *)artist error:(NSString *)error {
-    if (error != nil) {
-        [self showError:error];
-        return;
-    }
-    if (artist.artistAlbum == nil) {
-        [self showError:@"Impossible to get the album"];
-    } else {
-        [self.userInterface showResultsOfGetOneAlbum:artist];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (error != nil) {
+            [self showError:error];
+            return;
+        }
+        if (artist.artistAlbum == nil) {
+            [self showError:@"Impossible to get the album"];
+        } else {
+            [self.userInterface showResultsOfGetOneAlbum:artist];
+        }
+    });
 }
 
 - (void) showError:(NSString *)error {

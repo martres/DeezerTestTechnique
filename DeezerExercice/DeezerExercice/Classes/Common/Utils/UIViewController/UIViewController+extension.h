@@ -6,8 +6,8 @@
 //  Copyright © 2017 Deezer. All rights reserved.
 //
 
-@interface UIViewController (getIdentifier)
+@interface UIViewController (Extension)
 
-+ (NSString *)identifierStoryboard;;
++ (NSString *)identifierStoryboard;
 
 @end

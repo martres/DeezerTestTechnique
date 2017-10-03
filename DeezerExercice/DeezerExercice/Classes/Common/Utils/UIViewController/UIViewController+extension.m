@@ -8,7 +8,7 @@
 
 #import "Utils.h"
 
-@implementation UIViewController (getIdentifier)
+@implementation UIViewController (Extension)
 
 + (NSString *)identifierStoryboard {
     NSString *nameClass = [NSString stringWithFormat:@"%@", [self class]];

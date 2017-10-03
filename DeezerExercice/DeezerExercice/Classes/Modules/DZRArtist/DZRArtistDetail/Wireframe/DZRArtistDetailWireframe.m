@@ -30,11 +30,14 @@
     presenter.userInterface = controller;
     presenter.detailWireframe = self;
     
+    interactor.output = presenter;
+    
     controller.eventHandler = (id<DZRArtistDetailModuleInterface>) presenter;
     controller.artist = detailArtist;
     
     self.rootWireframe = rootWireframe;
-    [self.presentedViewController presentViewController:controller animated:true completion:nil];
+    self.presentedViewController = controller;
+    [viewController presentViewController:controller animated:true completion:nil];
 }
 
 - (void)dismissArtistDetail {

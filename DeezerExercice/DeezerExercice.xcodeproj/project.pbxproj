@@ -39,7 +39,7 @@
 		6533E6991F829180000DBE2E /* ImageViewLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6533E6971F829180000DBE2E /* ImageViewLoad.m */; };
 		655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */; };
 		655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */; };
-		6597A2271F7E8FCB003254D0 /* UIViewController+getIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */; };
+		6597A2271F7E8FCB003254D0 /* UIViewController+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2261F7E8FCB003254D0 /* UIViewController+extension.m */; };
 		6597A23B1F7EAF0B003254D0 /* DZRTestEnumMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */; };
 		6597A23F1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A23E1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m */; };
 		6597A2431F7EB97D003254D0 /* TestApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2421F7EB97D003254D0 /* TestApiManager.m */; };
@@ -71,7 +71,7 @@
 		65B95B291F82D5BB00F0487D /* URLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D27A21F7EC2CE007C2727 /* URLManager.h */; };
 		65B95B2A1F82D5BB00F0487D /* DZRRootWireframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791891F7D6B1D00297D7C /* DZRRootWireframe.h */; };
 		65B95B2B1F82D5BB00F0487D /* UIView+round.h in Headers */ = {isa = PBXBuildFile; fileRef = 65CAAECA1F81445300659461 /* UIView+round.h */; };
-		65B95B2C1F82D5BB00F0487D /* UIViewController+getIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */; };
+		65B95B2C1F82D5BB00F0487D /* UIViewController+extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6597A22D1F7E9E73003254D0 /* UIViewController+extension.h */; };
 		65B95B2D1F82D5BB00F0487D /* DZRArtistDetailModuleInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B95B0E1F82C54300F0487D /* DZRArtistDetailModuleInterface.h */; };
 		65B95B2E1F82D5BB00F0487D /* DZRArtistDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791781F7D67BA00297D7C /* DZRArtistDetailViewController.h */; };
 		65B95B2F1F82D5BB00F0487D /* DZRArtistDetailWireframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 650791901F7D6FED00297D7C /* DZRArtistDetailWireframe.h */; };
@@ -159,9 +159,9 @@
 		655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackArray.m; sourceTree = "<group>"; };
 		655E5F601F7F201E007C7B8C /* BaseArrayEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseArrayEntity.h; sourceTree = "<group>"; };
 		655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseArrayEntity.m; sourceTree = "<group>"; };
-		6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getIdentifier.m"; sourceTree = "<group>"; };
+		6597A2261F7E8FCB003254D0 /* UIViewController+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extension.m"; sourceTree = "<group>"; };
 		6597A22A1F7E9A71003254D0 /* DZRArtistSearchInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchInterface.h; sourceTree = "<group>"; };
-		6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+getIdentifier.h"; sourceTree = "<group>"; };
+		6597A22D1F7E9E73003254D0 /* UIViewController+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extension.h"; sourceTree = "<group>"; };
 		6597A22F1F7EA235003254D0 /* DZRArtistSearchModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchModuleInterface.h; sourceTree = "<group>"; };
 		6597A2321F7EAC77003254D0 /* EnumHTTPMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumHTTPMethod.h; sourceTree = "<group>"; };
 		6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTestEnumMethod.m; sourceTree = "<group>"; };
@@ -594,8 +594,8 @@
 		6597A2241F7E8ECE003254D0 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6597A22D1F7E9E73003254D0 /* UIViewController+getIdentifier.h */,
-				6597A2261F7E8FCB003254D0 /* UIViewController+getIdentifier.m */,
+				6597A22D1F7E9E73003254D0 /* UIViewController+extension.h */,
+				6597A2261F7E8FCB003254D0 /* UIViewController+extension.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -888,7 +888,7 @@
 				65B95B291F82D5BB00F0487D /* URLManager.h in Headers */,
 				65B95B2A1F82D5BB00F0487D /* DZRRootWireframe.h in Headers */,
 				65B95B2B1F82D5BB00F0487D /* UIView+round.h in Headers */,
-				65B95B2C1F82D5BB00F0487D /* UIViewController+getIdentifier.h in Headers */,
+				65B95B2C1F82D5BB00F0487D /* UIViewController+extension.h in Headers */,
 				6517AC411F83AFD3005AAC27 /* DZRArtistTrackTableViewCell.h in Headers */,
 				65B95B2D1F82D5BB00F0487D /* DZRArtistDetailModuleInterface.h in Headers */,
 				65B95B2E1F82D5BB00F0487D /* DZRArtistDetailViewController.h in Headers */,
@@ -1046,7 +1046,7 @@
 				65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */,
 				5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */,
 				650791921F7D6FED00297D7C /* DZRArtistDetailWireframe.m in Sources */,
-				6597A2271F7E8FCB003254D0 /* UIViewController+getIdentifier.m in Sources */,
+				6597A2271F7E8FCB003254D0 /* UIViewController+extension.m in Sources */,
 				650791821F7D694500297D7C /* DZRArtistSearchPresenter.m in Sources */,
 				65ADDAC11F7FFC0700B92A20 /* DZRArtistSearchInteractor.m in Sources */,
 				652D27AF1F7ED7DD007C2727 /* DZRArtistService.m in Sources */,

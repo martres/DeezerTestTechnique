@@ -10,6 +10,6 @@
 #define Define_h
 
 #define stringWithLiteral(literal) @#literal
-#define MainColor [UIColor colorWithRed:248 green:148 blue:6 alpha:1]
+#define MainColor [UIColor colorWithRed:52/255 green:73/255 blue:94/255 alpha:1]
 
 #endif /* Define_h */

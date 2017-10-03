@@ -26,16 +26,19 @@
         case ARTIST: {
             DZRArtistService *service = [[DZRArtistService alloc] init];
             [self callArtistService:service nameService:nameService data:data completion:completion];
+            return;
         }
             
         case ALBUM: {
             DZRAlbumService *service = [[DZRAlbumService alloc] init];
             [self callAlbumService:service nameService:nameService data:data completion:completion];
+            return;
         }
 
         case TRACK: {
             DZRTrackService *service = [[DZRTrackService alloc] init];
             [self callTrackService:service nameService:nameService data:data completion:completion];
+            return;
         }
 
         default:
@@ -48,10 +51,12 @@
     switch (nameService) {
         case SEARCH_ARTIST_WITH_PARAM: {
             [service searchArtists:data completion:completion];
+            return;
         }
         
         case MORE_ARTIST: {
             [service moreArtists:data completion:completion];
+            return;
         }
         default:
             NSLog(@"WRONG NAME SERVICE FOR ARTIST SERVICE");
@@ -63,6 +68,7 @@
     switch (nameService) {
         case GET_ONE_ALBUM: {
             [service getOneAlbum:data completion:completion];
+            return;
         }
         default:
             NSLog(@"WRONG NAME SERVICE FOR ALBUM SERVICE");
@@ -74,6 +80,7 @@
     switch (nameService) {
         case GET_TRACKS_OF_ALBUM: {
             [service getTracksFromAlbum:data completion:completion];
+            return;
         }
         default:
             NSLog(@"WRONG NAME SERVICE FOR TRACK SERVICE");
