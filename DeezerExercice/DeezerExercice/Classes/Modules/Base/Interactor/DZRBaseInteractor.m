@@ -18,7 +18,9 @@
 
 - (instancetype)initWithService:(id)serviceManager {
     self = [super init];
-    if (self) { }
+    if (self) {
+        self.serviceManager = serviceManager;
+    }
     return self;
 }
 

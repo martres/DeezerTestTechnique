@@ -22,6 +22,7 @@
 
 - (void)stopSong {
     [self.player pause];
+    self.player = nil;
 }
 
 - (void)launchSong:(DZRTrack *)track {

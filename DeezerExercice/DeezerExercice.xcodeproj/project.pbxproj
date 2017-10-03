@@ -39,6 +39,8 @@
 		6533E6991F829180000DBE2E /* ImageViewLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6533E6971F829180000DBE2E /* ImageViewLoad.m */; };
 		655E5F5E1F7F1FB3007C7B8C /* DZRTrackArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */; };
 		655E5F621F7F201E007C7B8C /* BaseArrayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */; };
+		65678F161F8443AE00D47704 /* DZRTestServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65678F151F8443AE00D47704 /* DZRTestServiceManager.m */; };
+		65678F1A1F8449B100D47704 /* DZRTestPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65678F191F8449B100D47704 /* DZRTestPlayerManager.m */; };
 		6597A2271F7E8FCB003254D0 /* UIViewController+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A2261F7E8FCB003254D0 /* UIViewController+extension.m */; };
 		6597A23B1F7EAF0B003254D0 /* DZRTestEnumMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A23A1F7EAF0B003254D0 /* DZRTestEnumMethod.m */; };
 		6597A23F1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597A23E1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m */; };
@@ -84,6 +86,7 @@
 		65B95B361F82D5BB00F0487D /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1A7D861A6558BB00092761 /* AppDelegate.h */; };
 		65B95B371F82D5BB00F0487D /* DZRAppDepencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 65CAAED41F81556100659461 /* DZRAppDepencies.h */; };
 		65B95B381F82D5BB00F0487D /* Define.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F59D5C1F7F0FCD00CAF5C7 /* Define.h */; };
+		65BEBB4B1F844E4300ADC596 /* TestUIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BEBB4A1F844E4300ADC596 /* TestUIViewExtension.m */; };
 		65CAAECC1F81445300659461 /* UIView+round.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAECB1F81445300659461 /* UIView+round.m */; };
 		65CAAED21F814FA000659461 /* DZRArtistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CAAED01F814FA000659461 /* DZRArtistCollectionViewCell.m */; };
 		65CAAED31F814FA000659461 /* DZRArtistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CAAED11F814FA000659461 /* DZRArtistCollectionViewCell.xib */; };
@@ -161,6 +164,8 @@
 		655E5F5D1F7F1FB3007C7B8C /* DZRTrackArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTrackArray.m; sourceTree = "<group>"; };
 		655E5F601F7F201E007C7B8C /* BaseArrayEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseArrayEntity.h; sourceTree = "<group>"; };
 		655E5F611F7F201E007C7B8C /* BaseArrayEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseArrayEntity.m; sourceTree = "<group>"; };
+		65678F151F8443AE00D47704 /* DZRTestServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTestServiceManager.m; sourceTree = "<group>"; };
+		65678F191F8449B100D47704 /* DZRTestPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRTestPlayerManager.m; sourceTree = "<group>"; };
 		6597A2261F7E8FCB003254D0 /* UIViewController+extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extension.m"; sourceTree = "<group>"; };
 		6597A22A1F7E9A71003254D0 /* DZRArtistSearchInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistSearchInterface.h; sourceTree = "<group>"; };
 		6597A22D1F7E9E73003254D0 /* UIViewController+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extension.h"; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 		65B95B131F82D09E00F0487D /* ServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
 		65B95B171F82D2B700F0487D /* EnumService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumService.h; sourceTree = "<group>"; };
 		65B95B181F82D3A400F0487D /* BaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		65BEBB4A1F844E4300ADC596 /* TestUIViewExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIViewExtension.m; sourceTree = "<group>"; };
 		65CAAECA1F81445300659461 /* UIView+round.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+round.h"; sourceTree = "<group>"; };
 		65CAAECB1F81445300659461 /* UIView+round.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+round.m"; sourceTree = "<group>"; };
 		65CAAECF1F814FA000659461 /* DZRArtistCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRArtistCollectionViewCell.h; sourceTree = "<group>"; };
@@ -595,6 +601,29 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		65678F141F84435800D47704 /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				65678F151F8443AE00D47704 /* DZRTestServiceManager.m */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		65678F171F84496300D47704 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		65678F181F84498400D47704 /* PlayerManager */ = {
+			isa = PBXGroup;
+			children = (
+				65678F191F8449B100D47704 /* DZRTestPlayerManager.m */,
+			);
+			path = PlayerManager;
+			sourceTree = "<group>";
+		};
 		6597A2241F7E8ECE003254D0 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,8 +673,10 @@
 		6597A2381F7EAEC9003254D0 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				652D27A51F7EC4A0007C2727 /* URLManager */,
 				6597A2371F7EAEC0003254D0 /* ApiManager */,
+				65678F181F84498400D47704 /* PlayerManager */,
+				65678F141F84435800D47704 /* ServiceManager */,
+				652D27A51F7EC4A0007C2727 /* URLManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -661,6 +692,8 @@
 		6597A23C1F7EB102003254D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				65BEBB491F844E2500ADC596 /* UIView */,
+				65678F171F84496300D47704 /* UIImageView */,
 				6597A23D1F7EB126003254D0 /* UIViewController */,
 			);
 			path = Utils;
@@ -770,6 +803,14 @@
 				65B95B181F82D3A400F0487D /* BaseService.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		65BEBB491F844E2500ADC596 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				65BEBB4A1F844E4300ADC596 /* TestUIViewExtension.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		65C03FC41F7D5CE5002F5028 /* Entities */ = {
@@ -1066,8 +1107,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				652D27A71F7EC4B7007C2727 /* TestURLManager.m in Sources */,
+				65678F1A1F8449B100D47704 /* DZRTestPlayerManager.m in Sources */,
+				65678F161F8443AE00D47704 /* DZRTestServiceManager.m in Sources */,
 				6597A2431F7EB97D003254D0 /* TestApiManager.m in Sources */,
 				6597A23F1F7EB1A2003254D0 /* TestUIViewController+getIdentifier.m in Sources */,
+				65BEBB4B1F844E4300ADC596 /* TestUIViewExtension.m in Sources */,
 				6597A23B1F7EAF0B003254D0 /* DZRTestEnumMethod.m in Sources */,
 				652D27AD1F7ED6D7007C2727 /* TestDZArtistService.m in Sources */,
 				5C2E661C1A67C3D500607EC5 /* DZRArtistTest.m in Sources */,

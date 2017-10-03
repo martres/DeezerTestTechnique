@@ -20,7 +20,6 @@
 - (instancetype)initWithService:(ServiceManager *)serviceManager {
     self = [super initWithService:serviceManager];
     if (self) {
-        self.serviceManager = serviceManager;
     }
     return self;
 }

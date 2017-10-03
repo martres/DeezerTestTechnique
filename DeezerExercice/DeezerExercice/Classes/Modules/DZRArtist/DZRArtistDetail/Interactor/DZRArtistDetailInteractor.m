@@ -26,7 +26,6 @@
 - (instancetype)initWithService:(ServiceManager *)serviceManager playerManager:(PlayerManager *)playerManager {
     self = [super initWithService:serviceManager];
     if (self) {
-        self.serviceManager = serviceManager;
         self.playerManager = playerManager;
     }
     return self;
